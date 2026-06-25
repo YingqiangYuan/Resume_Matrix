@@ -1,2 +1,7 @@
 # learn_build_resume_matrix-project
-Learn XYZ styled GitHub Repo Template
+
+This repository teaches you how to build a resume matrix for the American job market: a small system of reusable, modular resume pieces that you can recombine and tailor for different roles, rather than a single static document you rewrite from scratch every time. It walks you through the hiring landscape, how ATS screening actually works in the AI era, and how to write strong Summaries and bullet points that survive interview follow-ups.
+
+Inside the `examples/` directory you will find a series of fully worked resume artifacts that you can read and learn from directly. These examples are the source material the course is built on, and they double as the reference you will keep coming back to when you draft your own resume. Each example is self-contained, so you can study them in order or jump straight to the topic you care about.
+
+The course covers three connected questions. First, how to actually write a resume from scratch — the structure, the Summary, and the bullet points that make a recruiter want to talk to you. Second, how to elevate the resume you already have by deepening shallow project experience until it can survive real interview pressure, instead of pretending you did more than you did. Third, how to operate the 1+N system, where you maintain one master pool of material and spin off N tailored resumes for different roles and companies, so each application reads as if it were written for that specific job.
