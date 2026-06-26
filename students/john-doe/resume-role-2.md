@@ -2,20 +2,20 @@
 
 Seattle, WA · john.doe@example.com · linkedin.com/in/john-doe · github.com/john-doe
 
-> Tailored for Data Engineer roles. Derived from `resume.md` by keeping Summary Variant B, the data/infra skill lines, and Bullet Sets 2, 4, and 5.
+> Tailored for Data Analyst roles. Derived from `resume.md` by keeping Summary Variant B, the Data Analytics skill lines, and Bullet Sets 2, 4, and 5.
 
 ---
 
 ## 1. Summary
 
-M.S. Computer Science student specializing in real-time data infrastructure. Built event-driven EMR ingestion pipelines processing 250K+ clinical records and Kafka-based streams handling 12K events per second across healthcare and fintech engagements. Strong with Python, Spark Structured Streaming, Kafka, Airflow, Snowflake, dbt, and AWS data services.
+M.S. Computer Science student focused on Data Analytics for AI and risk products. Built a Tableau adoption dashboard and ran a statistically-rigorous A/B test that drove a 14-point acceptance lift at a healthcare AI startup; designed a retrospective study at a derivatives broker that quantified a 35% false-positive reduction with tight confidence intervals and unlocked production scaling. Strong with SQL, Python (pandas, scipy.stats, statsmodels), Tableau, Looker, and Snowflake.
 
 ---
 
 ## 2. Education
 
 M.S. Computer Science, University of Washington, expected December 2026.
-Relevant coursework: Distributed Systems, Database Systems, Machine Learning.
+Relevant coursework: Machine Learning, Database Systems, Statistical Learning.
 
 B.S. Computer Science, University of California San Diego, 2024. GPA 3.8 / 4.0.
 
@@ -23,11 +23,12 @@ B.S. Computer Science, University of California San Diego, 2024. GPA 3.8 / 4.0.
 
 ## 3. Skills
 
-Languages: Python, Go, SQL
-Data: Apache Kafka, Apache Spark Structured Streaming, Apache Airflow, dbt, Snowflake, PostgreSQL, Redis, Great Expectations
-Cloud and Infra: AWS (MSK, EKS, Lambda, S3, RDS, ElastiCache), Docker, Kubernetes, Terraform
-Backend: FastAPI, gRPC
-Observability: Prometheus, Grafana, OpenTelemetry, structured logging
+Languages: Python, SQL
+Data Analytics: SQL, Python (pandas, scipy.stats, statsmodels), Tableau, Looker, A/B testing, retrospective studies, KPI reporting
+Data Warehousing: Snowflake, PostgreSQL
+ML (working knowledge): XGBoost, scikit-learn, model evaluation, PSI drift monitoring
+Tools: Jupyter, dbt, Git
+AI / LLM (working knowledge): LangChain, OpenAI API, RAG
 
 ---
 
@@ -37,19 +38,19 @@ Observability: Prometheus, Grafana, OpenTelemetry, structured logging
 
 Software Engineer Intern, AI Team. 2025-06 to 2025-09.
 
-- Built event-driven ingestion pipeline for FHIR-format EMR notes on AWS Lambda and SQS, processing 250K+ historical records during backfill and 4,000 new notes per day in production with zero data-loss incidents.
-- Designed a 14-entity PostgreSQL schema for normalized clinical data with denormalized views for downstream analytics, supporting sub-second p95 query times for 60 physicians.
-- Implemented HIPAA-compliant PHI de-identification combining Microsoft Presidio with custom regex rules from a clinical informatics consultant; achieved 99.4% precision on internal test set.
-- Wired up Prometheus, Grafana, and OpenTelemetry observability across ingestion and serving layers; cut on-call triage time by 40% on data-quality incidents.
+- Built physician adoption dashboard in Tableau pulling from PostgreSQL across the 60-physician pilot; surfaced three distinct adoption cohorts (power users above 80%, moderates 30 to 60%, skeptics under 20%) that drove targeted retraining and lifted week-6 satisfaction from 74% to 91%.
+- Designed and ran a 4-week A/B test on summary length using stratified randomization across 30 physicians; chi-squared test in Python's scipy.stats showed the short variant (~100 words) won by 14 percentage points in acceptance rate at p<0.05, and the team shipped it company-wide.
+- Wrote SQL exploration queries against the 250K-note corpus to identify three lowest-quality specialties (Pediatrics, OB/GYN, Behavioral Health); prioritized prompt iteration on those categories and brought all three above the 75% quality threshold by week 7.
+- Built a one-page weekly clinical-ops KPI report (PHI precision, summary quality, end-to-end latency, satisfaction, adoption cohorts) consumed by the CTO and Head of Clinical Operations in the Monday leadership meeting; replaced a fragmented set of Slack updates as the canonical pilot health signal.
 
 ### Forge Trading, Real-Time Fraud Detection Pipeline
 
-Data Engineering Contractor. 2025-12 to 2026-01.
+Data Analytics and ML Contractor. 2025-12 to 2026-01.
 
-- Built a real-time data pipeline on Kafka (AWS MSK) and Spark Structured Streaming processing 12,000 events per second at peak, up from a 5,000 events-per-second ceiling on the prior system.
-- Engineered exactly-once delivery semantics using Kafka transactions and idempotent event-id-keyed sinks; brought data loss from a baseline of two events per week down to zero over a six-week production run.
-- Designed a Snowflake feature store with six sliding-window aggregates refreshed every 30 seconds and pushed into Redis for low-latency reads; documented every feature as a dbt model for analyst self-service.
-- Built Airflow DAGs for nightly retraining gated by 18 Great Expectations data contracts; blocked two bad retraining runs caused by an upstream merchant-feed schema change.
+- Analyzed 6 months of compliance flag history in SQL on Snowflake; identified three false-positive patterns (cross-border weekend travel, holiday retail spikes, miscategorized merchants) accounting for ~80% of analyst clearance hours; delivered a one-page memo with a target list of rules to retire.
+- Built a Looker dashboard tracking daily flag volume, false-positive rate, and analyst clearance time by category; refreshed hourly, replaced a 2-day Excel weekly report, became the compliance team's daily standup reference.
+- Designed retrospective study comparing the new ML model against the rules engine on 4M historical transactions; computed a 35% false-positive reduction with 95% confidence intervals using Python (statsmodels); presented to the executive review committee, became the main basis for green-lighting active scoring.
+- Wrote SQL exploration notebooks for the analyst team showing which signal combinations correlated with confirmed fraud (e.g., geo-anomaly combined with merchant-risk score above thresholds was 12x more likely to be real fraud); incorporated into the manual review playbook.
 
 ### Pulse Social, Feed Ranking Microservice
 

@@ -44,7 +44,7 @@ Software Engineer Intern, AI Team. 2025-06 to 2025-09.
 
 ### Forge Trading, Real-Time Fraud Detection Pipeline
 
-Data Engineering Contractor. 2025-12 to 2026-01.
+Data Analytics and ML Contractor. 2025-12 to 2026-01.
 
 - Trained an XGBoost fraud-detection model on 4M+ labeled transactions across 30 engineered features (rolling velocity, geo-anomaly, merchant-risk score) and tuned with Bayesian search via Optuna; achieved 0.94 AUC on a held-out month.
 - Shadow-deployed model against the live production transaction stream for two weeks; matched the rules-engine recall while cutting false-positive flag rate by 35% and catching $1.2M in confirmed fraud the rules engine missed.
