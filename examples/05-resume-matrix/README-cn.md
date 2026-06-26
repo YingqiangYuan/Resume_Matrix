@@ -56,27 +56,29 @@
 
 > 注：之所以拿医疗、金融来举例，是因为这两个行业是 AI 在业务里落地最好、岗位和钱最多的两个方向。
 
-John Doe 是华盛顿大学 CS 硕士在读，目标 2026 年 12 月毕业。他做过三段实习，分别在医疗 AI 创业公司、金融衍生品经纪商、消费社交产品。他的项目都是 AI、Data、Software 三种能力的不同组合。
+John Doe 是华盛顿大学 CS 硕士在读，目标 2026 年 12 月毕业。他做过三段经历，分别在一家妇产科连锁医院、一家反欺诈/反洗钱 SaaS、一家消费社交产品。他的项目都是 AI、Data、Software 三种能力的不同组合。
 
-第一段实习是 2025 年夏天的医疗项目。完整的案例描述在 [from-2025-06-to-2025-09-clinical-notes-summarization-platform-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-clinical-notes-summarization-platform-cn.md)。这段经历里他既用了 LLM 做临床病历摘要，又在系统上线后用 Tableau、SQL、A/B 测试去回答「这套东西到底有没有帮到医生」。你可以从 AI 角度讲他这段经历，重点放在 Prompt 工程、评估 Harness、RAG；也可以从 Data Analytics 角度讲，重点放在采用率仪表盘、摘要长度的 A/B 测试和统计检验、按专科的 SQL 质量探索。
+第一段经历是 2025 年夏天的医疗项目，他在 Cedar Ridge Women's Health 给妇产科病房做了 MaternaPulse，一个基于 AWS Bedrock AgentCore 的内部自然语言 BI Agent。完整的项目设计材料在 [CedarRidge-maternity-bi-agent/](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/)。这段经历可以从 AI 角度讲，重点放在 Strand Agents、Bedrock Knowledge Base、多 provider LLM 抽象、评估 Harness；也可以从 Data Analytics 角度讲，重点放在 Snowflake 上的语义层、Charge Nurse UAT 研究、自助查询率 Dashboard、HIPAA + TJC 审计日志规范。
 
-第二段是 2025 年冬天的金融项目。案例在 [from-2025-12-to-2026-01-realtime-fraud-detection-pipeline-cn.md](../../students/john-doe/experiences/from-2025-12-to-2026-01-realtime-fraud-detection-pipeline-cn.md)。这段同样可以两面写：AI 角度强调 XGBoost 模型训练、PSI 漂移监控；Data Analytics 角度强调对历史 Compliance 标记的 SQL 模式分析、Looker Dashboard、把新模型和旧规则引擎做严格对比的回溯研究。
+第二段是 2025 年冬天的金融项目，他作为合同工在 NovaRisk AI 给反欺诈运营团队搭了 Fraud and AML BI Agent 的 Phase 0 基础。项目设计材料在 [NovaRisk-fraud-aml-bi-agent/](../../students/john-doe/experiences/from-2025-12-to-2026-01-NovaRisk-fraud-aml-bi-agent/)。这段同样可以两面写：AI 角度强调 Strand Agents 上的工具链搭建、Bedrock Knowledge Base 的 metric glossary 入库、SOC2 + FinCEN 审计追溯链；Data Analytics 角度强调对 6 个月历史 ad-hoc 请求的 SQL 模式分析、把分散在 Slack 和 Notion 里的口径定义重写成 YAML 语义层、回溯对照分析师手写 SQL 与语义层 SQL 之间的 drift。
 
 第三段是 2026 年夏天的社交产品项目。案例在 [from-2026-06-to-2026-09-feed-ranking-microservice-cn.md](../../students/john-doe/experiences/from-2026-06-to-2026-09-feed-ranking-microservice-cn.md)。这段相对纯粹，就是软件开发：Go 写微服务、gRPC、Kubernetes、灰度上线。这段没有第二种重点写法。
 
-所以 John Doe 的母版简历里会出现五段大经历，每段下面 3 到 4 条 bullet：
+所以 John Doe 的母版简历里有这五段「可投递」的 bullet set，每段下面 3 到 4 条 bullet：
 
-1. 医疗项目，AI 重点版本
-2. 医疗项目，Data Analytics 重点版本
-3. 金融项目，AI 重点版本
-4. 金融项目，Data Analytics 重点版本
-5. 社交项目，软件开发重点版本
+- MaternaPulse，AI 重点版本
+- MaternaPulse，Data Analytics 重点版本
+- NovaRisk BI Agent，AI 重点版本
+- NovaRisk BI Agent，Data Analytics 重点版本
+- Feed 排序微服务，软件开发重点版本
 
-注意第 1、2 段和第 3、4 段其实是同一个项目的两种写法。母版里会重复出现，因为这是他在做投递时的「素材池」，不需要简洁。
+注意前两段和中间两段其实是同一个项目的两种写法。母版里会重复出现，因为这是他在做投递时的「素材池」，不需要简洁。
 
 Summary 同样维护三份，分别对应三个目标方向：AI Engineer、Data Analyst、Software Engineer。Skills 是一个全集，覆盖他会的所有技术。
 
 母版长这样：[resume.md](../../students/john-doe/resume.md)。打开看一眼你就明白「巨长」是什么意思了。
+
+> 注：你打开 master 简历会发现里面其实写了 6 段 bullet set，第一段标注着「BEFORE elevation, teaching artifact」。那是给后面 06 examples 用的教学件，跟 1+N 这套机制没关系。这一节你可以忽略它，专心看后面这 5 段。后续 examples 会专门讲它是怎么回事。
 
 ---
 
@@ -84,13 +86,13 @@ Summary 同样维护三份，分别对应三个目标方向：AI Engineer、Data
 
 John Doe 可以同时投 AI、Data Analyst、Software 三类岗位。他会从同一份母版派生出几份针对性简历，过程全是删减。
 
-投 AI Engineer 岗位的时候，他保留 Summary 变体 A，保留 AI/ML 相关的 Skills 行，保留 bullet set #1（医疗 AI 版）、#3（金融 AI 版）、#5（社交软件版，因为软件能力对 AI 岗位也是加分项）。删掉其它的。结果就是 [resume-role-1.md](../../students/john-doe/resume-role-1.md)。
+投 AI Engineer 岗位的时候，他保留 Summary 变体 A，保留 AI/ML 相关的 Skills 行，保留 MaternaPulse 的 AI 版、NovaRisk BI Agent 的 AI 版、Feed 排序微服务（因为软件能力对 AI 岗位也是加分项）。删掉其它的。结果就是 [resume-role-1.md](../../students/john-doe/resume-role-1.md)。
 
-投 Data Analyst 岗位的时候，他保留 Summary 变体 B，保留 Data Analytics 相关的 Skills 行，保留 bullet set #2（医疗 Analytics 版）、#4（金融 Analytics 版）、#5。结果是 [resume-role-2.md](../../students/john-doe/resume-role-2.md)。
+投 Data Analyst 岗位的时候，他保留 Summary 变体 B，保留 Data Analytics 相关的 Skills 行，保留 MaternaPulse 的 Analytics 版、NovaRisk BI Agent 的 Analytics 版、Feed 排序微服务。结果是 [resume-role-2.md](../../students/john-doe/resume-role-2.md)。
 
-投 Software Engineer 岗位、目标公司是一家医疗公司的时候，他保留 Summary 变体 C，保留软件/后端相关的 Skills，保留 bullet set #1（医疗 AI 版，因为目标公司在意医疗 AI 这个领域）和 #5。结果是 [resume-role-3.md](../../students/john-doe/resume-role-3.md)。
+投 Software Engineer 岗位、目标公司是一家医疗公司的时候，他保留 Summary 变体 C，保留软件/后端相关的 Skills，保留 MaternaPulse 的 AI 版（因为目标公司在意医疗 AI 这个领域）和 Feed 排序微服务。结果是 [resume-role-3.md](../../students/john-doe/resume-role-3.md)。
 
-投 Software Engineer 岗位、目标公司是一家金融公司的时候，他保留 Summary 变体 C，同样的软件 Skills，但保留 bullet set #3（金融 AI 版）和 #5。结果是 [resume-role-4.md](../../students/john-doe/resume-role-4.md)。
+投 Software Engineer 岗位、目标公司是一家金融公司的时候，他保留 Summary 变体 C，同样的软件 Skills，但保留 NovaRisk BI Agent 的 AI 版和 Feed 排序微服务。结果是 [resume-role-4.md](../../students/john-doe/resume-role-4.md)。
 
 看出门道了吗？四份针对性简历，每一份都是从同一份母版上「删」出来的。措辞、数字、排版完全继承母版。他不需要重写任何一个 bullet，不需要重新想任何一个数字，不需要担心说法前后不一致。这就是这个做法的杠杆。
 
@@ -102,7 +104,7 @@ John Doe 可以同时投 AI、Data Analyst、Software 三类岗位。他会从�
 
 母版简历：
 
-- [resume.md](../../students/john-doe/resume.md)：包含 3 份 Summary 变体、全集 Skills、5 段 bullet set 的母版简历。
+- [resume.md](../../students/john-doe/resume.md)：包含 3 份 Summary 变体、全集 Skills、5 段可投递 bullet set（外加一段下一节才会用上的教学件）的母版简历。
 
 派生出来的 4 份投递简历：
 
@@ -111,13 +113,13 @@ John Doe 可以同时投 AI、Data Analyst、Software 三类岗位。他会从�
 - [resume-role-3.md](../../students/john-doe/resume-role-3.md)：Software Engineer 方向，目标公司是医疗行业。
 - [resume-role-4.md](../../students/john-doe/resume-role-4.md)：Software Engineer 方向，目标公司是金融行业。
 
-每段经历背后的原始素材，叫 case 文件，里面是项目的完整叙述（背景、做了什么、产出、技术栈）。这是写 bullet 的源头，bullet 是从这里提取压缩出来的：
+每段经历背后的原始素材在 `experiences/` 目录里，里面是项目的完整叙述（医疗和金融项目是一个文件夹，包含项目背景、团队、业务需求、架构、执行计划五份文档；社交项目是一份完整的 case 文件）。这是写 bullet 的源头，bullet 是从这里提取压缩出来的：
 
-- [医疗 AI 项目案例](../../students/john-doe/experiences/from-2025-06-to-2025-09-clinical-notes-summarization-platform-cn.md)
-- [金融欺诈检测项目案例](../../students/john-doe/experiences/from-2025-12-to-2026-01-realtime-fraud-detection-pipeline-cn.md)
+- [MaternaPulse BI Agent 项目设计材料](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/)
+- [NovaRisk Fraud & AML BI Agent 项目设计材料](../../students/john-doe/experiences/from-2025-12-to-2026-01-NovaRisk-fraud-aml-bi-agent/)
 - [社交 Feed 排序项目案例](../../students/john-doe/experiences/from-2026-06-to-2026-09-feed-ranking-microservice-cn.md)
 
-建议的看法：先把三份 case 文件读一遍，理解项目本身是什么；再打开母版 [resume.md](../../students/john-doe/resume.md)，对照看每个 bullet set 是怎么从 case 文件里抽出来的，注意同一个项目的两种重点写法（AI 版 vs Data Analytics 版）措辞上的差别；最后打开四份派生简历，对照母版看哪些内容被保留、哪些被删掉。
+建议的看法：先把三份素材浏览一遍，理解项目本身是什么；再打开母版 [resume.md](../../students/john-doe/resume.md)，对照看每个 bullet set 是怎么从素材里抽出来的，注意同一个项目的两种重点写法（AI 版 vs Data Analytics 版）措辞上的差别；最后打开四份派生简历，对照母版看哪些内容被保留、哪些被删掉。
 
 ---
 
