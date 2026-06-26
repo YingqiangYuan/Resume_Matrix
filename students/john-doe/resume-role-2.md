@@ -2,13 +2,13 @@
 
 Seattle, WA · john.doe@example.com · linkedin.com/in/john-doe · github.com/john-doe
 
-> Tailored for Data Analyst roles. Derived from `resume.md` by keeping Summary Variant B, the Data Analytics skill lines, and Bullet Sets 2, 4, and 5.
+> Tailored for Data Analyst roles. Derived from `resume.md` by keeping Summary Variant B, the Data Analytics skill lines, and Bullet Sets 3, 5, and 6.
 
 ---
 
 ## 1. Summary
 
-M.S. Computer Science student focused on Data Analytics for AI and risk products. Built a Tableau adoption dashboard and ran a statistically-rigorous A/B test that drove a 14-point acceptance lift at a healthcare AI startup; designed a retrospective study at a derivatives broker that quantified a 35% false-positive reduction with tight confidence intervals and unlocked production scaling. Strong with SQL, Python (pandas, scipy.stats, statsmodels), Tableau, Looker, and Snowflake.
+M.S. Computer Science student focused on Data Analytics for AI and risk products. Codified metric definitions into YAML semantic layers over Snowflake at a maternity-care network and a fraud-detection SaaS; designed UAT studies, retrospective gap analyses, and CloudWatch-driven adoption dashboards that moved pilot self-serve rates from 0 to 41% and resolved auditor-flagged definition inconsistencies. Strong with SQL, Python (pandas, scipy.stats, statsmodels), Snowflake, Looker, and Tableau.
 
 ---
 
@@ -24,33 +24,33 @@ B.S. Computer Science, University of California San Diego, 2024. GPA 3.8 / 4.0.
 ## 3. Skills
 
 Languages: Python, SQL
-Data Analytics: SQL, Python (pandas, scipy.stats, statsmodels), Tableau, Looker, A/B testing, retrospective studies, KPI reporting
+Data Analytics: SQL, Python (pandas, scipy.stats, statsmodels), Tableau, Looker, semantic layers (YAML), A/B testing, retrospective studies, UAT design, KPI reporting
 Data Warehousing: Snowflake, PostgreSQL
-ML (working knowledge): XGBoost, scikit-learn, model evaluation, PSI drift monitoring
+ML (working knowledge): evaluation harnesses, model accuracy/answer accuracy/hallucination metrics
 Tools: Jupyter, dbt, Git
-AI / LLM (working knowledge): LangChain, OpenAI API, RAG
+AI / LLM (working knowledge): Strand Agents, Bedrock Knowledge Base, OpenAI API, RAG
 
 ---
 
 ## 4. Experience
 
-### MedSync Health, Clinical Notes Summarization Platform
+### Cedar Ridge Women's Health, MaternaPulse BI Agent
 
-Software Engineer Intern, AI Team. 2025-06 to 2025-09.
+Full-stack AI/Data Intern. 2025-06 to 2025-09.
 
-- Built physician adoption dashboard in Tableau pulling from PostgreSQL across the 60-physician pilot; surfaced three distinct adoption cohorts (power users above 80%, moderates 30 to 60%, skeptics under 20%) that drove targeted retraining and lifted week-6 satisfaction from 74% to 91%.
-- Designed and ran a 4-week A/B test on summary length using stratified randomization across 30 physicians; chi-squared test in Python's scipy.stats showed the short variant (~100 words) won by 14 percentage points in acceptance rate at p<0.05, and the team shipped it company-wide.
-- Wrote SQL exploration queries against the 250K-note corpus to identify three lowest-quality specialties (Pediatrics, OB/GYN, Behavioral Health); prioritized prompt iteration on those categories and brought all three above the 75% quality threshold by week 7.
-- Built a one-page weekly clinical-ops KPI report (PHI precision, summary quality, end-to-end latency, satisfaction, adoption cohorts) consumed by the CTO and Head of Clinical Operations in the Monday leadership meeting; replaced a fragmented set of Slack updates as the canonical pilot health signal.
+- Codified the maternity ward's operational metric definitions (active census, postpartum LOS, room availability with cleaning state, high-risk BP trend) into a YAML semantic layer over Snowflake; replaced an undocumented mix of Slack-screenshot SQL and Notion notes that had produced inconsistent definitions across prior reports.
+- Designed and ran a UAT study with 2 Charge Nurses on 30 golden conversations covering Shift Handover, Room Availability, and High-Risk Alerts; tracked thumbs-up rate weekly, surfaced 8 wording and information-density adjustments, and lifted UAT acceptance from 64% to 92% over three iterations.
+- Built an adoption dashboard on the agent's CloudWatch query log and Snowflake audit table tracking pilot ward self-serve query rate, p95 latency, and ad-hoc ticket displacement; the pilot ward's self-serve query rate climbed from 0 to 41% in 8 weeks, beating the project's 40% target.
+- Authored the HIPAA + TJC-compliant audit trail spec covering every NL query, generated SQL, KB snippet ID, and result row count (excluding PHI values) into both CloudWatch (90-day retention) and a Snowflake audit table (7-year retention); cleared the Q3 internal compliance dry-run on the first pass.
 
-### Forge Trading, Real-Time Fraud Detection Pipeline
+### NovaRisk AI, Fraud and AML BI Agent
 
-Data Analytics and ML Contractor. 2025-12 to 2026-01.
+Analytics Engineering Contractor. 2025-12 to 2026-01.
 
-- Analyzed 6 months of compliance flag history in SQL on Snowflake; identified three false-positive patterns (cross-border weekend travel, holiday retail spikes, miscategorized merchants) accounting for ~80% of analyst clearance hours; delivered a one-page memo with a target list of rules to retire.
-- Built a Looker dashboard tracking daily flag volume, false-positive rate, and analyst clearance time by category; refreshed hourly, replaced a 2-day Excel weekly report, became the compliance team's daily standup reference.
-- Designed retrospective study comparing the new ML model against the rules engine on 4M historical transactions; computed a 35% false-positive reduction with 95% confidence intervals using Python (statsmodels); presented to the executive review committee, became the main basis for green-lighting active scoring.
-- Wrote SQL exploration notebooks for the analyst team showing which signal combinations correlated with confirmed fraud (e.g., geo-anomaly combined with merchant-risk score above thresholds was 12x more likely to be real fraud); incorporated into the manual review playbook.
+- Codified NovaRisk's fraud-ops metric definitions (false-positive rate, SAR conversion rate, structuring pattern hit rate, model-vs-rule precision) into a YAML semantic layer over Snowflake; resolved 3 conflicting definitions of false-positive rate that an external auditor had flagged across different quarterly reports.
+- Analyzed 6 months of the senior fraud analyst's ad-hoc query backlog (~40 requests per week, ~22 analyst-hours per week) in SQL on Snowflake; categorized into 8 business-problem clusters and 20 representative golden SQL templates that became the project's evaluation gold set.
+- Designed a retrospective gap analysis comparing the analyst's hand-written SQL against the semantic-layer-derived SQL across 20 templates; surfaced 4 cases where the hand-written version had drifted from the canonical definition, and brought all 20 back to a single source of truth.
+- Built the evaluation harness measuring SQL accuracy, answer accuracy (with ±2% tolerance), hallucination rate, and citation coverage on the 20 golden queries; the framework was reused unchanged in subsequent phases to drive the agent past the 85% SQL accuracy and 80% answer accuracy gates needed for SOC2 readiness.
 
 ### Pulse Social, Feed Ranking Microservice
 

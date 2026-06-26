@@ -94,7 +94,29 @@
 
 ---
 
-## 7. 三条路其实是同一件事
+## 7. 一个完整的例子：John Doe 的三段经历正好对应这三条路
+
+我们在 [05-resume-matrix](../05-resume-matrix/README-cn.md) 里用了虚构学生 John Doe 来演示 1+N 简历法。回到他的三段经历，你会发现它们正好对应了上面这三条路里的每一条，而且能让你直观看到「素材准备」这件事在每一条路上分别长什么样。
+
+**2025 年冬天的 NovaRisk 反欺诈合同项目，对应方法一：导师设计的项目。** John 入职这个 6 周的 winter contract 时，他的 mentor 已经写好了 [一整套项目设计材料](../../students/john-doe/experiences/from-2025-12-to-2026-01-NovaRisk-fraud-aml-bi-agent/)：项目背景与业务需求、团队和协作模式、详细的功能与非功能需求、技术架构、执行计划。他在真正动手之前，写简历需要的全部上下文都已经在文件夹里了。这种设计材料的颗粒度，就是你以后跟着导师做项目时能拿到的标准起点。
+
+**2025 年夏天的 Cedar Ridge Women's Health 实习，对应方法二：把已有项目拔高精修。** 这是这门课里最具教学价值的一段，因为我们把「拔高」前后的两份材料都放出来了，让你直接对照。
+
+拔高之前，John 对这段实习的描述是 [一份很薄的 SQL 报表文档](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting-cn.md)：他在 Snowflake 上写了 15 条 SQL 帮一位 senior analyst 出报表，没有业务框架、没有指标、没有 ownership、没有他自己做过的任何决定。如果直接用这份材料去写简历，他能挤出来的也就是「写了 15 条 SQL、做了 Excel 周报」这种没有竞争力的 bullet。
+
+拔高之后，同一段实习被重新框成了 [MaternaPulse BI Agent 的完整项目设计](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/)：他不再是「打杂写 SQL」，而是「为整个妇产科病房网络搭一个基于 AWS Bedrock AgentCore 的自然语言 BI Agent」。同一份经历，同一段时间，同一家公司，但素材深度是另一个数量级。
+
+你可以直接打开 master 简历 [resume.md](../../students/john-doe/resume.md) 看到这两个版本在 bullet 层面的对照：第一段叫「Maternity SQL Reporting (BEFORE elevation, teaching artifact)」的 bullet set 就是拔高之前的样子；紧跟着的两段（MaternaPulse 的 AI emphasis 和 Data Analytics emphasis）是拔高之后的样子。这就是 05-resume-matrix 里我们让你「先忽略它」的那段教学件，现在它的作用浮出水面了。
+
+具体怎么从前者拔到后者（用什么样的提问把概念漏洞挖出来、用什么样的方式把决策依据补回去、怎么在补深度的同时确保自己真的学进去了），后续 examples 会专门教。
+
+**2026 年夏天的 Pulse Social 实习，对应方法三：以终为始自己设计 mini 项目。** John 当时的处境是：他在前面的目标定位环节里清楚了自己的目标方向是「能进 Big Tech 后端组的 Software Engineer」。于是他反向设计了一个他确信自己能在 12 周内做完的项目：用 Go 重写一个 Feed 排序微服务，从一个 Python 单体里抽出来，按百分比灰度上线。这个设计是他自己拍出来的，导师只是把关，没有替他设计。最终结果就是 [feed-ranking-microservice 的 case 文档](../../students/john-doe/experiences/from-2026-06-to-2026-09-feed-ranking-microservice-cn.md)。具体怎么「以终为始」反推出适合自己的项目设计，同样后续 examples 会专门讲。
+
+这三段经历放在一起，覆盖了大多数学生会遇到的情况：要么手头有导师设计好的项目（方法一），要么手头有过去做的相对薄的项目（方法二），要么得自己从目标反推一个项目出来（方法三）。后续 examples 会一条一条把每种方法的具体操作教给你。这一节先把底层逻辑讲清楚就够了。
+
+---
+
+## 8. 三条路其实是同一件事
 
 我们退一步看这三种方法。表面上它们差别很大：第一条靠导师、第二条靠自己的过去、第三条靠从零设计。但本质上它们做的是同一件事。
 
@@ -110,7 +132,7 @@
 
 ---
 
-## 8. AI 时代怎么把素材变成 bullet
+## 9. AI 时代怎么把素材变成 bullet
 
 最后说一下为什么这个流程是 AI 时代正确的姿势。
 
@@ -126,7 +148,7 @@
 
 ---
 
-## 9. 导师寄语
+## 10. 导师寄语
 
 我经常碰到学生问我：「老师我现在简历上没什么项目，怎么办？」
 

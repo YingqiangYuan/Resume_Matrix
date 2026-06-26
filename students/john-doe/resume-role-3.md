@@ -2,13 +2,13 @@
 
 Seattle, WA · john.doe@example.com · linkedin.com/in/john-doe · github.com/john-doe
 
-> Tailored for Software Engineer roles at a healthcare company. Derived from `resume.md` by keeping Summary Variant C, the software/backend skill lines, and Bullet Sets 1 and 5. The healthcare-AI experience leads with the AI emphasis variant because the target reader cares about that domain.
+> Tailored for Software Engineer roles at a healthcare company. Derived from `resume.md` by keeping Summary Variant C, the software/backend skill lines, and Bullet Sets 2 and 6. The healthcare-AI experience leads with the AI emphasis variant because the target reader cares about that domain.
 
 ---
 
 ## 1. Summary
 
-M.S. Computer Science student building distributed backend services. Shipped a Go-based feed ranking microservice serving 4,500 requests per second at a consumer social product, plus a production LLM-powered clinical summarization service at a healthcare AI startup. Strong with Go, Python, gRPC, Kubernetes, and AWS.
+M.S. Computer Science student building distributed backend services. Shipped a Go-based feed ranking microservice serving 4,500 requests per second at a consumer social product, plus a production natural-language BI Agent on AWS Bedrock AgentCore at a 6-hospital maternity-care network. Strong with Go, Python, gRPC, Kubernetes, AWS CDK, and AWS.
 
 ---
 
@@ -24,11 +24,11 @@ B.S. Computer Science, University of California San Diego, 2024. GPA 3.8 / 4.0.
 ## 3. Skills
 
 Languages: Go, Python, TypeScript, SQL
-Backend: gRPC, Protocol Buffers, FastAPI, REST
-Cloud and Infra: AWS (ECS, EKS, Lambda, S3, RDS, ElastiCache), Docker, Kubernetes, Helm, Terraform
-Data: PostgreSQL, Redis, Apache Kafka
-Observability: Prometheus, Grafana, OpenTelemetry, structured logging
-AI and ML (working knowledge): LangChain, OpenAI API, RAG
+Backend: gRPC, Protocol Buffers, FastAPI, REST, Next.js
+Cloud and Infra: AWS CDK, AWS (Bedrock, AgentCore, ECS, EKS, Lambda, S3, RDS, ElastiCache, CloudWatch, Secrets Manager), Docker, Kubernetes, Helm
+Data: Snowflake, PostgreSQL, Redis
+Observability: CloudWatch, Prometheus, Grafana, OpenTelemetry, structured logging
+AI and ML (working knowledge): Strand Agents, Bedrock Knowledge Base, OpenAI API, RAG, evaluation harnesses
 
 ---
 
@@ -43,11 +43,11 @@ Software Engineer Intern, Backend Team. 2026-06 to 2026-09.
 - Designed a gRPC API with three RPCs (GetFeed, RecordImpression, HealthCheck) consumed by three client services; deployed to Kubernetes via Helm with HPA, Prometheus metrics, and OpenTelemetry tracing per stage.
 - Wrote a k6 load-test suite replaying two weeks of production traffic at 1.5x peak and ran two weeks of shadow deployment before any user rollout; shipped to 25% of users in 8 weeks with +6% session length lift in the A/B test (p<0.01).
 
-### MedSync Health, Clinical Notes Summarization Platform
+### Cedar Ridge Women's Health, MaternaPulse BI Agent
 
-Software Engineer Intern, AI Team. 2025-06 to 2025-09.
+Full-stack AI/Data Intern. 2025-06 to 2025-09.
 
-- Built an LLM-powered clinical notes summarization service using OpenAI GPT-4 and LangChain, processing 250K+ FHIR-formatted patient records and reducing physician chart review time from 12 to 4 minutes per case across a 60-physician pilot.
-- Designed a prompt evaluation harness with eight quality metrics (including factual coverage and citation faithfulness against a 300-note clinician-annotated gold set); iterated on prompts to reach 91% physician satisfaction at week 6.
-- Implemented structured output enforced by Pydantic schemas with a retry chain on schema-validation failure; cut malformed-output rate from 11% in the prototype to under 0.5% in production.
-- Built a RAG layer over an internal clinical-guideline corpus with k-NN retrieval on OpenAI embeddings stored in pgvector; deployed the full stack as a FastAPI service on AWS ECS Fargate.
+- Built MaternaPulse, an internal natural-language BI Agent for the maternity wards of a 6-hospital healthcare network, in Python using Strand Agents on AWS Bedrock AgentCore Runtime; let Charge Nurses across 15 OB wards ask plain-English shift-handover, bed-availability, and high-risk-patient questions and get hybrid text + table + chart answers in under 6 seconds (p95).
+- Designed the Knowledge Retrieval tool over Amazon Bedrock Knowledge Base on a ~50-doc internal OB glossary and metric corpus, so every answer cited canonical metric definitions; hit 100% citation rate on the 30-conversation golden set and held hallucination rate under 5%.
+- Implemented a multi-provider LLM abstraction (OpenAI / Gemini for demo, Claude on Bedrock for production) selectable by environment variable; the same agent code ran across three providers with zero conditional branches, shipped unchanged to the CMIO demo.
+- Wrote an evaluation harness against the senior clinical analyst's 20 SQL templates (the OB ward's internally-validated metric definitions) covering SQL accuracy, answer accuracy, hallucination rate, and p95 latency; reached 92% SQL accuracy and 87% answer accuracy on the golden set, clearing both the project's 90%/85% targets and the CMIO go/no-go gate.
