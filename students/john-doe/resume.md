@@ -116,4 +116,4 @@ Bullet Sets 2 and 3 are both drawn from [from-2025-06-to-2025-09-CedarRidge-mate
 
 Bullet Sets 4 and 5 are both drawn from [from-2025-12-to-2026-01-NovaRisk-fraud-aml-bi-agent/](./experiences/from-2025-12-to-2026-01-NovaRisk-fraud-aml-bi-agent/).
 
-Bullet Set 6 is drawn from [from-2026-06-to-2026-09-feed-ranking-microservice.md](./experiences/from-2026-06-to-2026-09-feed-ranking-microservice.md).
+Bullet Set 6 is drawn from [executed-case.md](./experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/executed-case.md).

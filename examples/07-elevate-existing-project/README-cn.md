@@ -26,6 +26,50 @@
 
 这就是为什么这套工作流即便每一步看起来都很简单，整体的杠杆却非常大。**信息密度的累积是非线性的**。
 
+下面这张图把 6 个阶段的输入累积过程画出来。每一个新阶段（蓝色）拿前面所有阶段的产出（绿色）当输入，自己再吐出新的绿色块。绿色块越往下越多，这就是「输入累积」具体长什么样。
+
+```mermaid
+flowchart TD
+    JD[输入: 目标 JD]:::input
+    R[输入: 薄简历 resume-old.md]:::input
+    Exp[输入: 原始薄经历 sql-reporting-cn.md]:::input
+
+    JD --> S1[阶段 1: understand-landscape]:::stage
+    S1 --> L1[产出: landscape/ 5 篇]:::out
+
+    JD --> S2
+    R --> S2
+    L1 --> S2[阶段 2: qualify-gap-plan A]:::stage
+    S2 --> G1[产出: 01-gap-analysis-cn.md]:::out
+
+    JD --> S3
+    L1 --> S3
+    R --> S3
+    Exp --> S3
+    G1 --> S3[阶段 3: mini-project-design + mini-project-review]:::stage
+    S3 --> C1[产出: case-cn.md elevated]:::out
+
+    JD --> S4
+    L1 --> S4
+    G1 --> S4
+    C1 --> S4[阶段 4: qualify-gap-plan B]:::stage
+    S4 --> P1[产出: 02-gap-fill-plan + pocs/ + tutorials/]:::out
+
+    P1 --> S5[阶段 5: qualify-coach]:::stage
+    S5 --> N1[产出: concept notes + POC 实操]:::out
+
+    N1 --> S6[阶段 6: qualify-mock-interview]:::stage
+    S6 --> W1[产出: 薄弱点报告]:::out
+
+    W1 -.补课循环.-> S5
+
+    classDef stage fill:#cfe2ff,stroke:#0d6efd,color:#000
+    classDef out fill:#d1e7dd,stroke:#198754,color:#000
+    classDef input fill:#fff3cd,stroke:#ffc107,color:#000
+```
+
+阶段 6 的 mock 面试官手里其实拿着完整的 8 份资料（简历 + JD + landscape 5 篇 + gap 分析 + elevated case + fill plan + POC + 学习笔记），跟一个真正「很了解你」的面试官没本质区别。
+
 > 注：这个 6 阶段、输入叠加的形状不是 deepen 独有的。后面 08 教「从 0 开始设计项目」时，你会看到几乎一样的链路，只是起点不同（没有现有经历，但目标 JD 一样）。一个工作流，两种用法。
 
 ---
@@ -65,6 +109,8 @@ John 在 2025 年秋天的状态是这样的。
 | 6. 验（mock interview） | `qualify-mock-interview` | 上面所有 | 面试转录加薄弱点报告加下一轮补课清单 | `qualify-for-.../mock-interview-{n}-cn.md` |
 
 注意每个阶段产出的文件直接进同一个 `qualify-for-<job>/` 文件夹。这个文件夹本身就是这次「qualify 这个岗位」全部工作的容器。
+
+> 注：上面这 5 个 skill 现在都已经在仓库的 `.claude/skills/` 下了。在 Claude Code 终端里直接调用对应的 skill（例如 `mini-project-design`、`qualify-gap-plan`、`qualify-coach`）就能跑通对应阶段；每个 skill 会问你索要它需要的输入，输出文件直接落到 `qualify-for-<JD-slug>/` 文件夹下。不知道当前应该用哪个 skill，看上面的表第 2 列。
 
 5、6 阶段的产出 John 自己跑过 2 到 3 轮（学 → 考 → 学 → 考），直到核心的 4 个 🔴 Core gap 都能「看 JD 立刻能讲」。
 

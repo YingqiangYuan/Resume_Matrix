@@ -62,7 +62,7 @@ John Doe 是华盛顿大学 CS 硕士在读，目标 2026 年 12 月毕业。他
 
 第二段是 2025 年冬天的金融项目，他作为合同工在 NovaRisk AI 给反欺诈运营团队搭了 Fraud and AML BI Agent 的 Phase 0 基础。项目设计材料在 [NovaRisk-fraud-aml-bi-agent/](../../students/john-doe/experiences/from-2025-12-to-2026-01-NovaRisk-fraud-aml-bi-agent/)。这段同样可以两面写：AI 角度强调 Strand Agents 上的工具链搭建、Bedrock Knowledge Base 的 metric glossary 入库、SOC2 + FinCEN 审计追溯链；Data Analytics 角度强调对 6 个月历史 ad-hoc 请求的 SQL 模式分析、把分散在 Slack 和 Notion 里的口径定义重写成 YAML 语义层、回溯对照分析师手写 SQL 与语义层 SQL 之间的 drift。
 
-第三段是 2026 年夏天的社交产品项目。案例在 [from-2026-06-to-2026-09-feed-ranking-microservice-cn.md](../../students/john-doe/experiences/from-2026-06-to-2026-09-feed-ranking-microservice-cn.md)。这段相对纯粹，就是软件开发：Go 写微服务、gRPC、Kubernetes、灰度上线。这段没有第二种重点写法。
+第三段是 2026 年夏天的社交产品项目。案例在 [Pulse Social Feed Ranker 成熟 case](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/executed-case-cn.md)。这段相对纯粹，就是软件开发：Go 写微服务、gRPC、Kubernetes、灰度上线。这段没有第二种重点写法。
 
 所以 John Doe 的母版简历里有这五段「可投递」的 bullet set，每段下面 3 到 4 条 bullet：
 
@@ -117,7 +117,7 @@ John Doe 可以同时投 AI、Data Analyst、Software 三类岗位。他会从�
 
 - [MaternaPulse BI Agent 项目设计材料](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/)
 - [NovaRisk Fraud & AML BI Agent 项目设计材料](../../students/john-doe/experiences/from-2025-12-to-2026-01-NovaRisk-fraud-aml-bi-agent/)
-- [社交 Feed 排序项目案例](../../students/john-doe/experiences/from-2026-06-to-2026-09-feed-ranking-microservice-cn.md)
+- [社交 Feed 排序项目案例](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/executed-case-cn.md)
 
 建议的看法：先把三份素材浏览一遍，理解项目本身是什么；再打开母版 [resume.md](../../students/john-doe/resume.md)，对照看每个 bullet set 是怎么从素材里抽出来的，注意同一个项目的两种重点写法（AI 版 vs Data Analytics 版）措辞上的差别；最后打开四份派生简历，对照母版看哪些内容被保留、哪些被删掉。
 
