@@ -41,7 +41,7 @@ This is a New Grad opening. We do not expect you to arrive with deep production 
 ## Education, Experience, and Other Information
 
 - Bachelor's degree in Computer Science, Data Science, Health Informatics, or a related field. A Master's degree is an asset, particularly with coursework in machine learning, natural language processing, or distributed systems.
-- 0–2 years of post-graduation experience. New grad applications are welcome and explicitly encouraged.
+- 0 to 2 years of post-graduation experience. New grad applications are welcome and explicitly encouraged.
 - Required: strong Python proficiency including at least one production-grade or production-adjacent codebase. We will ask to discuss a code sample during the technical loop.
 - Required: SQL proficiency including window functions and basic warehouse query optimization. Snowflake or BigQuery exposure is preferred; comparable experience with PostgreSQL plus a small Snowflake project is acceptable.
 - Strongly preferred: hands-on experience with at least one LLM application framework. Strand Agents, LangChain, LlamaIndex, Haystack, or comparable. We use Strand Agents in production; experience with any well-known equivalent will transfer.

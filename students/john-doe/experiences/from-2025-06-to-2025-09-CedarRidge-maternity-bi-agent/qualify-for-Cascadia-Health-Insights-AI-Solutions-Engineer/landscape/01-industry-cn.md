@@ -272,4 +272,4 @@ graph LR
 
 ---
 
-> 下一篇看 02-company.md（Cascadia 公司维度）。
+> 下一篇看 02-company-cn.md（Cascadia 公司维度）。

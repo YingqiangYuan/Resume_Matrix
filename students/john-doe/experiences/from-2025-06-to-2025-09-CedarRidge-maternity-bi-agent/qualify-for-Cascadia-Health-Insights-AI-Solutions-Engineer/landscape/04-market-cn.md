@@ -316,7 +316,7 @@ confidence 标签：entry tier replacement risk medium（AI Solutions Engineer �
 
 ## 7. 跨文件交叉参照与本节结论锚点
 
-本节涉及的"行业"判断与 01-industry.md 重叠之处包括：PNW healthcare AI vendor 生态、Big Tech 在 PNW 的整体扩张节奏、healthcare IT 整体景气度。本节聚焦"招聘量与薪资"侧面，把行业层面的判断留给 01-industry.md。本节涉及的"角色"判断与 03-role.md 重叠之处包括：AI Solutions Engineer 在 Customer-Embedded 团队中的职责、AI 工具如何重塑日常工作。本节聚焦"岗位族在 PNW 有多少坑、给多少钱"，把岗位层面的判断留给 03-role.md。
+本节涉及的"行业"判断与 01-industry-cn.md 重叠之处包括：PNW healthcare AI vendor 生态、Big Tech 在 PNW 的整体扩张节奏、healthcare IT 整体景气度。本节聚焦"招聘量与薪资"侧面，把行业层面的判断留给 01-industry-cn.md。本节涉及的"角色"判断与 03-role-cn.md 重叠之处包括：AI Solutions Engineer 在 Customer-Embedded 团队中的职责、AI 工具如何重塑日常工作。本节聚焦"岗位族在 PNW 有多少坑、给多少钱"，把岗位层面的判断留给 03-role-cn.md。
 
 ---
 
