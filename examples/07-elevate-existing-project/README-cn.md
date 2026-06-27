@@ -120,7 +120,7 @@ John 在 2025 年秋天的状态是这样的。
 
 抽象的工作流讲完了。下面我们带你打开 John 实际跑出来的几个文档看一眼。
 
-**阶段 1 产物**：打开 [00-title-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/00-title-cn.md)，这是一份「以做风投尽调的力气调研一个岗位背后的公司、行业、岗位族、市场」的报告首页。里面有 4 个 TL;DR、文件索引、6 条「还没核实的事项加下次怎么问 hiring manager」。如果你点进 [01-industry-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/01-industry-cn.md) 这种深篇，你会看到 5000 字以上中文、20 个以上 citation、mermaid 图、行业生命周期判断。这不是「看几篇博客写两段总结」的水平，是把一个岗位背后的世界看透的力气。**JD 是被 landscape 反向解构出来的，不是被孤立读的**。
+**阶段 1 产物**：打开 [00-title-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/00-title-cn.md)，这是一份「以做风投尽调的力气调研一个岗位背后的公司、行业、岗位族、市场」的报告首页。里面有 4 个文件索引、6 条「还没核实的事项加下次怎么问 hiring manager」。如果你点进 [01-industry-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/01-industry-cn.md) 这种深篇，你会看到 5000 字以上中文、20 个以上 citation、mermaid 图、行业生命周期判断。这不是「看几篇博客写两段总结」的水平，是把一个岗位背后的世界看透的力气。**JD 是被 landscape 反向解构出来的，不是被孤立读的**。
 
 **阶段 2 产物**：打开 [01-gap-analysis-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/01-gap-analysis-cn.md)，看 9 个 gap 是怎么按 🔴 / 🟡 / 🟠 拆出来的，每个 gap 后面附「为什么这个 gap 对这个岗位重要」和「closing 这个 gap 后你能讲什么」。不掺水，不美化，是诚实审计。
 

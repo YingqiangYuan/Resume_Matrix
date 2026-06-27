@@ -10,7 +10,7 @@
 - 学生定位: UW M.S. Computer Science 在读, 2026 年 12 月毕业, 美国公民, 西雅图本地, 无 production backend / distributed systems / Go 经历
 - 报告原则: facts only, no recommendation
 
-## 四个维度的 TL;DR (abbreviated)
+## 四个维度的 (abbreviated)
 
 ### Industry: US 消费社交 (sub-FAANG niche segment)
 
@@ -33,7 +33,7 @@ Seattle 是 PNW backend intern hiring 中心 (Amazon, Microsoft, Pulse, Smartshe
 | 文件 | 状态 | 回答什么问题 |
 |---|---|---|
 | [job-description.md](../job-description.md) | 已有 | Pulse Backend Engineer Intern JD 原文 |
-| 01-industry-cn.md | abbreviated | US consumer social 行业全景 (本文件 TL;DR 已涵盖) |
+| 01-industry-cn.md | abbreviated | US consumer social 行业全景 (本文件已涵盖) |
 | 02-company-cn.md | abbreviated | Pulse 公司维度 |
 | 03-role-cn.md | abbreviated | Backend Engineer Intern 角色维度 |
 | 04-market-cn.md | abbreviated | PNW Backend Intern 就业市场维度 |
