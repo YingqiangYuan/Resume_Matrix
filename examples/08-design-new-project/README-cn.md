@@ -68,6 +68,8 @@ John 摸一下自己的家底：Go 没写过，分布式系统只上过课没碰
 
 放在 Pulse 这个例子上，全部产出都进 `students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/` 这个文件夹。文件夹名字编码了「这次 qualify 的是哪段经历、对哪个岗位」。注意：经历文件夹用的是项目执行的时段（2026-04 到 2026-09），即便 John 在 2 月就开始设计，文件夹名字也已经为执行期预留好了位置。
 
+> 注：表里第 1 阶段用的 `understand-landscape` skill 是**前置课程 career_planning 里教过的内容**，不在本仓库教学里展开。本课假设你已经会用它，把一个 JD 反向解构成 4 篇 industry / company / role / market 调研报告。如果还没学过，回头补一下那门课再继续。本课从第 2 阶段开始展开。
+
 ---
 
 ## 5. 每个阶段实际长什么样
@@ -123,4 +125,4 @@ John 摸一下自己的家底：Go 没写过，分布式系统只上过课没碰
 
 工作流的杠杆在于它**对起点宽容, 对终点严格**。起点你可以是「什么都没有」, 终点必须是「能进面试间说清每一个决策」。08 教的就是从最难的那个起点出发, 怎么走到同样严格的那个终点。
 
-下一节我们开始展开 6 阶段里第一个具体 skill: `understand-landscape`, 教你怎么把一个 JD 反向解构成 4 篇行业 / 公司 / 岗位 / 市场报告。
+到这里你已经有了完整的项目素材库（一份 elevated case 或 from-scratch case 加配套的 landscape、gap 分析、fill plan、POC 实操、mock 面试转录）。下一节 09-write-bullets 教你**怎么从这份万字 case 文档压缩出简历上的 3 到 4 条 bullet**, 而且保证这些 bullet 经得起面试官追问。
