@@ -11,7 +11,9 @@ File and language conventions: for Chinese (the course default), write `01-gap-a
 
 Severity convention: each gap MUST be classified as 🔴 (Core / blocking) / 🟡 (Important) / 🟠 (Nice-to-have). Do not introduce P0/P1/P2 or High/Med/Low. Downstream skills (`qualify-coach`, `qualify-mock-interview`) prioritize their work by these emoji buckets, so consistency matters.
 
-Positioning: this skill runs at TWO stages of a larger 6-stage qualify pipeline. Stage 2 (early diagnosis) when the student only has a resume + JD + landscape; stage 4 (case-aligned) after `mini-project-design` has produced a `case-cn.md`. The two stages are handled by the same skill but produce subtly different outputs — see section 1. Upstream of stage 2 is `understand-landscape` (from a separate prerequisite course). Downstream of stage 4 is `qualify-coach` (stage 5), which consumes your fill plan and POC scaffolds.
+Positioning: this skill is **independently usable**. It takes a current state (resume + optional case + optional landscape) and a target (JD) and produces a gap analysis + fill plan + POC scaffolds + tutorial stubs. You can invoke it standalone any time a student has those inputs: you do NOT need any other skill to have run first.
+
+In the recommended 6-stage resume matrix workflow (landscape → gap analysis → case design → fill plan → coach → mock interview) this skill plays the gap analysis and fill plan stages (stage 2 and stage 4). Section 1 describes the two-stage detection logic. But that workflow is just a recommended sequence; the **coupling between this skill and the others is weak**. Each can be used in isolation; the workflow only adds value through the order of accumulated context. Students can also bring their own extra constraints when invoking (additional context, time budget, specific subject scope, "I only have 4 weeks not 12", "skip the POC scaffolds I only want gap analysis"). Adapt your output to those constraints rather than forcing the canonical workflow shape.
 
 This skill is unusual in that it appears at TWO stages of the workflow (stage 2 and stage 4). You must detect which stage you are running in and adapt accordingly. See section 1.
 

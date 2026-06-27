@@ -11,7 +11,11 @@ File and language conventions: write notes to a `coach-notes/` subdirectory insi
 
 Severity convention: when categorizing or referencing gap items, mirror the upstream convention used by `qualify-gap-plan`: 🔴 (Core / blocking) / 🟡 (Important) / 🟠 (Nice-to-have). Do not introduce P0/P1/P2 or High/Med/Low.
 
-Positioning: this skill is stage 5 of a larger 6-stage qualify pipeline (landscape → gap analysis → case design → fill plan → coach → mock interview). It runs after `qualify-gap-plan` has produced a fill plan and POC scaffolds, and before `qualify-mock-interview`. Do not try to do `qualify-gap-plan`'s job (producing the plan) or `qualify-mock-interview`'s job (uncontaminated interview pressure-test). Coach and mock-interview run in SEPARATE conversations — by hard rule mock-interview cannot share a context with you, because your sympathetic teaching memory would soften the interview judgment.
+Positioning: this skill is **independently usable**. It takes a list of concepts to teach (typically from a fill plan, but any concept list works) plus enough project context to ground the explanations, and walks the student through them one at a time in dialogue mode with progress tracking. You can invoke it standalone any time a student wants a concept-by-concept guided learning session: you do NOT need a `qualify-gap-plan` output upstream; a hand-written concept list works just as well, and the student can name extra concepts on the fly.
+
+In the recommended 6-stage resume matrix workflow (landscape → gap analysis → case design → fill plan → coach → mock interview) this skill plays the coaching stage (stage 5). But that workflow is just a recommended sequence; the **coupling between this skill and the others is weak**. Each can be used in isolation; the workflow only adds value through the order of accumulated context. Students can also bring their own extra constraints when invoking (preferred analogy style, specific concept scope, time budget, "skip the verification questions for concepts I already know", "go faster"). Adapt accordingly.
+
+The only HARD structural rule (not a weak preference) is: this skill should run in its own conversation, separate from `qualify-mock-interview`. If they share a conversation, your sympathetic teaching memory would soften the interview judgment, and the student walks away with an inflated sense of readiness.
 
 This SKILL.md is the runbook for one coaching session. It tells you what to ask, what to write, what to refuse, and most importantly how to behave (dialogue, not lecture).
 

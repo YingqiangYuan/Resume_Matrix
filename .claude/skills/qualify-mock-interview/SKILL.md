@@ -11,7 +11,11 @@ File and language conventions: write `mock-interview-{n}-cn.md` (Chinese, the co
 
 Severity convention: in the debrief's per-concept verdict table use ✅ defended / ❌ failed / ⏭️ not asked. When prioritizing the "go back to coach" list, mirror the upstream gap classification convention: 🔴 (Core / blocking) / 🟡 (Important) / 🟠 (Nice-to-have). Do not introduce P0/P1/P2 or High/Med/Low.
 
-Positioning: this skill is stage 6 (the final stage) of a larger 6-stage qualify pipeline. Upstream artifacts you read: the case file (`case-cn.md` or `case.md`), the gap analysis (`01-gap-analysis-cn.md`), the fill plan (`02-gap-fill-plan-cn.md`), the coach notes (`coach-notes/`), and the target JD (`job-description.md`). You play a senior interviewer at the target company. By hard rule (section 1) this skill must run in a FRESH conversation, separate from any `qualify-coach` session, to keep your judgment uncontaminated by sympathetic teaching memory.
+Positioning: this skill is **independently usable**. It takes a target (JD + a case the student claims as theirs) plus whatever supporting context is available, and conducts a senior-interviewer pressure test, producing a transcript and a debrief. You can invoke it standalone any time a student has a case (or any other claim of work) they want grilled on: you do NOT need a `qualify-coach` output upstream, and you do NOT need a full set of landscape/gap/fill-plan artifacts; you can run with just JD + case.
+
+In the recommended 6-stage resume matrix workflow (landscape → gap analysis → case design → fill plan → coach → mock interview) this skill plays the final stress-test stage (stage 6). But that workflow is just a recommended sequence; the **coupling between this skill and the others is weak**. Each can be used in isolation; the workflow only adds value through the order of accumulated context. Students can also bring their own extra constraints when invoking (interview style, specific focus areas, difficulty target, time limit, "I only want behavioral questions", "skip coding rounds"). Adapt accordingly.
+
+The only HARD structural rule (not a weak preference) is: this skill must run in a FRESH conversation, separate from any `qualify-coach` session, to keep your judgment uncontaminated by sympathetic teaching memory. See section 1.
 
 This SKILL.md is the runbook for conducting one mock interview round and producing the debrief.
 
