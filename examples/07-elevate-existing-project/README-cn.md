@@ -8,7 +8,7 @@
 
 这一篇专门展开方法二的工作流。它的本质是 **「以终为始」地重新设计已有经历**：拿一份薄简历加一个目标 JD 作为起点，把简历上**已有的那段薄经历**按「3 到 6 个月能够得着的程度」重新设计成一个新的、更深的项目版本，让它**对得上目标岗位的要求**。
 
-注意这一节我们还**没在写任何 bullet**，那是后面 09 才教的内容。这一节做的事是**把项目 case 给拔高**，相当于以「我要 qualify 这个 JD」为终点，反过来设计一个新版本的项目经历。case 拔高完之后，它一份顶两份用：往前是后面写拔高版 bullet 的素材，往后是你接下来 3 到 6 个月**要么在脑子里把它做一遍、要么真动手把它做出来**的施工蓝图。
+注意这一节我们还**没在写任何 bullet**，那是后面 [09-write-bullets](../09-write-bullets/README-cn.md) 才教的内容。这一节做的事是**把项目 case 给拔高**，相当于以「我要 qualify 这个 JD」为终点，反过来设计一个新版本的项目经历。case 拔高完之后，它一份顶两份用：往前是后面写拔高版 bullet 的素材，往后是你接下来 3 到 6 个月**要么在脑子里把它做一遍、要么真动手把它做出来**的施工蓝图。
 
 听起来抽象，但这个流程是有具体形状的。我们用 John Doe 的实际产出走一遍。
 
@@ -16,17 +16,27 @@
 
 ## 2. 工作流的本质：输入叠加
 
-先说核心机制。这个工作流不是一个黑盒。你扔进去一份薄简历和一个 JD，它直接吐出一份打磨好的最终简历。它是 **6 个阶段的链路**，每个阶段都做这件事：
+先说核心机制。这个工作流不是一个黑盒，它是 **6 个阶段的链路**，起点是「一份薄简历加一个目标 JD」，终点是「面试就绪的全套素材」。每一阶段都遵循同一条规则：
 
 - 拿前面所有阶段累积下来的产物当输入
 - 在它们的基础上多产出一些新信息
 - 把「前面的产物加上新产物」打包，传给下一阶段
 
-随着阶段推进，**累积的上下文越来越厚**。第一阶段只有简历和 JD，第六阶段已经有简历 + JD + landscape 5 篇 + gap 分析 + 拔高后的项目 case + 填 gap 的学习计划 + 9 个 POC 的实操产出 + 一轮 mock 面试的薄弱点报告。所有这些都是给后面写 bullet、写 summary、走进面试间用的弹药。
+走完 6 个阶段，你手上会累积 9 类「产物」文件。在看下面那张图之前，先把每个产物是什么、放在哪过一遍，不然图里突然冒出来的文件名容易让人懵：
 
-这就是为什么这套工作流即便每一步看起来都很简单，整体的杠杆却非常大。**信息密度的累积是非线性的**。
+- [`resume-old.md`](../../students/john-doe/resume-old.md)：学生进入工作流之前那份「写得不太行」的薄简历。
+- [`job-description.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/job-description.md)：学生选中的目标岗位招聘描述，后面所有阶段反向校准的锚点。
+- 原始薄经历 [`...sql-reporting-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting-cn.md)：简历上那段薄实习或项目的展开文档，是 07 工作流要拔高的原材料。
+- [`landscape/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/) 5 篇：用做风投尽调的力气调研「行业 / 公司 / 角色 / 市场」4 篇深篇加 1 篇 index，让 AI 真正「懂」这个岗位背后的世界（这一篇 skill 来自前置课程 career_planning）。
+- [`01-gap-analysis-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/01-gap-analysis-cn.md)：拿 JD 加 landscape 跟当前简历比对的诚实差距诊断，每条 gap 按 🔴 Core / 🟡 Important / 🟠 Nice-to-have 三档拆开。
+- [`case-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case-cn.md) 拔高版：把原始薄经历重新设计成够得着 JD 的项目设计文档。**整套工作流最核心的产物**，既是后续写拔高版 bullet 的素材，也是接下来 3 到 6 个月真去施工时的设计蓝图。
+- [`02-gap-fill-plan-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/02-gap-fill-plan-cn.md) 加 [`pocs/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/) 加 [`tutorials/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/)：拆 gap 得到的「填补差距」三件套，学习计划加每个 gap 一个 mini-POC 加配套教程。
+- `coach-notes/`：跟 AI coach 一起学概念时产出的笔记加进度表，动态生成于 [qualify-for 目录](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/) 下，本仓库示例里没展开。
+- `mock-interview-{n}-cn.md`：跟 AI 模拟面试官问答的转录加 debrief，同样动态生成于上面那个 qualify-for 目录下。
 
-下面这张图把 6 个阶段的输入累积过程画出来。整张图分成两列：
+**为什么这堆产物加在一起能撑起「面试就绪」？** 这 9 类产物一层一层堆出了「这个项目我真懂」的证据链：landscape 让你看 JD 的眼光跟别人不一样，gap 分析让你知道自己差在哪，拔高 case 描述你这段经历真正长什么样，POC 让你掏得出代码 demo，coach notes 让你能在白板前讲清每个技术选型，mock 让你提前在压测里暴露弱点。9 份摞起来，等于一个能坐进面试间、被任何角度追问都接得住的求职者。**信息密度的累积是非线性的**，这就是这套工作流的真正杠杆。
+
+下面这张图把这种累积过程画出来。整张图分成两列：
 
 - **左列「累积产物」**：从上往下越积越厚。最上面那个**实线方框**是初始的种子输入（薄简历 + 目标 JD），下面每一行的**虚线方框**是阶段跑完后新增进来的产物。
 - **右列「阶段」**：从上往下依次是 6 个阶段，每行一个。
@@ -78,7 +88,7 @@ flowchart LR
 
 阶段 6 的 mock 面试官手里其实拿着完整的一整套资料（简历 + JD + landscape 5 篇 + gap 分析 + 拔高 case + fill plan + POC + 学习笔记），跟一个真正「很了解你」的面试官没本质区别。
 
-> 注：这个 6 阶段、输入叠加的形状不是「为目标岗位拔高项目」这条路独有的。后面 08 教「从 0 开始设计项目」时，你会看到几乎一样的链路，只是起点不同（没有现有经历，但目标 JD 一样）。一个工作流，两种用法。
+> 注：这个 6 阶段、输入叠加的形状不是「为目标岗位拔高项目」这条路独有的。后面 [08-design-new-project](../08-design-new-project/README-cn.md) 教「从 0 开始设计项目」时，你会看到几乎一样的链路，只是起点不同（没有现有经历，但目标 JD 一样）。一个工作流，两种用法。
 
 ---
 
@@ -109,12 +119,12 @@ John 在 2025 年秋天的状态是这样的。
 
 | 阶段 | 解释 | 输入文档 | 输出文档 |
 |---|---|---|---|
-| 阶段 1 `understand-landscape` | 把目标 JD 当尽调对象, 调研行业加公司加角色加市场 | `job-description.md` | `landscape/00` 到 `04` 共 5 篇 |
-| 阶段 2 `qualify-gap-plan` 诊断版 | 对照 JD 和 landscape 诚实诊断当前简历的差距 | 上面所有加 `resume-old.md` | `01-gap-analysis-cn.md` |
-| 阶段 3 `mini-project-design` 加 `mini-project-review` | 把原始薄经历重新设计成够得着 JD 的拔高版, 3 轮迭代 | 上面所有加原始薄经历 | `case-cn.md` 拔高版 |
-| 阶段 4 `qualify-gap-plan` 对齐 case 版 | 对照拔高 case 重新算差距, POC 颗粒度更细 | 上面所有加 `case-cn.md` | `02-gap-fill-plan-cn.md` 加 `pocs/` 加 `tutorials/` |
-| 阶段 5 `qualify-coach` | 一个 gap 一个 gap 地学概念加写 POC, 顺便感受 case 难度 | 上面所有 | `coach-notes/` (笔记加进度表) |
-| 阶段 6 `qualify-mock-interview` | 用 AI 扮演陌生面试官真刀真枪压测 | 上面所有 | `mock-interview-{n}-cn.md` |
+| 阶段 1 `understand-landscape` | 把目标 JD 当尽调对象, 调研行业加公司加角色加市场 | [`job-description.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/job-description.md) | [`landscape/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/) 5 篇 |
+| 阶段 2 `qualify-gap-plan` 诊断版 | 对照 JD 和 landscape 诚实诊断当前简历的差距 | 上面所有加 [`resume-old.md`](../../students/john-doe/resume-old.md) | [`01-gap-analysis-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/01-gap-analysis-cn.md) |
+| 阶段 3 `mini-project-design` 加 `mini-project-review` | 把原始薄经历重新设计成够得着 JD 的拔高版, 3 轮迭代 | 上面所有加[原始薄经历](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting-cn.md) | [`case-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case-cn.md) 拔高版 |
+| 阶段 4 `qualify-gap-plan` 对齐 case 版 | 对照拔高 case 重新算差距, POC 颗粒度更细 | 上面所有加 [`case-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case-cn.md) | [`02-gap-fill-plan-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/02-gap-fill-plan-cn.md) 加 [`pocs/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/) 加 [`tutorials/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/) |
+| 阶段 5 `qualify-coach` | 一个 gap 一个 gap 地学概念加写 POC, 顺便感受 case 难度 | 上面所有 | `coach-notes/` 动态生成于 [qualify-for 目录](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/) |
+| 阶段 6 `qualify-mock-interview` | 用 AI 扮演陌生面试官真刀真枪压测 | 上面所有 | `mock-interview-{n}-cn.md` 动态生成于 [qualify-for 目录](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/) |
 
 每个阶段产出的文件都直接落在同一个 `qualify-for-<JD-slug>/` 文件夹下。这个文件夹本身就是这次「qualify 这个岗位」全部工作的容器。
 
@@ -134,11 +144,11 @@ POC 这个词后面会反复出现，先在这里说一次：**POC 是 Proof of 
 
 **产出**：
 
-- `landscape/00-title-cn.md`：index 加未核实事项清单（备问 hiring manager 用）
-- `landscape/01-industry-cn.md`：行业研究
-- `landscape/02-company-cn.md`：公司研究
-- `landscape/03-role-cn.md`：岗位族研究
-- `landscape/04-market-cn.md`：市场研究
+- [`landscape/00-title-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/00-title-cn.md)：index 加未核实事项清单（备问 hiring manager 用）
+- [`landscape/01-industry-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/01-industry-cn.md)：行业研究
+- [`landscape/02-company-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/02-company-cn.md)：公司研究
+- [`landscape/03-role-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/03-role-cn.md)：岗位族研究
+- [`landscape/04-market-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/04-market-cn.md)：市场研究
 
 **为什么本工作流非要先跑 landscape**：后面阶段 2 算 gap、阶段 3 设计拔高 case 时，AI 的输出质量直接取决于「它对这个岗位的真实理解有多深」。没有 landscape 当上下文，AI 就只能基于 JD 字面意义猜，gap 和 case 都会比较浅。
 
@@ -168,10 +178,10 @@ landscape 在同目录的 landscape/ 下。
 
 **产出**：4 个文件，全部落到 `qualify-for-<JD-slug>/` 下：
 
-- `01-gap-analysis-cn.md`：诚实的 gap 诊断，每个 gap 按 🔴/🟡/🟠 三档拆开
-- `02-gap-fill-plan-cn.md`：填 gap 的总计划，含 POC 索引、教程索引、周计划表
-- `pocs/poc-NN-<slug>/README-cn.md`：每个 gap 一个 POC 脚手架
-- `tutorials/NN-<slug>-cn.md`：每个 gap 一个教程占位文件
+- [`01-gap-analysis-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/01-gap-analysis-cn.md)：诚实的 gap 诊断，每个 gap 按 🔴/🟡/🟠 三档拆开
+- [`02-gap-fill-plan-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/02-gap-fill-plan-cn.md)：填 gap 的总计划，含 POC 索引、教程索引、周计划表
+- `pocs/poc-NN-<slug>/README-cn.md`：每个 gap 一个 POC 脚手架，本仓库示例展开了 [`poc-01-strand-agents/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/poc-01-strand-agents/README-cn.md) 和 [`poc-05-semantic-yaml/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/poc-05-semantic-yaml/README-cn.md)
+- `tutorials/NN-<slug>-cn.md`：每个 gap 一个教程占位文件，本仓库示例展开了 [`01-strand-agents-quickstart-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/01-strand-agents-quickstart-cn.md) 和 [`05-semantic-layer-yaml-design-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/05-semantic-layer-yaml-design-cn.md)
 
 **翻车点**：没提供 capacity profile，计划表就是 AI 拍脑袋的「假周计划」，一定告诉它你每周几小时。还有，POC 是技能习题、不是简历级项目，别误读成「我要从头做 9 个完整业务项目」。
 
@@ -312,7 +322,7 @@ case 文件: .../qualify-for-.../case-cn.md
 
 **翻车点**：
 
-- 把 AI 当百度。它只讲一遍、问完问题就停。你不答它就不动，别等它自己往下吐。
+- 把 AI 当搜索引擎用。它只讲一遍、问完问题就停。你不答它就不动，别等它自己往下吐。
 - 跳过验证问题。验证问题答得敷衍，等于这个概念没学会，但进度表上是 ✅，到了 mock 面试就崩。
 - 在同一个会话里既跑 coach 又想做 mock 面试。后面 §4.6 节会专门讲，这是另一条硬约束。
 
@@ -336,15 +346,15 @@ John 自己实际跑下来，§4.5 和 §4.6 这一对循环走了 2 到 3 轮�
 
 ---
 
-## 5. 每个阶段实际长什么样
+## 5. 看一眼这些产物的细节：密度有多大
 
-抽象的工作流讲完了。下面我们带你打开 John 实际跑出来的几个文档看一眼。
+§2 列了产物清单加链接，§4 表格也给了链接，但只看文件名感受不到产物的密度。这一节带你点进几个关键文件具体看一眼：一份 landscape 5 篇有多重、拔高 case 跟原始薄经历差距有多大、POC 加教程怎么具体到能直接动手。
 
 **阶段 1 产物**：打开 [00-title-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/00-title-cn.md)，这是一份「以做风投尽调的力气调研一个岗位背后的公司、行业、岗位族、市场」的报告首页。里面有另外 4 篇深篇的索引、6 条「还没核实的事项加下次怎么问 hiring manager」。如果你点进 [01-industry-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/01-industry-cn.md) 这种深篇，你会看到 5000 字以上中文、20 个以上 citation、mermaid 图、行业生命周期判断。这不是「看几篇博客写两段总结」的水平，是把一个岗位背后的世界看透的力气。**JD 是被 landscape 反向解构出来的，不是被孤立读的**。
 
 **阶段 2 产物**：打开 [01-gap-analysis-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/01-gap-analysis-cn.md)，看 9 个 gap 是怎么按 🔴 / 🟡 / 🟠 拆出来的，每个 gap 后面附「为什么这个 gap 对这个岗位重要」和「closing 这个 gap 后你能讲什么」。不掺水，不美化，是诚实审计。
 
-**阶段 3 产物**：打开 [case-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case-cn.md)。这是 John 把 Cedar Ridge 薄实习重新设计成的「如果再多 6 个月做深，项目长什么样」的版本。同一段时间、同一家公司、同一个 mentor，但是技术栈、产出、决策密度都另一个数量级。这是 bullet 写作的源头。
+**阶段 3 产物**：把 [拔高版 case-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case-cn.md) 和 [原始薄经历 sql-reporting-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting-cn.md) 两份对照着打开看, 你立刻能直观感受到「拔高」具体是什么意思。同一段时间、同一家公司、同一个 mentor，但是技术栈、产出、决策密度都是另一个数量级。这是后面写拔高版 bullet 的源头。
 
 **阶段 4 产物**：打开 [02-gap-fill-plan-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/02-gap-fill-plan-cn.md)，看 9 个 gap 怎么变成 9 个 mini-POC 的设计稿。每个 POC 是一个**学技能的小项目**，不是假装的业务项目。然后翻一下示例 [POC-01](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/poc-01-strand-agents/README-cn.md) 加配套教程 [tutorial 01](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/01-strand-agents-quickstart-cn.md)，是不是非常具体？
 

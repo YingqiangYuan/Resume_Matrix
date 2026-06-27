@@ -22,7 +22,7 @@ from-2026-04-to-2026-09-pulse-social-feed-ranker/
 
 ## 跟 CedarRidge 文件夹的对比
 
-CedarRidge 文件夹 (`../from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/`) 是 elevate 工作流的产物 (07 模式)。整段 Cedar Ridge 实习真实发生过, deepen 只是重新理解和深化, 不会真的再执行一遍。
+CedarRidge 文件夹 (`../from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/`) 是 elevate (拔高) 工作流的产物 (07 模式)。整段 Cedar Ridge 实习真实发生过, 拔高只是重新理解和深化, 不会真的再执行一遍。
 
 Pulse 这个文件夹是 from-scratch 工作流的产物 (08 模式)。起点是 nothing relevant 加一份 JD, John 设计了一个 forward-looking 项目作为 take-home 谈资 + 拿 offer 后执行的 spec, 然后真的通过 Pulse Backend Intern offer 把这个项目从「设计」变成了「执行完的成熟版」。
 

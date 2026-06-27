@@ -72,7 +72,7 @@
 
 这条路的前提是，你手头已经有一两个项目可以拿来拔高。如果完全没有，这一条用不上，需要走第三条。
 
-这套方法的完整工作流（landscape 调研 → gap 分析 → elevated 项目设计 → mini-POC 加教程 → coach → mock 面试），[07-elevate-existing-project](../07-elevate-existing-project/README-cn.md) 专门展开了一遍，把 John Doe 的实际案例从头到尾走给你看。
+这套方法的完整工作流（landscape 调研 → gap 分析 → 拔高项目设计 → mini-POC 加教程 → coach → mock 面试），[07-elevate-existing-project](../07-elevate-existing-project/README-cn.md) 专门展开了一遍，把 John Doe 的实际案例从头到尾走给你看。
 
 ---
 
@@ -108,7 +108,7 @@
 
 你可以直接打开 master 简历 [resume.md](../../students/john-doe/resume.md) 看到这两个版本在 bullet 层面的对照：第一段叫「Maternity SQL Reporting (BEFORE elevation, teaching artifact)」的 bullet set 就是拔高之前的样子；紧跟着的两段（MaternaPulse 的 AI emphasis 和 Data Analytics emphasis）是拔高之后的样子。这就是 05-resume-matrix 里我们让你「先忽略它」的那段教学件，现在它的作用浮出水面了。
 
-具体怎么从前者拔到后者，[07-elevate-existing-project](../07-elevate-existing-project/README-cn.md) 把这整条 deepen 工作流的链路拆成 6 个阶段（landscape 调研、gap 分析、elevated 项目设计、学习计划、实操、mock 面试），跟着 John Doe 的实际产出从头走一遍。
+具体怎么从前者拔到后者，[07-elevate-existing-project](../07-elevate-existing-project/README-cn.md) 把这整条「拔高」工作流的链路拆成 6 个阶段（landscape 调研、gap 分析、拔高项目设计、学习计划、实操、mock 面试），跟着 John Doe 的实际产出从头走一遍。
 
 **2026 年夏天的 Pulse Social 实习，对应方法三：以终为始自己设计 mini 项目。** John 当时的处境是：他在前面的目标定位环节里清楚了自己的目标方向是「能进 Big Tech 后端组的 Software Engineer」。于是他反向设计了一个他确信自己能在 12 周内做完的项目：用 Go 重写一个 Feed 排序微服务，从一个 Python 单体里抽出来，按百分比灰度上线。这个设计是他自己拍出来的，导师只是把关，没有替他设计。最终结果就是 [Pulse Social feed ranker 的成熟 case](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/executed-case-cn.md)。具体怎么「以终为始」反推出适合自己的项目设计，[08-design-new-project](../08-design-new-project/README-cn.md) 会专门讲。它跟 07 共用同一套 6 阶段工作流，只是起点不同（07 起点是「有薄经历」，08 起点是「白纸」）。
 

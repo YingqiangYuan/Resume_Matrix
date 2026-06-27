@@ -2,7 +2,7 @@
 
 > Period: 2025-06 to 2025-09. Company: Cedar Ridge Women's Health. Role: Analytics Intern. Industry: Healthcare.
 
-> Note: This is how John Doe originally described this internship before he learned to elevate it. The same internship, reframed and deepened through "Method 2: elevating an existing project," became the [CedarRidge-maternity-bi-agent](./from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/) project design package. Reading the two side by side shows what "elevation" actually means in practice.
+> Note: This is how John Doe originally described this internship before he learned to elevate it. The same internship, reframed and elevated through "Method 2: elevating an existing project," became the [CedarRidge-maternity-bi-agent](./from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/) project design package. Reading the two side by side shows what "elevation" actually means in practice.
 
 ## 1. Context
 

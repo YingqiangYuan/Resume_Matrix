@@ -10,30 +10,44 @@
 
 换句话说，如果 07 你已经读懂了链路是怎么累积上下文的，08 你只需要看清楚一件事：起点没有现成经历的时候，整个链路依然成立，只是第 3 阶段的输入和输出形态变了一点。
 
-> 注：这一节同样不教你具体怎么实现每个 skill。它教你**起点不同的时候**这个工作流长什么样、需要你额外注意什么。
-
 ---
 
-## 2. 工作流的本质：跟 07 一样, 只是起点不同
+## 2. 工作流的本质：跟 07 一样，只是起点不同
 
-先把 07 §2 的那张图复述一下。这是 6 个阶段输入累积的样子。
+复述一遍 [07 §2](../07-elevate-existing-project/README-cn.md#2-工作流的本质输入叠加) 那条 6 阶段链路：landscape → gap 分析 → 项目 case → fill plan → coach → mock。08 沿用这同一条链路，只在第 3 阶段换了个调用模式（从 `elevate` 切成 `from-scratch`）。
+
+看图之前先快速过一遍 08 这条路上的产物。这一节假设你**先读过** [07 §2](../07-elevate-existing-project/README-cn.md#2-工作流的本质输入叠加)（那里展开讲了 9 类产物分别是什么）。08 的产物清单跟 07 几乎完全一样，只有 3 处不同：
+
+- **没有「原始薄经历」文件**：起点是白纸，没有任何相关现有经历可以拔高。第 3 阶段的输入里相应也少了这一份。
+- **[`case-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/case-cn.md) 是「前瞻版」**（forward-looking）：文档语气用「我计划 / 我将要」，而不是 07 那种「我做了 / 我建了」，因为这是写在执行之前的设计稿。
+- **多一份 [`executed-case-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/executed-case-cn.md)**：项目真去执行 12 周后回头写的「成熟版」case，记录真正发生的事。08 比 07 多这一份，因为这条路径是「真去执行」，设计 → 执行 → 成熟是有形态变化的，详情见 §6。
+
+下面这张图把整套工作流画成「主干加旁路输入」的形态：阶段 1 到阶段 6 是从上到下的主干（蓝色），旁边伸进来的虚线箭头是各阶段需要的外部输入。其中**阶段 3 是 07 和 08 唯一形态不同的地方**，所以画了两条候选输入：07 走「现有经历」（`elevate` 模式），08 走「无现有经历加 capacity profile」（`from-scratch` 模式）。
 
 ```mermaid
 flowchart TD
-  A[阶段 1 landscape] --> B[阶段 2 gap 分析]
-  B --> C[阶段 3 项目设计 + review]
-  C --> D[阶段 4 gap 填充计划 + POC]
-  D --> E[阶段 5 coach 学概念加写代码]
-  E --> F[阶段 6 mock interview]
-  J[JD] --> A
-  R[简历] --> B
-  X[现有经历] -. elevate 模式 .-> C
-  N[(无现有经历)] -. from-scratch 模式 .-> C
+    S1["阶段 1<br/>understand-landscape"] --> S2["阶段 2<br/>qualify-gap-plan 诊断版"]
+    S2 --> S3["阶段 3<br/>mini-project-design 加 review"]
+    S3 --> S4["阶段 4<br/>qualify-gap-plan 对齐 case 版"]
+    S4 --> S5["阶段 5<br/>qualify-coach"]
+    S5 --> S6["阶段 6<br/>qualify-mock-interview"]
+
+    JD["目标 JD<br/>job-description.md"] -. 外部输入 .-> S1
+    R["薄简历<br/>resume-old.md"] -. 外部输入 .-> S2
+    E1["现有薄经历"] -. 07: elevate 模式 .-> S3
+    E2["无现有经历<br/>加 capacity profile"] -. 08: from-scratch 模式 .-> S3
+
+    classDef stage fill:#cfe2ff,stroke:#0d6efd,color:#000
+    classDef inp fill:#fff3cd,stroke:#ffc107,color:#000
+    classDef mode fill:#f8d7da,stroke:#dc3545,color:#000
+    class S1,S2,S3,S4,S5,S6 stage
+    class JD,R inp
+    class E1,E2 mode
 ```
 
-链路完全没变。每一阶段都是「拿前面所有产出 + 一点新输入 → 新产出」。第 6 阶段拿到的上下文厚度跟 07 一样：简历加 JD 加 landscape 4 篇加 gap 分析加 case 加学习计划加 POC 实操加 mock 转录。
+链路本身完全没变。每一阶段都是「拿前面所有产出加一点新输入产出新东西」。第 6 阶段累积到手的资料厚度跟 07 一样：简历加 JD 加 landscape 5 篇加 gap 分析加 case 加学习计划加 POC 实操加 mock 转录。
 
-唯一的差异在第 3 阶段。07 里 `mini-project-design` 的输入里有一项「locked business context」：同一家公司、同一段时间、同一个 mentor，project-design skill 只能在这些约束里重组事实。08 里没有这一项。skill 切到 `from-scratch` 模式，产出的 case 是前瞻性的：它描述的是「你**将要**做什么」，不是「你做过什么」。
+唯一的形态差异在第 3 阶段。07 里 `mini-project-design` 的输入里有一项「locked business context」：同一家公司、同一段时间、同一个 mentor，design skill 只能在这些约束里重组事实。08 里没有这一项。skill 切到 `from-scratch` 模式，产出的 case 是前瞻性的：它描述的是「你**将要**做什么」，不是「你做过什么」。
 
 骨架同源，参数不同。这就是 06 + 07 + 08 之间的关系。
 
@@ -53,38 +67,38 @@ John 摸一下自己的家底：Go 没写过，分布式系统只上过课没碰
 
 ---
 
-## 4. 6 个阶段, 跟 07 同骨架
+## 4. 6 个阶段，跟 07 同骨架
 
-下面这张表跟 07 §4 的那张几乎完全一样。唯一不同的是第 3 行多了一个「`from-scratch` 模式」的标注。
+下面这张表跟 [07 §4](../07-elevate-existing-project/README-cn.md) 的那张几乎完全一样，差异是第 3 行 skill 切到 `from-scratch` 模式、输入不带「现有经历」、输出是「前瞻版」case。文件路径全部指向 Pulse 这个例子的实际位置。
 
-| 阶段 | 用什么 skill | 输入 | 新产出 | 产出存在哪 |
-|---|---|---|---|---|
-| 1. 理解目标 | `understand-landscape` | JD | landscape 4 篇加 index | `qualify-for-.../landscape/` |
-| 2. 诊断 gap | `qualify-gap-plan` 第一部分 | JD 加 landscape 加当前简历 | gap 分析 | `qualify-for-.../01-gap-analysis-cn.md` |
-| 3. 设计项目 (**from-scratch** 模式) | `mini-project-design` 加 `mini-project-review` | 上面所有加 capacity profile, **不带现有经历** | 前瞻性的 case | `qualify-for-.../case-cn.md` |
-| 4. 拆 gap 为学习计划 | `qualify-gap-plan` 第二部分 | 上面所有 | gap 填充计划加 mini-POC 设计加教程目录 | `qualify-for-.../02-gap-fill-plan-cn.md` 加 `pocs/` 加 `tutorials/` |
-| 5. 练（学概念加写代码） | `qualify-coach` | 上面所有 | 概念学习笔记加 POC 代码加实操记录 | `pocs/poc-*/` 各文件夹 |
-| 6. 验（mock interview） | `qualify-mock-interview` | 上面所有 | 面试转录加薄弱点报告加下一轮补课清单 | `qualify-for-.../mock-interview-{n}-cn.md` |
+| 阶段 | 解释 | 输入文档 | 输出文档 |
+|---|---|---|---|
+| 阶段 1 `understand-landscape` | 把目标 JD 当尽调对象, 调研行业加公司加角色加市场 | [`job-description.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/job-description.md) | [`landscape/`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/landscape/) 5 篇 (本仓库示例只展开了 `00-title-cn.md`) |
+| 阶段 2 `qualify-gap-plan` 诊断版 | 对照 JD 和 landscape 诚实诊断当前简历的差距 | 上面所有加 [`resume-old.md`](../../students/john-doe/resume-old.md) | [`01-gap-analysis-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/01-gap-analysis-cn.md) (stub) |
+| 阶段 3 `mini-project-design` 加 `mini-project-review` (**from-scratch 模式**) | 在无现有经历约束下前瞻性地设计 case, 3 轮迭代 | 上面所有加 capacity profile (**不带现有经历**) | [`case-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/case-cn.md) 前瞻版 |
+| 阶段 4 `qualify-gap-plan` 对齐 case 版 | 对照前瞻 case 重新算差距, POC 颗粒度更细 | 上面所有加 [`case-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/case-cn.md) | [`02-gap-fill-plan-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/02-gap-fill-plan-cn.md) 加 [`pocs/`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/pocs/) 加 [`tutorials/`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/tutorials/) |
+| 阶段 5 `qualify-coach` | 一个 gap 一个 gap 地学概念加写 POC, 顺便感受 case 难度 | 上面所有 | `coach-notes/` 动态生成于 [qualify-for 目录](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/) |
+| 阶段 6 `qualify-mock-interview` | 用 AI 扮演陌生面试官真刀真枪压测 | 上面所有 | `mock-interview-{n}-cn.md` 动态生成于 [qualify-for 目录](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/) |
 
-放在 Pulse 这个例子上，全部产出都进 `students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/` 这个文件夹。文件夹名字编码了「这次 qualify 的是哪段经历、对哪个岗位」。注意：经历文件夹用的是项目执行的时段（2026-04 到 2026-09），即便 John 在 2 月就开始设计，文件夹名字也已经为执行期预留好了位置。
+全部产出都进 [`from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/) 这个文件夹。文件夹名字编码了「这次 qualify 的是哪段经历、对哪个岗位」。注意：经历文件夹用的是项目执行的时段（2026-04 到 2026-09），即便 John 在 2 月就开始设计，文件夹名字也已经为执行期预留好了位置。
 
-> 注：表里第 1 阶段用的 `understand-landscape` skill 是**前置课程 career_planning 里教过的内容**，不在本仓库教学里展开。本课假设你已经会用它，把一个 JD 反向解构成 4 篇 industry / company / role / market 调研报告。如果还没学过，回头补一下那门课再继续。本课从第 2 阶段开始展开。
+> 注：表里第 1 阶段用的 `understand-landscape` skill 是**前置课程 career_planning 里教过的内容**，不在本仓库教学里展开。本课假设你已经会用它，把一个 JD 反向解构成 4 篇 industry / company / role / market 调研报告加 1 篇 index。如果还没学过，回头补一下那门课再继续。本课从第 2 阶段开始展开。
 
 ---
 
-## 5. 每个阶段实际长什么样
+## 5. 看一眼这些产物的细节：08 特有的几处长什么样
 
-抽象工作流讲完了。下面带你看 John 在 Pulse 这个例子里实际跑出来的几个文档。
+§2 列了产物清单和差异，§4 表格也给了链接，但只看文件名感受不到 08 跟 07 的具体落差。这一节带你点进 08 几个**跟 07 形态不同**的关键文件具体看一眼，体会 from-scratch 模式的特殊之处。
 
-**阶段 1 产物**：landscape 4 篇 (industry / company / role / market) 跟 07 同样的力气。Pulse 是一家 200 人、800 万 MAU 的消费社交，主战场是 Home Feed。这些细节、它的工程文化、它在消费社交细分赛道里的位置，都是 landscape 阶段挖出来的。挖出来之后你才知道：JD 里那句「we treat the feed as a craft」不是空话，他们在 Feed 工程上是真的下重注。
+**[landscape `00-title-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/landscape/00-title-cn.md)** (本仓库示例只展开了 index 这一篇)：跟 07 同样的力气。Pulse 是一家 200 人、800 万 MAU 的消费社交，主战场是 Home Feed。这些细节、它的工程文化、它在消费社交细分赛道里的位置，都是 landscape 阶段挖出来的。挖出来之后你才知道：JD 里那句「we treat the feed as a craft」不是空话，他们在 Feed 工程上是真的下重注。
 
-**阶段 2 产物**：gap analysis。John 把自己的 resume-old.md 跟 Pulse 的 JD 一比，9 个 gap 按 🔴 / 🟡 / 🟠 拆开。🔴 Core 里至少有 Go 工程能力、gRPC、Redis 实战、微服务设计、Kubernetes 真部署这 5 项。这一步跟 07 完全同形态：诚实审计，不掺水。
+**阶段 2 gap analysis** (本仓库为 stub)：John 把自己的 resume-old.md 跟 Pulse 的 JD 一比，9 个 gap 按 🔴 / 🟡 / 🟠 拆开。🔴 Core 里至少有 Go 工程能力、gRPC、Redis 实战、微服务设计、Kubernetes 真部署这 5 项。这一步跟 07 完全同形态：诚实审计，不掺水。
 
-**阶段 3 产物**：[case-cn.md](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/) 里的 case 文件 (`mini-project-design` 在 `from-scratch` 模式下产出)。这是这一篇最关键的一个文件。它跟 07 的 case 长得很像 (业务背景 / 触发事件 / 范围 / 团队 / 我做了什么 / 决策回放 / 产出 / 反思)，但语气是前瞻的。它写的是：「假设我在 Pulse 拿到这个实习，我打算这样做这个 feed-ranking 微服务」。它就是 John 用来「在拿到这个实习之前就把它在脑子里跑一遍」的设计稿。后面这个文件在执行结束后会成熟成 [executed-case-cn.md](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/executed-case-cn.md)，记录真正发生了什么。这两份对照看一眼，你就明白「设计版」和「执行版」分别是什么形态。
+**[前瞻版 `case-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/case-cn.md) vs [成熟版 `executed-case-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/executed-case-cn.md)**：这是 08 最值得对照打开的一对。前瞻版用「我计划」「我将要」语气，写的是「假设我在 Pulse 拿到这个实习，我打算这样做 feed-ranking 微服务」，是 John 在执行前「在脑子里把项目跑一遍」的设计稿。成熟版用「我做了」「我建了」语气，是 4 个月内 Pulse 实习真做完后回头写的回顾。两份对照看，你就明白 from-scratch 这条路上「设计稿 → 执行 → 成熟 case」的弧线长什么样。这一对是 08 独有的，07 没有对应物。
 
-**阶段 4 产物**：gap-fill-plan 跟 07 同形态。把 🔴 / 🟡 gap 各对应一个 mini-POC。比如 Go 工程能力就是一个 Go 写的小 Wikipedia QA 服务；gRPC 就是用 protobuf 定义一个 3-RPC 的契约自己起客户端服务端打通；Redis 实战就是用 Sorted Set 实现「最近见过」过滤。注意：每个 POC 是**学技能的小项目**，不是假装的业务项目。这一条 07 已经讲过, 08 同样适用。
+**阶段 4 产物** (本仓库 fill plan 和 POC 也是 stub)：跟 07 同形态。把 🔴 / 🟡 gap 各对应一个 mini-POC。比如 Go 工程能力就是一个 Go 写的小 Wikipedia QA 服务；gRPC 就是用 protobuf 定义一个 3-RPC 的契约自己起客户端服务端打通；Redis 实战就是用 Sorted Set 实现「最近见过」过滤。每个 POC 是**学技能的小项目**，不是假装的业务项目。这一条 07 已经讲过，08 同样适用。
 
-**阶段 5、6 产物**：跟 07 一样，2 到 3 轮「学 → 考 → 学 → 考」直到 4 到 5 个 🔴 Core gap 都能「看 JD 立刻能讲」。这一节同样不展开了。
+**阶段 5、6 产物**：跟 07 一样，2 到 3 轮「学 → 考 → 学 → 考」直到 4 到 5 个 🔴 Core gap 都能「看 JD 立刻能讲」。本仓库示例同样不展开（动态生成于 qualify-for 目录下）。
 
 ---
 
@@ -125,4 +139,4 @@ John 摸一下自己的家底：Go 没写过，分布式系统只上过课没碰
 
 工作流的杠杆在于它**对起点宽容, 对终点严格**。起点你可以是「什么都没有」, 终点必须是「能进面试间说清每一个决策」。08 教的就是从最难的那个起点出发, 怎么走到同样严格的那个终点。
 
-到这里你已经有了完整的项目素材库（一份 elevated case 或 from-scratch case 加配套的 landscape、gap 分析、fill plan、POC 实操、mock 面试转录）。下一节 09-write-bullets 教你**怎么从这份万字 case 文档压缩出简历上的 3 到 4 条 bullet**, 而且保证这些 bullet 经得起面试官追问。
+到这里你已经有了完整的项目素材库（一份拔高 case 或 from-scratch case 加配套的 landscape、gap 分析、fill plan、POC 实操、mock 面试转录）。下一节 [09-write-bullets](../09-write-bullets/README-cn.md) 教你**怎么从这份万字 case 文档压缩出简历上的 3 到 4 条 bullet**，而且保证这些 bullet 经得起面试官追问。

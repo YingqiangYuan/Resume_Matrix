@@ -2,7 +2,7 @@
 
 Seattle, WA · john.doe@example.com · linkedin.com/in/john-doe · github.com/john-doe
 
-> This is John's resume as it stood in late 2025, before he ran the deepen workflow on his Cedar Ridge internship. It contains one thin internship plus a couple of coursework projects, and the Summary is generic. This file exists in the repo as a teaching artifact: open it alongside `resume.md` to see what the deepen workflow actually changes.
+> This is John's resume as it stood in late 2025, before he ran the elevation workflow on his Cedar Ridge internship. It contains one thin internship plus a couple of coursework projects, and the Summary is generic. This file exists in the repo as a teaching artifact: open it alongside `resume.md` to see what the elevation workflow actually changes.
 
 ---
 
