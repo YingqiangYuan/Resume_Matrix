@@ -199,24 +199,57 @@ landscape 在同目录的 landscape/ 下。
 
 为了让这两个 AI 实例真正「互不知情」，它们必须在两个独立的 Claude Code 会话里跑，状态完全留在磁盘上。`case-cn.md` 是 design 端的产物，`review-NN.md` 是 review 端的产物，`fix-NN.md` 是 design 在 Loop 模式下回应 review 的产物。任一终端关掉或换模型重开都不影响，下一次启动只要看磁盘上的文件就知道当前是哪一轮、上一轮 review 说了什么、设计端接受了哪些、拒绝了哪些。
 
-整个 3 轮的流程是 7 步的线性序列。蓝色步骤在终端 1（design 会话）里跑，绿色步骤在终端 2（review 会话）里跑：
+整个 3 轮的流程是 7 步的序列。下面这张图沿用 §2 的两列布局：**左列是磁盘上累积的文件**（黄色实线是初始输入，绿色虚线是每一步新增的产物），**右列是 7 个步骤**（蓝色在终端 1 跑 `mini-project-design`，粉色在终端 2 跑 `mini-project-review`），左右之间的箭头还原 input → step → produces 的 zig-zag：
 
 ```mermaid
-flowchart TD
-    S1[Step 1 终端 1<br/>mini-project-design 初稿<br/>产出 case-cn.md]
-    S2[Step 2 终端 2<br/>mini-project-review<br/>产出 review-01.md]
-    S3[Step 3 终端 1<br/>mini-project-design loop<br/>产出 fix-01.md 加 Edit case-cn.md]
-    S4[Step 4 终端 2<br/>mini-project-review<br/>产出 review-02.md]
-    S5[Step 5 终端 1<br/>mini-project-design loop<br/>产出 fix-02.md 加 Edit case-cn.md]
-    S6[Step 6 终端 2<br/>mini-project-review<br/>产出 review-03.md]
-    S7[Step 7 终端 1<br/>mini-project-design loop<br/>产出 fix-03.md 加 Edit case-cn.md<br/>review-03 通常已 approve, 收敛]
+block-beta
+columns 2
+  IN["🟡 输入<br/>JD + 原始薄经历<br/>+ landscape 5 篇 + capacity"] space
+  space S1["Step 1 终端 1<br/>mini-project-design 初稿"]
+  L1["🟢 case-cn.md 初稿"] space
+  space S2["Step 2 终端 2<br/>mini-project-review"]
+  L2["🟢 review-01.md"] space
+  space S3["Step 3 终端 1<br/>mini-project-design loop"]
+  L3["🟢 fix-01.md + case-cn.md 修订"] space
+  space S4["Step 4 终端 2<br/>mini-project-review"]
+  L4["🟢 review-02.md"] space
+  space S5["Step 5 终端 1<br/>mini-project-design loop"]
+  L5["🟢 fix-02.md + case-cn.md 再修订"] space
+  space S6["Step 6 终端 2<br/>mini-project-review"]
+  L6["🟢 review-03.md"] space
+  space S7["Step 7 终端 1<br/>mini-project-design loop<br/>review-03 通常 approve, 收敛"]
+  L7["🟢 fix-03.md + 最终 case-cn.md"] space
 
-    S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7
+  IN --> S1
+  S1 --> L1
+  L1 --> S2
+  S2 --> L2
+  L2 --> S3
+  S3 --> L3
+  L3 --> S4
+  S4 --> L4
+  L4 --> S5
+  S5 --> L5
+  L5 --> S6
+  S6 --> L6
+  L6 --> S7
+  S7 --> L7
 
-    classDef t1 fill:#cfe2ff,stroke:#0d6efd,color:#000
-    classDef t2 fill:#d1e7dd,stroke:#198754,color:#000
-    class S1,S3,S5,S7 t1
-    class S2,S4,S6 t2
+  style IN fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+  style L1 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style L2 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style L3 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style L4 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style L5 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style L6 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style L7 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style S1 fill:#cfe2ff,stroke:#0d6efd
+  style S2 fill:#fde2e2,stroke:#dc3545
+  style S3 fill:#cfe2ff,stroke:#0d6efd
+  style S4 fill:#fde2e2,stroke:#dc3545
+  style S5 fill:#cfe2ff,stroke:#0d6efd
+  style S6 fill:#fde2e2,stroke:#dc3545
+  style S7 fill:#cfe2ff,stroke:#0d6efd
 ```
 
 注意这里没有任何「内容复制粘贴」环节。你这边唯一要做的是在两个终端之间通知一下「我这边那一步跑完了，到你那边了」，每次都让对应 skill 自己去磁盘上读最新的文件、自己算当前是 NN 几、自己写下一个文件。状态由文件名编号自然驱动。
