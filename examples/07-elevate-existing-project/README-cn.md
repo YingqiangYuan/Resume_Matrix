@@ -44,60 +44,48 @@
 每一行的逻辑都一样：**左列当前累积的所有产物**斜着指向**右列这一行的阶段**当输入，阶段跑完后斜着指回**左列下一行**新增一份产物。所以左列从上到下越来越长，最底下落下来的就是 case 拔高版加全套实操文档。
 
 ```mermaid
-flowchart TB
-    subgraph r1[" "]
-        direction LR
-        IN["🟡 种子输入<br/>resume-old.md<br/>job-description.md"]:::seed
-        S1["阶段 1<br/>understand-landscape"]:::stage
-        IN -- 输入 --> S1
-    end
-    subgraph r2[" "]
-        direction LR
-        L1["🟢 加 landscape/ 5 篇"]:::acc
-        S2["阶段 2<br/>qualify-gap-plan 诊断版"]:::stage
-        L1 -- 输入 --> S2
-    end
-    subgraph r3[" "]
-        direction LR
-        L2["🟢 加 01-gap-analysis-cn.md"]:::acc
-        S3["阶段 3<br/>mini-project-design 加 mini-project-review"]:::stage
-        L2 -- 输入 --> S3
-    end
-    subgraph r4[" "]
-        direction LR
-        L3["🟢 加 case-cn.md 拔高版"]:::acc
-        S4["阶段 4<br/>qualify-gap-plan 对齐 case 版"]:::stage
-        L3 -- 输入 --> S4
-    end
-    subgraph r5[" "]
-        direction LR
-        L4["🟢 加 02-gap-fill-plan 加 pocs/ 加 tutorials/"]:::acc
-        S5["阶段 5<br/>qualify-coach"]:::stage
-        L4 -- 输入 --> S5
-    end
-    subgraph r6[" "]
-        direction LR
-        L5["🟢 加 coach-notes/"]:::acc
-        S6["阶段 6<br/>qualify-mock-interview"]:::stage
-        L5 -- 输入 --> S6
-    end
-    subgraph r7[" "]
-        direction LR
-        L6["🟢 加 mock-interview-n-cn.md"]:::acc
-    end
+block-beta
+columns 2
+  IN["🟡 种子输入<br/>resume-old.md<br/>job-description.md"] space
+  space S1["阶段 1<br/>understand-landscape"]
+  L1["🟢 加 landscape/ 5 篇"] space
+  space S2["阶段 2<br/>qualify-gap-plan 诊断版"]
+  L2["🟢 加 01-gap-analysis-cn.md"] space
+  space S3["阶段 3<br/>mini-project-design 加 mini-project-review"]
+  L3["🟢 加 case-cn.md 拔高版"] space
+  space S4["阶段 4<br/>qualify-gap-plan 对齐 case 版"]
+  L4["🟢 加 02-gap-fill-plan 加 pocs/ 加 tutorials/"] space
+  space S5["阶段 5<br/>qualify-coach"]
+  L5["🟢 加 coach-notes/"] space
+  space S6["阶段 6<br/>qualify-mock-interview"]
+  L6["🟢 加 mock-interview-n-cn.md"] space
 
-    S1 -. 产出 .-> L1
-    S2 -. 产出 .-> L2
-    S3 -. 产出 .-> L3
-    S4 -. 产出 .-> L4
-    S5 -. 产出 .-> L5
-    S6 -. 产出 .-> L6
+  IN --> S1
+  S1 --> L1
+  L1 --> S2
+  S2 --> L2
+  L2 --> S3
+  S3 --> L3
+  L3 --> S4
+  S4 --> L4
+  L4 --> S5
+  S5 --> L5
+  L5 --> S6
+  S6 --> L6
 
-    classDef seed fill:#fff3cd,stroke:#ffc107,color:#000,stroke-width:2px
-    classDef acc fill:#d1e7dd,stroke:#198754,color:#000,stroke-dasharray: 5 5
-    classDef stage fill:#cfe2ff,stroke:#0d6efd,color:#000
-    classDef rowbox fill:none,stroke:none
-    class r1,r2,r3,r4,r5,r6,r7 rowbox
+  style IN fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+  style L1 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style L2 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style L3 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style L4 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style L5 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style L6 fill:#d1e7dd,stroke:#198754,stroke-dasharray: 5 5
+  style S1 fill:#cfe2ff,stroke:#0d6efd
+  style S2 fill:#cfe2ff,stroke:#0d6efd
+  style S3 fill:#cfe2ff,stroke:#0d6efd
+  style S4 fill:#cfe2ff,stroke:#0d6efd
+  style S5 fill:#cfe2ff,stroke:#0d6efd
+  style S6 fill:#cfe2ff,stroke:#0d6efd
 ```
 
 阶段 6 的 mock 面试官手里其实拿着完整的一整套资料（简历 + JD + landscape 5 篇 + gap 分析 + 拔高 case + fill plan + POC + 学习笔记），跟一个真正「很了解你」的面试官没本质区别。
