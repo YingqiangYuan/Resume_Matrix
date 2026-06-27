@@ -45,17 +45,23 @@
 
 ```mermaid
 flowchart LR
-    subgraph L["累积产物 左列"]
+    subgraph 左["累积产物 (左列, 从上往下越积越厚)"]
         direction TB
-        IN["种子输入 实线<br/>resume-old.md<br/>job-description.md"]
+        IN["种子输入 (实线)<br/>resume-old.md<br/>job-description.md"]
         L1["加 landscape/ 5 篇"]
         L2["加 01-gap-analysis-cn.md"]
         L3["加 case-cn.md 拔高版"]
         L4["加 02-gap-fill-plan 加 pocs/ 加 tutorials/"]
         L5["加 coach-notes/"]
         L6["加 mock-interview-n-cn.md"]
+        IN ~~~ L1
+        L1 ~~~ L2
+        L2 ~~~ L3
+        L3 ~~~ L4
+        L4 ~~~ L5
+        L5 ~~~ L6
     end
-    subgraph R["阶段 右列"]
+    subgraph 右["阶段 (右列, 6 个阶段依次推进)"]
         direction TB
         S1["阶段 1<br/>understand-landscape"]
         S2["阶段 2<br/>qualify-gap-plan 诊断版"]
@@ -63,6 +69,11 @@ flowchart LR
         S4["阶段 4<br/>qualify-gap-plan 对齐 case 版"]
         S5["阶段 5<br/>qualify-coach"]
         S6["阶段 6<br/>qualify-mock-interview"]
+        S1 ~~~ S2
+        S2 ~~~ S3
+        S3 ~~~ S4
+        S4 ~~~ S5
+        S5 ~~~ S6
     end
 
     IN  -- 输入 --> S1
@@ -296,6 +307,8 @@ skill 会自动识别这是阶段 4，因为你给了 case 文件。产出的 fi
 > 注：这里有个很多人没意识到的重点。**`qualify-gap-plan` 产出的 mini-POC 加教程，主要目的不是让你「学完所有东西再投简历」**。主要目的是：让你**在 AI 陪伴下小成本地试一下**，感受一下阶段 3 的 case-cn.md 设计出来的项目在 3 到 12 个月里到底**能不能做出来**。如果你一上手做某个 POC 就发现「完全无从下手」，说明项目设计的难度对你来说太高了，应该立刻退回阶段 3 调用 `mini-project-design`（在 Loop 模式下）让 AI 把难度降下来重新设计 case，再回到阶段 4 重跑一次 gap-plan。这就是「小步快跑、快速验证」的工作哲学，先动手，不行就赶紧调，比一路硬撑、最后到 mock 面试才发现项目设计不现实、再回头重做要便宜得多。
 
 ### 4.5 阶段 5：qualify-coach（学概念加写 POC 代码，顺便感受 case 难度）
+
+> 注：本节用「写 POC 代码」举例只是因为 07 的 John Doe 是 SWE 类岗位 (AI Solutions Engineer)。这套 skill 本质上是「为每个 gap 配一个练手作业」，作业的形态完全取决于你的目标工种：SWE 写代码 demo，数据科学家做小型数据分析，产品经理写产品 case 拆解，设计师做现成产品 UX teardown，分析师做行业图表复刻，等等。**核心机制是「学一个概念 → 用一个小练习去内化它 → 答对验证问题才标 ✅ 进度」**，「写代码」只是这条机制在 SWE 岗位上的具体落地。读后面段落时把「POC 代码」自动替换成你这个工种对应的练习就行。
 
 **什么时候用**：fill plan 在手，POC 脚手架建好了，你开始按计划一个一个 gap 学。
 
