@@ -90,7 +90,7 @@
 
 完成这份设计文档的同时，你就为简历准备了一份新的素材。
 
-具体怎么从目标反推出项目、文档要写成什么样、什么样的项目算「够深但不夸张」，[08-design-new-project](../08-design-new-project/README-cn.md)会专门讲。08 复用 07 同一套 6 阶段工作流，只是起点从「有薄经历」换成「白纸」。
+具体怎么从目标反推出项目、文档要写成什么样、什么样的项目算「够深但不夸张」，[08-design-new-project](../08-design-new-project/README-cn.md) 会专门讲。08 复用 07 同一套 6 阶段工作流，只是起点从「有薄经历」换成「白纸」。
 
 ---
 
@@ -110,7 +110,7 @@
 
 具体怎么从前者拔到后者，[07-elevate-existing-project](../07-elevate-existing-project/README-cn.md) 把这整条 deepen 工作流的链路拆成 6 个阶段（landscape 调研、gap 分析、elevated 项目设计、学习计划、实操、mock 面试），跟着 John Doe 的实际产出从头走一遍。
 
-**2026 年夏天的 Pulse Social 实习，对应方法三：以终为始自己设计 mini 项目。** John 当时的处境是：他在前面的目标定位环节里清楚了自己的目标方向是「能进 Big Tech 后端组的 Software Engineer」。于是他反向设计了一个他确信自己能在 12 周内做完的项目：用 Go 重写一个 Feed 排序微服务，从一个 Python 单体里抽出来，按百分比灰度上线。这个设计是他自己拍出来的，导师只是把关，没有替他设计。最终结果就是 [Pulse Social feed ranker 的成熟 case](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/executed-case-cn.md)。具体怎么「以终为始」反推出适合自己的项目设计，[08-design-new-project](../08-design-new-project/README-cn.md)会专门讲。它跟 07 共用同一套 6 阶段工作流，只是起点不同（07 起点是「有薄经历」，08 起点是「白纸」）。
+**2026 年夏天的 Pulse Social 实习，对应方法三：以终为始自己设计 mini 项目。** John 当时的处境是：他在前面的目标定位环节里清楚了自己的目标方向是「能进 Big Tech 后端组的 Software Engineer」。于是他反向设计了一个他确信自己能在 12 周内做完的项目：用 Go 重写一个 Feed 排序微服务，从一个 Python 单体里抽出来，按百分比灰度上线。这个设计是他自己拍出来的，导师只是把关，没有替他设计。最终结果就是 [Pulse Social feed ranker 的成熟 case](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/executed-case-cn.md)。具体怎么「以终为始」反推出适合自己的项目设计，[08-design-new-project](../08-design-new-project/README-cn.md) 会专门讲。它跟 07 共用同一套 6 阶段工作流，只是起点不同（07 起点是「有薄经历」，08 起点是「白纸」）。
 
 这三段经历放在一起，覆盖了大多数学生会遇到的情况：要么手头有导师设计好的项目（方法一），要么手头有过去做的相对薄的项目（方法二），要么得自己从目标反推一个项目出来（方法三）。方法二的完整工作流见 [07-elevate-existing-project](../07-elevate-existing-project/README-cn.md)，方法三的（共用同一套工作流，起点不同）见 [08-design-new-project](../08-design-new-project/README-cn.md)。这一节先把底层逻辑讲清楚就够了。
 
