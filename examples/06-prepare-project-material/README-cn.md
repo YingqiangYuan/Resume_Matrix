@@ -35,6 +35,8 @@
 素材不是 bullet 本身. 素材是 bullet 的源头. 它是一份关于某个项目的详细文档: 项目的背景, 要解决的业务问题, 你在里面扮演的角色, 你做了哪些具体决定, 用了哪些技术, 最后产出是什么, 数字怎么测的. 每一段经历对应一份这样的文档, 存在你自己的 Master Repo 里.
 
 > 注: Master Repo 是一个用年月日和你自己名字命名的 Git Repo (比如 `2026-06-01-john-doe`), 里面放着你写简历需要的所有素材, Master Resume 母版, 以及派生出去的针对性简历. 怎么搭这个 Repo, 目录结构怎么组织, [11-submit-and-collaborate §3.1](../11-submit-and-collaborate/README-cn.md#31-github-上有简历所需要的所有素材-这是无可替代的) 里有一个完整的目录树范例.
+>
+> **关于本课程示例里 `students/john-doe/` 这个目录**: 这是这门课用来演示一切的虚构学生例子. 你在 examples 各章看到的所有 `students/john-doe/resume.md`, `students/john-doe/experiences/...`, `students/john-doe/.../qualify-for-.../case-cn.md` 这种路径, 在 John 真实的世界里其实就是他自己的那个 `2026-06-01-john-doe/` Master Repo, 目录结构一模一样, 只是被搬到本课程仓库的 `students/` 子目录下方便你跟着课讲解一路对照看. **你自己照着学的时候, 你应该有一个独立的 Git Repo, 名字是 `<YYYY-MM-DD>-<your-name>`, 不是 fork 这门课的仓库再往 `students/` 下塞一个 `students/your-name/`**. 那样你自己的简历资产会跟课程内容耦合在一起, 课程仓库以后升级你就 merge 不动了. 把课程仓库当成参考资料库读, 把你自己的 Master Repo 单独建一个, 这是正确姿势. (如果后续这门课增加更多虚构学生例子, 比如 `students/jane-roe/`, 结构跟 John 完全一样, 都是同一种 Master Repo 的样板.)
 
 为什么要先有这份长文档, 再有简历 bullet, 而不是直接写 bullet? 因为 bullet 是高度压缩的结果, 压缩的前提是有足够的原始信息可压缩. 你写不出经得起追问的 bullet, 根本原因往往不是表达不好, 而是你对项目本身的理解就不够深.
 
