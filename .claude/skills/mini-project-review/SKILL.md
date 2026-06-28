@@ -177,7 +177,11 @@ Use the severity emoji convention `🔴 Core`, `🟡 Important`, `🟠 Nice-to-h
 ## 5. Mode-specific review
 
 For elevate: business context lock audit (company, time period, reporting line, team composition).
-For from-scratch: capacity audit (no resources the student does not have, no datasets without access, no AWS budget the student cannot pay for).
+
+For from-scratch, run two distinct audits.
+
+- **Capacity audit**: no resources the student does not have, no datasets without access, no AWS budget the student cannot pay for, no time commitment beyond their stated hours per week.
+- **Venue audit**: does the student have a credible execution venue for this project? A venue is a real container where the work will actually happen: a confirmed internship, a long-term open source contribution channel, an apprenticeship, a contracting gig, a research lab affiliation. A from-scratch case without a venue is fantasy, and one interviewer follow-up ("where did you build this?") will collapse it. If the case names no venue or the venue is hand-waved ("I plan to find an internship"), raise this as a 🔴 Core feasibility issue. The fix is either to name a concrete venue or to radically shrink scope to something the student can demonstrably finish solo with no external dependencies. Capacity and venue are independent: a student can have plenty of hours per week (capacity) but no place to do the work (no venue), and vice versa.
 
 ---
 
@@ -228,7 +232,7 @@ Treat each outcome metric as a measurement audit. If the case just says "reduced
 
 In `elevate` structural mode, cross-reference the original thin case against the elevated case. The company name, time period, reporting line, and team composition MUST match. Any drift is a flag.
 
-In `from-scratch` structural mode, cross-reference against the student's capacity. If the case calls for production AWS infrastructure but the student has no AWS budget, flag it.
+In `from-scratch` structural mode, cross-reference against the student's capacity AND venue (see §5). Capacity is "can they make the hours and access work"; venue is "do they have an actual place to do this work". A from-scratch case with no named venue or a vague venue ("I will look for an internship that lets me do this") is a 🔴 Core feasibility issue. Recommend either naming a concrete venue (a specific internship offer, a specific open source project, a specific contracting client) or shrinking the scope to mentorless-doable size. Do not let an unsited project pass review on the assumption that the venue will materialize.
 
 When you write a fix list entry, make it specific enough that `mini-project-design` in loop mode can act on it. "Tighten the LangGraph vs Strand Agents decision so it names version numbers and the specific failure mode" is actionable. "Make the technology decisions more rigorous" is not.
 

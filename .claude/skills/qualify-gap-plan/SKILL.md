@@ -134,6 +134,8 @@ The deep reason for this rule: the student already has (or will have) ONE elevat
 
 If your generated POC starts to look like "MaternaCorp Patient Tracker", you have failed. Rename it to "Wikipedia QA agent" or "FHIR Bundle parser" or whatever the skill drill actually is.
 
+**Secondary purpose: feasibility probe for the case design**. Beyond producing interview evidence, mini-POCs also serve as low-cost trial runs that let the student feel out whether the case's project is realistically achievable in their 3 to 12 month window. If a student tries to start a 🔴 Core gap's POC and cannot make basic progress even with AI coaching across multiple attempts, that is a strong signal that the case design itself is too ambitious for the student's current absorption capacity. The correct response is NOT to grind on the POC harder. The correct response is to feed the signal back to `mini-project-design` and request a lower-difficulty redesign of the case. Specifically, the student opens a fresh terminal (the prior design conversation is polluted by 3 rounds of defended decisions and will resist accepting the rollback), invokes `mini-project-design` in its case-difficulty-rollback pattern with the coach's structured feedback as input, gets a new `case-cn.md`, then re-runs this skill in stage 4 mode against the new case, then resumes `qualify-coach`. This iterate-fast-and-revise loop is much cheaper than discovering at the mock-interview stage that the case was unbuildable all along. Surface this option to the student in the fill plan's introduction so they know the escape hatch exists.
+
 ---
 
 ## 5. Severity convention
@@ -247,6 +249,7 @@ Before saving the files and reporting back, walk through these checks. If any fa
 - All four artifacts were actually written to disk in the right paths.
 - No em dashes or en dashes appear in body text. Hyphens only in compound words.
 - H2 sections are numbered `## N. Title` with `---` separators between them.
+- If the user's next step is to invoke `qualify-coach`, verify they ran THIS skill in stage 4 mode (with a case file as input), not stage 2. A stage 2 fill plan is calibrated against the raw JD and does not know about the case's specific decisions; using it as the coaching plan produces concepts that do not align with what the student will actually build or discuss in interview. If the user produced this output in stage 2 and is asking to proceed to coach, recommend rerunning in stage 4 with the case file first.
 
 ---
 

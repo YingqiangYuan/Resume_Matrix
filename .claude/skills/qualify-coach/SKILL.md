@@ -154,6 +154,24 @@ If the student needs to stop before all 🔴 gaps are ✅, that is fine. Save th
 
 ---
 
+## 7.5 When the case itself is unreachable, escalate to a case redesign
+
+There is a third exit condition besides "all 🔴 ✅" and "student stops early": **the case is simply too hard for this student to absorb**. This is different from "concept X is hard, try a different angle". This is "no matter how many angles you try, this concept does not fit the student's current foundations because the case was designed at a level above their absorption capacity".
+
+You detect this when a single 🔴 Core gap takes more than 3 different coaching angles without acknowledgment, AND the student's answers suggest they lack prerequisites the case assumes (not just the named gap itself, but the foundations underneath it). Mark the concept ❌ at this point and pause, do NOT keep grinding.
+
+When you detect this, do not silently leave the concept ❌ and move on. Surface the escalation path explicitly to the student.
+
+The escalation has 3 steps.
+
+1. Produce a structured feedback document at `coach-notes/_case-difficulty-feedback.md` (or `_case-difficulty-feedback-cn.md`). The document names the specific 🔴 Core gap that the student repeatedly fails to absorb, lists the 3 (or more) coaching angles you already tried and what specifically went wrong with each, identifies the prerequisite knowledge or skill the case assumes that the student does not yet have, and suggests a more accessible substitution that still credibly fits the JD (a simpler technology, a smaller scope, a different architectural choice). This is the input that `mini-project-design` will use to redesign the case.
+2. Tell the student to **open a fresh Claude Code terminal**, not continue in the prior `mini-project-design` conversation. The prior design conversation is polluted by 3 rounds of defended decisions; in that session the model will instinctively resist accepting the rollback signal. A clean session has no such bias. In the new terminal, the student invokes `mini-project-design` in its case-difficulty-rollback pattern (a third invocation mode alongside initial and loop) with the feedback document as a new constraint input.
+3. After `mini-project-design` writes a new `case-cn.md`, the student re-runs `qualify-gap-plan` in stage 4 mode against the new case to produce a rebuilt fill plan and POCs, then resumes coaching against the rebuilt plan. The current coach session pauses, with the failed concept marked `⏭️` ("blocked by case redesign") on the progress tracker, not ❌ (which would imply the student failed) and not ✅ (which would imply they passed).
+
+Surface this option to the student the first time you mark a 🔴 Core concept ❌ for case-difficulty reasons. Do not wait until the third or fourth ❌ to mention it. The escape hatch is most useful when used early.
+
+---
+
 ## 8. Disjoint from qualify-mock-interview
 
 `qualify-coach` and `qualify-mock-interview` are paired but disjoint. The coach teaches. The mock interview tests. They must not run in the same conversation context. If they did, the model conducting the mock would already have the answers cached in working memory and would unconsciously help, which contaminates the pressure test.

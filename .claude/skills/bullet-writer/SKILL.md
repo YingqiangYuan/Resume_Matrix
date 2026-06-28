@@ -76,7 +76,7 @@ Refuse to draft if any mandatory input is missing. Soft-nudge for optional input
 
 ### Phase 2: Surface the project's transferable capabilities
 
-Before drafting any bullet, decide what this project demonstrates in the chosen angle. Typically 2 to 4 transferable capabilities, written in the language of the target Job Family. For example, depending on the angle:
+Before drafting any bullet, decide what this project demonstrates in the chosen angle. Typically 3 (sometimes 2 or 4 depending on case depth), written in the language of the target Job Family. For example, depending on the angle:
 
 - For a backend angle: "Can design correct concurrency primitives under contention", "Can debug distributed-system pathologies from logs and traces", "Can ship gRPC services to Kubernetes with sane SLO budgets".
 - For a data analyst angle: "Can codify metric definitions into a maintained semantic layer", "Can run UAT studies that change product decisions", "Can build adoption dashboards that prove or kill a launched feature".

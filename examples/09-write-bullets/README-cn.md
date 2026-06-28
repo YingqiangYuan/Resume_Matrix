@@ -234,7 +234,12 @@ Full-stack AI/Data Intern. 2025-06 to 2025-09.
 
 `bullet-writer` 写出来的是「为 Job Family 通用」的 master 版本, 已经写进 `resume.md` 里。同一份 master 投不同公司的同一个 Job Family 岗位, 大多数情况下不用改。
 
-但你**真心想要的某个公司**, JD 里有很特殊的关键词或强调点, 这时候用 `bullet-reviewer` 做轻量微调。
+但你**真心想要的某个公司**, JD 里有很特殊的关键词或强调点, 这时候用 `bullet-reviewer` 做轻量微调。这个 skill 有两种落地方式, 内部命名为 **Mode A** 和 **Mode B**:
+
+- **Mode A (in-place 编辑)**: 直接在 master `resume.md` 里那个原 Bullet Set 上改措辞, 原版被覆盖。适合改动小 (换 1 到 2 个关键词, 调整某条 bullet 的强调点) 的情况。默认就选 Mode A.
+- **Mode B (新增 JD-targeted 变体)**: master 里那个原 Bullet Set 保留不动, 在 §4 Experience 末尾**新增**一个 Bullet Set, 标题里显式编码目标公司加岗位 (例如 `### Bullet Set 8, Cedar Ridge MaternaPulse BI Agent (AI emphasis, for Nimbus Health LLM Engineer JD)`). 适合改动大 (超过 30% 措辞变化) 你又想保留原版以便日后投别家时用的情况.
+
+skill 内部用 30% 的 diff 阈值做 Mode 推荐: 改动小于 30% 默认 Mode A, 超过 30% 默认 Mode B, 最终都让你拍板. 12 §8.1 讲一段经历挂多个 qualify-for/ 子目录共存时, 提到的「用 `bullet-reviewer` Mode A 微调」就是这里的 Mode A.
 
 **输入输出本质** (跟 §4.1 同款分析):
 

@@ -27,7 +27,7 @@ A Summary is a 6-second positioning statement, not a mini-autobiography. It must
 - **Strength**: what is the 1 or 2 most distinctive things this person brings within that Identity? Concrete, named (e.g., "production AI on AWS Bedrock", "semantic layers on Snowflake", "Go microservices serving 4.5k RPS").
 - **Evidence**: 1 sentence or 1 enumerated tech list anchoring Identity + Strength in real artifacts (project, company type, scale, technologies actually used in the master's Bullet Sets).
 
-Total length: approximately 200 to 300 characters, fits 2 lines in standard resume formatting. The student verifies length in their actual resume document after you write to the master.
+Total length: sweet spot 200 to 300 characters, fits 2 lines in standard resume formatting. Hard ceiling at roughly 350 characters; past that the Summary overflows 2 lines and loses the 6-second scan property, refuse to ship a draft over the ceiling (see §5). The student verifies actual line count in their resume document after you write to the master.
 
 **Anti-pattern you must refuse**: "passionate / results-driven / innovative / hands-on" adjective stacks. These are noise to both ATS and human hiring managers. Replace every adjective with a concrete noun (technology, project, metric, problem domain). If the student insists on adjectives, push back once explaining why.
 

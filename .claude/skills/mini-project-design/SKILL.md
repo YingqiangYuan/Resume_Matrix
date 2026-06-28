@@ -27,6 +27,10 @@ The `elevate` structural mode applies when the student has a real existing exper
 
 The `from-scratch` structural mode applies when the student has no existing experience to elevate. You are designing a brand-new project the student will actually execute over the next 3 to 6 months. The case file is forward-looking.
 
+**Venue check (from-scratch only)**. A from-scratch case is fantasy unless the student has a credible execution venue: a real internship offer they can shape, a long-term open source contribution channel they can commit to, an apprenticeship, a contracting gig, or a similar real-world container where the project will actually run. When in from-scratch mode and initial execution mode, ask the student to name their venue before drafting the case. If no plausible venue exists, do not refuse outright, but warn loudly and record the venue gap in the case's "reflections and leftovers" section. An interviewer who probes "where did you build this" will collapse a venue-less project with one follow-up. `mini-project-review` enforces this audit on its end too; both ends matter.
+
+**Executed-case artifact (from-scratch downstream)**. Once the project is actually executed (typically 3 to 6 months after the design is finalized), the case file may be ported and matured into a sibling artifact at the experience folder root, conventionally named `executed-case-cn.md` (or `executed-case.md`). The executed version uses past-tense "I did / I built" language and records what actually happened, distinct from the forward-looking design that lives at `qualify-for-<JD-slug>/case-cn.md` and uses "I plan / I will" language. This executed artifact is downstream and not produced by this skill, but the skill's forward-looking output is its seed. The transition from design-tense case to executed-tense case happens via human writing (often informed by `understand-yourself` from the prerequisite course), not by this skill.
+
 **Execution mode** describes which round of the design loop you are in.
 
 The `initial` execution mode applies when there is no `case-cn.md` or `case.md` yet, or there is one but the qualify-for folder contains no `review-NN.md` file that has not already been answered by a `fix-NN.md`. You produce the case from scratch (or from inputs, in elevate mode).
@@ -191,7 +195,25 @@ Output language defaults to English. If the user requested Chinese, write `case-
 
 ---
 
-## 9. Invocation examples
+## 9. Special invocation: case-difficulty-rollback
+
+This is a third invocation pattern alongside initial and loop modes. It exists because a case design that survived 3 rounds of review can still turn out to be too hard for the student to actually learn from, and you only discover that downstream in `qualify-coach` or `qualify-mock-interview`. When that happens, the case has to be redesigned at lower difficulty.
+
+When the user invokes you with this pattern, they will typically come from a `qualify-coach` session that has produced a structured feedback document (often named `coach-notes/_case-difficulty-feedback.md`) naming the specific 🔴 Core gap they repeatedly fail to absorb despite multiple coaching angles, why the gap is too far, and a suggested substitution (a more accessible alternative skill or technology that still credibly fits the JD).
+
+Crucial procedural rules.
+
+- **This must run in a fresh terminal session, not in the prior design conversation that produced the original case**. The prior design conversation is polluted by 3 rounds of decisions you already defended; if you continue in that session you will instinctively defend the existing case rather than accept the rollback signal. A clean session has no such bias.
+- This is a fresh `initial` execution mode run, structural mode same as before (typically elevate or from-scratch matching the original case). The coach feedback document is an additional required input, on top of the usual initial-mode inputs.
+- Output is a new `case-cn.md` that overwrites the old one. The old version is preserved in git history; do not keep a parallel "v1" file in the qualify-for folder, that clutters the handshake protocol with `mini-project-review`.
+- After writing the new case, instruct the user to re-run `qualify-gap-plan` in stage 4 mode (against the new case) so the fill plan and POCs align, and then resume `qualify-coach` on the rebuilt plan. The prior `qualify-coach` session should be paused with its open concept marked `⏭️` ("blocked by case redesign") rather than declared complete.
+- The next round of `mini-project-review` after this rollback restarts the review counter; rename or archive existing `review-NN.md` and `fix-NN.md` files in the folder (a `_archive-pre-rollback/` subfolder is the recommended convention) so the fresh case starts at `review-01.md` again.
+
+This rollback path is the third leg of the "iterate fast, revise the case early" philosophy that runs throughout the workflow. It is cheaper to redesign the case in week 3 than to discover the case is unbuildable in week 12 during mock-interview prep.
+
+---
+
+## 10. Invocation examples
 
 Example A, initial mode, elevate.
 
@@ -209,7 +231,7 @@ The student has already done rounds 01 and 02. Now `review-03.md` has appeared. 
 
 ---
 
-## 10. Self-check before declaring done
+## 11. Self-check before declaring done
 
 For initial mode.
 
@@ -237,10 +259,11 @@ For loop mode.
 - The project setting (company, time period, team, JD target) was not altered.
 - The user has been told to go back to Terminal 2 and ask for the next review round.
 - No em dashes in the body of either file.
+- **If the latest `review-NN.md` verdict is `approve-with-revisions`, do NOT declare the design done**. That verdict means the spine is sound but specific gaps remain. Continue loop mode until the next review issues a clean `approve`, or until the student explicitly accepts the residual revisions in writing inside `fix-NN.md` with a documented reason. Stopping at `approve-with-revisions` is the most common workflow mistake; the unaddressed gaps surface as failure points in mock interviews weeks later.
 
 ---
 
-## 11. What this skill does NOT do
+## 12. What this skill does NOT do
 
 This skill does not run the review. That is `mini-project-review`, which runs in a separate terminal for independent perspective.
 
