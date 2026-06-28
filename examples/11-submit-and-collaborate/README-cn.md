@@ -159,12 +159,11 @@ Google Doc 有个 **Tab 功能**, 一个 doc 的左侧栏可以建多个 tab, �
 
 到了真投递的那一刻, 流程是这样:
 
-1. 在 Google Doc 里 **File → Make a copy** 整个文档做一份副本 (这是为了不动你的工作 doc), 副本命名比如「resume-cascadia-ai-solutions-engineer-pdf-export」
-2. 在副本里把除了目标派生 tab 之外的所有 tab (包括大全 tab) 都删掉, 只留要投的那一个 tab
-3. **File → Download → PDF Document (.pdf)**
-4. 改文件名成 `<Your Name>_Resume.pdf` 或 `<Your Name>_Resume_<Company>.pdf`, 投到公司招聘网站
+1. 在 Google Doc 左侧栏点中要投的那个派生 tab (比如 Cascadia 那个)
+2. **File → Download → PDF Document (.pdf)**, Google Doc 会只导出当前选中 tab 的内容, 其他 tab 不会一起进 PDF
+3. 改文件名成 `<Your Name>_Resume.pdf` 或 `<Your Name>_Resume_<Company>.pdf`, 投到公司招聘网站
 
-> **为什么要先做副本再删 tab**: 工作 doc 里那 1 + N 个 tab 是你长期维护的状态, 不能因为一次投递就把大全 tab 删了。所以每次投递都做副本, 副本里删 tab, 副本下载完 PDF 之后副本可以直接扔掉。
+> **不用做副本, 也不用删其他 tab**: Google Doc 的 PDF 导出是按当前选中的 tab 来的, 你选哪个 tab 就只导出哪个 tab。所以你的工作 doc 完全不用动, 1 + N 个 tab 长期都在那里, 投的时候点一下要投的那个 tab、下载 PDF 就完事。
 
 > **文件命名小细节**: 投递的 PDF 文件名**一定**要带你的名字, 比如 `John_Doe_Resume.pdf`。不要叫 `resume.pdf` 或 `final_v3.pdf`, 招聘官下载下来一堆 `resume.pdf` 都不知道是谁的, 第一印象就掉档次。
 
@@ -248,7 +247,7 @@ John 看到 Cascadia 在招 AI Solutions Engineer。他从大全简历里挑出 
 
 **Step 7: 导出 PDF 投递**
 
-按 §4 末尾的 4 步: 做 Google Doc 副本 → 副本里只留 Cascadia 派生 tab、删掉其他 tab → File → Download → PDF Document → 改文件名成 `John_Doe_Resume.pdf` → 投到 Cascadia 招聘网站。
+按 §4 末尾的 3 步: 在 Google Doc 左侧栏点中 Cascadia 派生 tab → File → Download → PDF Document → 改文件名成 `John_Doe_Resume.pdf` → 投到 Cascadia 招聘网站。
 
 下次投 NovaRisk 重复 Step 2 到 7, 但 Step 3 派生时选数据分析师方向那一份 Summary, 留 Cedar Ridge (数据角度) + NovaRisk (数据角度), 技能表留数据分析相关那几行。
 
