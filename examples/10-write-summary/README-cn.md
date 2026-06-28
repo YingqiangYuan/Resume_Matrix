@@ -121,14 +121,29 @@ John 的 master `resume.md` 在 [§1 Summary](../../students/john-doe/resume.md)
    - 「Tech 列表太长, 6 个 buzzword 看着像列简历 Skills 段, 砍到 3 个最关键的」
    - 「Evidence 那一段 maternal-ward 是医疗, B2B fraud-detection 是金融, 跨行业有跨度感, 留着; 但 multi-provider LLM abstraction 这个细节属于实现层, 进 Skills 段不进 Summary」
 5. 收敛到 1 段 2 行的版本, skill **直接 Edit 你的 master `resume.md`**, 在 §1 Summary 段末尾追加一个 `### Variant X, for <Job Family> roles` 段。X = 现有 variant 数加 1, 同时确保字母编号连续 (Variant A / B / C / D)。
-6. skill 同时告诉你 Edit 了哪几行, 让你 `git diff` 验证。
+6. **紧接着 Variant 段下面用 markdown blockquote (`>`) 写一段「Rationale for this Variant」**, 把 Identity 选择 / 关键名词 / 动词 / tech-list 排序的理由讲清楚, 同时记录这个 Variant 锚定了 master 里哪几个 Bullet Set (派生时这几个要一起留)。这块 rationale 是给你以后回看用的, 派生 role-specific 简历时整段删掉。
+7. skill 在聊天里只发一段简短的话提示「Variant X 写好了, 改了第 X-Y 行, 请 git diff 验证」, **详细解说不在聊天里复述, 都在文件里**。
 
-**输出结果长什么样** (新增进 `resume.md` §1 Summary 末尾):
+**输出结果长什么样** (新增进 `resume.md` §1 Summary 末尾, Variant 加紧接着的 Rationale 整体写入文件):
 
 ```markdown
 ### Variant D, for AI Engineer roles
 
 M.S. Computer Science student building production AI systems. Hands-on experience designing two natural-language BI Agents on AWS Bedrock AgentCore, covering maternity-ward operations at a 6-hospital healthcare network and fraud-ops self-serve analytics at a B2B fraud-detection SaaS. Comfortable with Strand Agents, Bedrock Knowledge Base, semantic layers over Snowflake, multi-provider LLM abstraction, prompt evaluation harnesses, and end-to-end AWS CDK deployment.
+
+> **Rationale for this Variant** (internal commentary; strip from any submitted resume)
+>
+> **Identity choice**: chose "M.S. Computer Science student building production AI systems" over generic "Software Engineer". The Bullet Sets actually show 2 shipped production AI agents, so this Identity is defensible. Avoided "AI Engineer" (claims more years than your level supports) and avoided "Aspiring AI Engineer" (signals junior anxiety).
+>
+> **Verbs**: "designing" in the Strength clause matches your actual case (you designed the architectures, didn't just implement). Avoided "led" (no team leadership in case).
+>
+> **Key nouns**: "production AI systems" packages shipped + on real users + on real infrastructure. "natural-language BI Agents" matches exactly the noun used in your Bullet Sets, keeping wording consistent. "semantic layers over Snowflake" signals you understand a non-trivial architectural pattern (invites a good follow-up question).
+>
+> **Tech-list ordering**: front-loaded "Strand Agents, Bedrock Knowledge Base" because they appear in 3 of 4 AI-direction Bullet Sets and are increasingly searched-for by hiring managers. "AWS CDK" at the end as a deploy-side signal.
+>
+> **Anchored on Bullet Sets**: 2 (Cedar Ridge AI emphasis), 4 (NovaRisk AI emphasis). When deriving a Variant D resume, keep these two Bullet Sets and drop the others.
+>
+> **Notes**: if you later derive a role-specific resume from this master, delete this rationale block.
 ```
 
 **翻车点**:
@@ -137,6 +152,7 @@ M.S. Computer Science student building production AI systems. Hands-on experienc
 - 用形容词堆砌 (passionate / results-driven / innovative / dynamic / fast-learning) 凑字数。这些词在 ATS 和 hiring manager 眼里是噪音, 全删, 用具体名词 (technologies / projects / metrics) 替代。
 - 第一人称代词 (I / my)。Summary 默认是无主语第三人称语气, 跟 bullet 一样。
 - Skill 写完不 git diff 直接结束。Edit 文件 AI 有概率漏 / 错位, 跑完总是看一眼 diff。
+- 派生 role-specific 简历时**忘了删 Rationale blockquote**。这块是给你自己内部看的, 投递时一定删干净。
 
 ---
 

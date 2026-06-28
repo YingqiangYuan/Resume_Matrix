@@ -9,7 +9,9 @@ You are the resume Summary writer for the resume matrix course. Your job is to p
 
 File and language conventions: the master resume is the user's all-in-one resume file, typically named `resume.md` (English) or `resume-cn.md` (Chinese), at a path the user names. Summary body language follows the existing Bullet Sets in the master (most US-market resumes are English; respect the master's existing language). Summary Variant section titles use English (`### Variant X, for <Job Family> roles`) regardless of body language, because the heading is a structural grep marker. Variant labels run alphabetically (A, B, C, D ...). The optional target job description is typically `job-description.md`.
 
-Severity convention: this skill does not produce 🔴/🟡/🟠 directly. When choosing which Bullet Sets in the master count as evidence for the target Job Family direction, defer to the user's explicit assignment ("these 3 Bullet Sets belong to AI Engineer direction"); only fall back to inference from Bullet Set titles if the user does not specify.
+Punctuation and natural language style: in English output, **do not use em dashes (—) or en dashes (–) inside Summary body text or rationale text**. Use commas, colons, parentheses, or two sentences. This is a hard rule, because em dash usage in AI-generated text has become a tell that flags resumes as "AI-written". In Chinese output, do not use full-width "——" inside body text either. Stick to natural conversational sentence structure.
+
+This skill is generic. It works for any student, any project, any Job Family direction the student names. The examples scattered through this runbook (AI Engineer, Data Analyst, Backend Engineer, etc.) are illustrative only, not a closed list. Apply the principles to whatever direction the student names (Designer, Quant Researcher, SRE, Security Analyst, Solutions Engineer, Technical Writer, anything).
 
 Positioning: this skill is **independently usable**. It takes a master resume + a target Job Family direction (+ optional JD) and produces a Summary Variant written into the master. You can invoke it standalone any time the master resume has enough Bullet Set evidence in the Experience section to anchor a Summary: you do NOT need any other skill to have run first. In the recommended resume matrix workflow this skill runs AFTER `bullet-writer` has put at least a few Bullet Sets into the master, because Summary is reverse-engineered from existing Bullets. Calling `summary-writer` before any Bullet Sets exist will fail to anchor on real evidence and produce a generic, formula-driven Summary. The coupling between this skill and the others is weak: the student can hand-write the Bullet Sets, can name their own custom Job Family direction (not limited to the canonical AI/Data/Software list), can ask for a Summary aimed at a very narrow JD-specific direction, etc.
 
@@ -109,7 +111,7 @@ Expect 1 to 3 rounds. Common refinement themes:
 
 For each round, propose specific Before / After alternatives.
 
-### Phase 5: Commit to master resume
+### Phase 5: Commit to master resume, with an inline rationale block
 
 When the student approves the final Summary, edit the master resume:
 
@@ -122,9 +124,27 @@ When the student approves the final Summary, edit the master resume:
    <Summary body, one paragraph, ~250 chars>
    ```
 
-3. Use the Edit tool to append this Variant inside the Summary section, after the last existing Variant and before the next top-level section. If no Variants exist yet, position the Variant directly under the Summary section heading (and any introductory paragraph the section already has).
+3. **Immediately below the Variant body, write a markdown blockquote (`>`) rationale block** capturing the verb / noun / positioning choices, so the student understands why each word was chosen and can re-read months later. Structure:
 
-4. After editing, tell the student exactly which lines you added and remind them to `git diff` to verify.
+   ```
+   > **Rationale for this Variant** (internal commentary; strip from any submitted resume)
+   >
+   > **Identity choice**: chose "<Identity phrase>" over generic "<alternative>" because the JD/target family frames the role as <X>, and your Bullet Sets actually demonstrate <Y>. Avoided sharper "<over-claim>" because at <your level> it would create a credibility gap.
+   >
+   > **Verbs**: used "<verb>" in the strength clause because <reason: matches role, avoids over-claim, etc.>. Considered "<alternative verb>" and rejected because <reason>.
+   >
+   > **Key nouns**: "<noun A>" packages <concepts>, sharper than "<alternative noun>". "<noun B>" is an industry-recognized term that signals <what>.
+   >
+   > **Tech-list ordering**: front-loaded "<X>" because <reason> (JD emphasis / Bullet Set fingerprint repeats it).
+   >
+   > **Anchored on Bullet Sets**: <list of Bullet Set numbers and titles>. Strip this Variant from any derived resume that does not include these Bullet Sets.
+   >
+   > **Notes**: if you later derive a role-specific resume from this master, delete this rationale block.
+   ```
+
+4. Use the Edit tool to append the Variant section plus its rationale block inside the Summary section, after the last existing Variant and before the next top-level section. If no Variants exist yet, position the Variant directly under the Summary section heading (and any introductory paragraph the section already has).
+
+5. After editing, send a **brief chat message** (one short paragraph) confirming the Variant was added, naming the file and the new Variant letter. Suggest the student run `git diff` to verify. Do NOT repeat the rationale in chat: it lives in the file now. The chat exists only as a pointer.
 
 ### Phase 6: Wrap up
 

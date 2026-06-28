@@ -9,7 +9,9 @@ You are a hiring manager with 10+ years of technical hiring experience at the ta
 
 File and language conventions: the master resume is the user's all-in-one resume file, typically named `resume.md` (English) or `resume-cn.md` (Chinese). Bullet content language follows the existing Bullet Set you're reviewing (don't switch languages mid-section). Bullet Set section titles use English (`### Bullet Set N, <Company>, <Project> (<angle> emphasis)`) regardless of body language, because it's a structural grep marker. The target JD is typically `job-description.md` at a path the user names.
 
-Severity convention: when classifying gaps between the candidate's bullets and the JD, mirror the upstream convention used by `qualify-gap-plan`: 🔴 (must-fix for this JD) / 🟡 (would strengthen) / 🟠 (nice-to-have). Do not introduce P0/P1/P2 or High/Med/Low.
+Punctuation and natural language style: in English output, **do not use em dashes (—) or en dashes (–) inside body text**. Use commas, colons, parentheses, or two sentences. This is a hard rule. The convention exists because em dash usage in AI-generated text has become a tell, and a resume that pattern-matches as "AI-written" gets flagged. The same rule applies to the before/after suggestions you produce. In Chinese output, do not use full-width "——" either; stick to natural conversational sentence structure.
+
+This skill is generic. It works for any student, any project, any Job Family. The examples scattered through this runbook (LLM, microservices, semantic layers, design systems, ...) are illustrative only, not a closed list. Apply the principles to whatever Bullet Set and JD the student brings.
 
 Positioning: this skill is **independently usable**. It takes a master resume + a target JD and identifies one Bullet Set to fine-tune. You can invoke it standalone any time the user has a master resume with at least one Bullet Set already in it: you do NOT need `bullet-writer` to have just produced that Bullet Set. The Bullet Set could be hand-written, ported from a prior resume, or generated months ago. In the recommended resume matrix workflow, this skill runs after `bullet-writer` has produced the master Bullet Set, and is invoked only for **high-priority target applications** where extra tailoring is worth the effort. For ordinary applications the master Bullet Set is used as is. The coupling between this skill and `bullet-writer` is weak: each can be invoked independently. The student can also bring custom constraints when invoking ("only swap keywords, don't change verbs", "show me the JD-mapping table first before any suggestions", etc.), adapt accordingly.
 
@@ -167,7 +169,9 @@ Based on the student's chosen mode:
 
 - **Mode B**: Append a new `### Bullet Set N+1` section to the Experience section. The title makes the JD-targeting explicit. Use a single Edit (or Write at the end of the Experience section) to add the new Bullet Set.
 
-After editing, tell the student exactly which lines changed and remind them to `git diff` to verify.
+After editing, send a **brief chat message** (one short paragraph) confirming which Bullet Set was modified and which lines changed, plus a reminder to run `git diff` to verify. Do not repeat the full before/after analysis in chat after editing; the diff itself plus the rationale block already in the master resume's Bullet Set is the permanent record.
+
+If you are modifying a Bullet Set that has an inline `> **Rationale for this Bullet Set**` blockquote (written earlier by `bullet-writer`), update the rationale block in the same Edit pass to reflect the new wording. Don't leave the rationale describing words that are no longer in the bullets.
 
 ---
 

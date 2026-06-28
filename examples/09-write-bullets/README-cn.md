@@ -35,13 +35,17 @@ Hiring manager 看 bullet 的时候, 他脑子里其实在找 4 个问题的答�
 
 ---
 
-## 3. 一段经历 4 条 bullet 的内部结构 (本节最关键的一段)
+## 3. 一段经历几条 bullet, 内部结构怎么排 (本节最关键的一段)
 
 这一节是 09 真正的新东西, 也是你看完之后**就该改你现在简历**的部分。
 
+先说**条数**: 一段经历**典型情况下写 3 到 4 条**, 薄经历只够写 2 条, 偶尔旗舰项目写到 5 条。**没有「必须 4 条」这个规则**。条数取决于你这段经历能撑起几个不同角度的亮点, 强行凑数会稀释。下面用 4 条做例子讲递进逻辑, 但同样的逻辑用在 3 条或 2 条上一样适用 (砍掉相对最弱那一条即可)。
+
+也说一下**长度**: 每条 bullet 写出来应该在简历上占 **1 到 2 行**, 极少数王牌亮点可以到 3 行 (例如这段经历的核心卖点, 信息密度高到删任何一段都掉档次)。具体多少词数取决于简历排版, **这个阶段不要纠结字数**, 内容成型就行, 排版微调留到 11 投递课。
+
 很多人写一段经历的 bullet, 写完是这样的:
 
-> ❌ 错误写法 (4 条平行清单):
+> ❌ 错误写法 (平行清单, 这里举 4 条但 3 条 / 5 条问题一样):
 >
 > - Built LLM-powered BI agent on AWS Bedrock and Strand Agents framework, achieving 93% accuracy on a 50-question medical reporting eval set.
 > - Implemented retry-with-feedback loop integrating Snowflake error messages back into the agent prompt, improving zero-shot SQL generation accuracy from 78% to 93%.
@@ -140,7 +144,7 @@ Hiring manager 看 bullet 的时候, 他脑子里其实在找 4 个问题的答�
 - 维护成本最低: 后续要改一条 bullet, 直接在 master 里改, 不用追多份散落文件
 - 跟 [05-resume-matrix](../05-resume-matrix/README-cn.md) 教的「**1 份 master + N 份派生**」一脉相承: master 是源头, 投递时按目标 JD 删减出派生版本, 永远只有一份事实
 
-所以 `bullet-writer` 这个 skill 的运行机制是: **跟你互动写出 3 到 4 条 bullet, 然后直接 Edit 你的 master `resume.md`, 在 §4 Experience 下新增一个 `### Bullet Set N, <公司>, <项目> (<角度> emphasis)` 段**。
+所以 `bullet-writer` 这个 skill 的运行机制是: 跟你互动写出几条 bullet (典型 3 到 4 条, 根据案例深度可以 2 到 5), 然后**直接 Edit 你的 master `resume.md`** (因为文件进 git, 改坏了能 revert 不怕), 在 §4 Experience 下新增一个 `### Bullet Set N, <公司>, <项目> (<角度> emphasis)` 段, **同时在 bullets 下面用 markdown blockquote (`>`) 写一段解说**, 讲清每条 bullet 的动词为什么这么选、关键名词在打包什么概念、量化数据怎么 defensible (industry baseline + 计算公式)。聊天里只发一句话提示「写好了, 请 git diff 验证」, 详细解说全在文件里方便你以后回看。
 
 ### 4.2 实操: 怎么用
 
@@ -176,20 +180,41 @@ Hiring manager 看 bullet 的时候, 他脑子里其实在找 4 个问题的答�
    - 「这条用了太强的动词, 我是应届生不能写 Architected」(skill 会降级到 Designed / Built)
    - 「B2 这条跟 B3 角度太像, 都是讲技术决策, 换一个角度」
    - 「B4 没体现我跨团队的部分, 加上跟 nurse manager 跑了 4 个 sprint」
-4. 收敛到 3 到 4 条你都拍板的版本, skill **直接 Edit 你的 master `resume.md`**, 在 §4 Experience 末尾追加一个 `### Bullet Set N, <Company>, <Project> (<角度> emphasis)` 段, N = 你 master 里现有 bullet set 数加 1。
-5. skill 同时告诉你 Edit 了哪几行, 让你 `git diff` 看一眼新增的段是不是你想要的。如果不满意就让 skill 改回去或调整。
+4. 收敛到你拍板的 2 到 5 条版本, skill **直接 Edit 你的 master `resume.md`**, 在 §4 Experience 末尾追加一个 `### Bullet Set N, <Company>, <Project> (<角度> emphasis)` 段, N = 你 master 里现有 bullet set 数加 1。
+5. **bullets 段下面紧接着用 markdown blockquote (`>`) 写一段「Rationale for this Bullet Set」**, 把每条 bullet 的关键词选择讲清楚: 动词为什么这么选 (扮演什么角色, 跟你的级别配不配), 关键名词在打包什么概念 (sharper than 什么), 量化数字是怎么 defensible 的 (industry baseline 是什么, 计算公式是什么, 每个因子靠不靠谱)。这个 rationale 段是给你以后回看用的, 派生 role-specific 简历时整段删掉。
+6. skill 在聊天里只发一段简短的话提示「Bullet Set N 写好了, 改了第 X-Y 行, 请 git diff 验证」, **详细解说不在聊天里复述, 都在文件里**, 你看文件就行。如果不满意就让 skill 改回去或调整。
 
-**输出结果长什么样** (新增进 `resume.md` §4 末尾的段):
+**输出结果长什么样** (新增进 `resume.md` §4 末尾的段, bullets 加紧接着的 Rationale 整体写入文件):
 
 ```markdown
 ### Bullet Set 7, Cedar Ridge Women's Health, MaternaPulse BI Agent (AI emphasis, for Cascadia AI Solutions Engineer)
 
 Full-stack AI/Data Intern. 2025-06 to 2025-09.
 
-- Built MaternaPulse, an LLM-powered ... ...  (B1: HR-readable 画面)
-- Designed a YAML-based semantic layer ... ...  (B2: 关键技术决策)
-- Implemented a retry-with-feedback loop ... ...  (B3: 最硬技术子问题)
-- Partnered with 3 nurse managers ... ...  (B4: ownership 加跨团队 impact)
+- Built MaternaPulse, an LLM-powered natural-language BI agent ... cutting analyst report turnaround from ~2 days to under 5 minutes.
+- Designed a YAML-based semantic layer decoupling 40+ clinical metrics from the Snowflake schema ...
+- Implemented a retry-with-feedback loop using Strand Agents' tool-calling framework: ... raising answering accuracy from 78% to 93%.
+- Partnered with 3 nurse managers and 2 analysts across 4 sprints ... shipped to 12 maternity units serving ~4,000 monthly inpatient cases.
+
+> **Rationale for this Bullet Set** (internal commentary; strip from any submitted resume)
+>
+> **Verbs**:
+> - Bullet 1 "Built": hands-on builder verb appropriate for new grad. Considered "Architected" (overclaims at this level) and "Developed" (less complete-system feel). "Built" matches the case's actual evidence of you shipping the whole agent yourself.
+> - Bullet 2 "Designed": signals ownership of the architecture choice (semantic layer was your call), not just implementation. Matches the case.
+> - Bullet 3 "Implemented": describes execution of a specific technique inside the larger system. Calibrated lower than "Designed" because the retry loop is a well-known pattern you applied, not a novel design.
+> - Bullet 4 "Partnered": collaborative verb without overclaiming. Says you worked across team boundaries without claiming you led the team.
+>
+> **Key nouns**:
+> - "natural-language BI agent" packages LLM + database query + business domain + non-engineer end user in 4 words. Sharper than "AI tool" or "data assistant".
+> - "semantic layer" is an industry-recognized term that signals you understand metric-definition abstractions belong above the database schema. Invites the "vs dbt?" follow-up which is good (interview-readiness signal).
+> - "retry-with-feedback loop" is more specific than "self-correction" and tells an experienced engineer exactly what the mechanism is.
+>
+> **Quantitative claims**:
+> - "~2 days to under 5 minutes" report turnaround. Formula: T_before ≈ 2 business days ≈ 960 working minutes (analyst SLA from case prior-state). T_after ≈ 10s agent p95 latency (Bedrock + Snowflake on warm data, CloudWatch-measurable) + 4 min user read-verify (from UAT logs) ≈ 4.5 min. Industry baseline: clinical analyst ad-hoc reports typically 1-3 business days at midsize hospital systems. Defensibility: agent latency from CloudWatch, user time from UAT log, baseline from case description.
+> - "78% to 93%" accuracy. Formula: correct / total = 47/50 (rounded to 93%). Industry baseline: SQL-generation accuracy for natural-language BI agents on domain-specific evals runs 70-90% in current published benchmarks (Spider, BIRD). 93% is in the upper range, defensible because eval is moderately curated and schema is constrained. Defensibility: pull the 50-question eval and walk through.
+> - "12 maternity units / 4,000 monthly inpatient cases" scale, not impact. Directly from the case prior-state description; no fabrication.
+>
+> **Notes**: if you later derive a role-specific resume from this master, delete this rationale block. Lives in master only for your reference.
 ```
 
 注意标题里**显式编码了角度和目标 Job Family** (`AI emphasis, for Cascadia AI Solutions Engineer`), 这样你 master 简历里同一段经历的 AI / Data / Software 多个版本并列摆着的时候一眼能区分。
@@ -198,9 +223,10 @@ Full-stack AI/Data Intern. 2025-06 to 2025-09.
 
 - 跳过「确认 3 条可迁移能力」直接让 skill 起草。skill 没有锚点, 起草出来的 bullet 会沿着 case 文档的章节顺序平铺, 退化成平行清单。
 - 不告诉 skill 你是应届生还是有经验, 它默认会用中等强度动词, 应届生看起来过强, 资深人看起来过弱。一开始就交代, 或者让它从你 master 简历里推断。
-- 上来就纠结措辞, 不质疑结构。**第一轮 push back 应该是「这 4 条角度组合对不对」**, 不是「Built 还是 Developed」。结构错了, 换动词没用。
-- 让 skill 把数字编出来。skill 默认会从 case 文档里找定义过的数字, 但如果 case 里没写, 它可能会用「significantly improved」这种空话。你要么去 case 里加, 要么换成 scale 描述 (「serving 12 units / 4000 cases monthly」)。
+- 上来就纠结措辞, 不质疑结构。**第一轮 push back 应该是「条数和角度组合对不对」**, 不是「Built 还是 Developed」。结构错了, 换动词没用。
+- 让 skill 凭空编数字而不让它说清楚 defensibility。新版 skill 默认会主动给你 industry baseline 加计算公式; 你要做的是看一眼那个 baseline 和公式合不合理, 不要直接采纳没说明白的数字。case 里没数字时, 让 skill 帮你构造一个但要求它把 industry baseline + 计算公式 + 每个因子的合理性都列出来。
 - skill Edit 完 resume.md **没有用 `git diff` 验证**就当事情结束了。AI Edit 文件有概率漏 / 错位 / 把别的 Bullet Set 改坏, 跑完总是 diff 一眼。
+- 派生 role-specific 简历时**忘了删掉 Rationale blockquote**。这些是给你自己看的内部解说, 投递时一定删干净。
 
 ---
 

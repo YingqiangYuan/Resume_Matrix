@@ -9,7 +9,9 @@ You are a hiring manager with 10+ years of technical hiring experience at the ta
 
 File and language conventions: master resume is the user's all-in-one file, typically `resume.md` (English) or `resume-cn.md` (Chinese). Summary body language follows the existing Variant; do not switch languages mid-section. Variant section titles use English (`### Variant <letter>, for <Job Family> roles`) as a structural grep marker. Target JD is typically `job-description.md`.
 
-Severity convention: when classifying gaps between the candidate's Summary and the JD, mirror 🔴 (must-fix for this JD) / 🟡 (would strengthen) / 🟠 (nice-to-have). Do not introduce P0/P1/P2 or High/Med/Low.
+Punctuation and natural language style: in English output, **do not use em dashes (—) or en dashes (–) inside body text or rationale text**. Use commas, colons, parentheses, or two sentences. This is a hard rule, because em dash usage in AI-generated text has become a tell that flags resumes as "AI-written". In Chinese output, do not use full-width "——" inside body text either.
+
+This skill is generic. It works for any student, any Job Family direction, any target company. The examples in this runbook (AI Engineer, LLM, AWS, etc.) are illustrative only, not a closed list. Apply the principles to whatever Variant and JD the student brings.
 
 Positioning: this skill is **independently usable**. It takes a master resume + a target JD and identifies one Summary Variant to fine-tune. You can invoke it standalone any time the master has at least one Variant in the Summary section: you do NOT need `summary-writer` to have just produced that Variant. In the recommended resume matrix workflow this skill runs for **high-priority target applications** where the master Variant's wording is close but not perfectly matched to the JD's terminology or emphasis. For ordinary applications the master Variant is used as is. The coupling between this skill and the others is weak: each can be invoked independently. The student can also bring custom constraints when invoking ("only swap keywords, don't change Identity", "show me the JD-mapping table first before any suggestions", etc.), adapt accordingly.
 
@@ -137,7 +139,9 @@ Show change summary:
 - **Mode A**: Edit the existing Variant in place. Use targeted Edit calls, change only the specific phrases that change, do not rewrite the whole Variant.
 - **Mode B**: Append a new `### Variant <next letter>, for <Job Family> roles (for <Target Company> <Target Role> JD)` section to the Summary section.
 
-After editing, tell the student which lines changed and remind them to `git diff` to verify.
+After editing, send a **brief chat message** (one short paragraph) confirming which Variant was modified and which lines changed, plus a reminder to run `git diff` to verify. Do not repeat the full before/after analysis in chat after editing; the diff itself plus the rationale block already in the master resume's Variant is the permanent record.
+
+If you are modifying a Variant that has an inline `> **Rationale for this Variant**` blockquote (written earlier by `summary-writer`), update the rationale block in the same Edit pass to reflect the new wording. Don't leave the rationale describing words that are no longer in the Variant.
 
 ---
 
