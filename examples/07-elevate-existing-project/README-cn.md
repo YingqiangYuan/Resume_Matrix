@@ -36,7 +36,7 @@
 - `coach-notes/`: 跟 AI coach 一起学概念时产出的笔记加进度表, 动态生成于 [qualify-for 目录](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/) 下, 本仓库示例里没展开.
 - `mock-interview-{n}-cn.md`: 跟 AI 模拟面试官问答的转录加 debrief, 同样动态生成于上面那个 qualify-for 目录下.
 
-**为什么这堆产物加在一起能撑起"面试就绪"? ** 这 9 类产物一层一层堆出了"这个项目我真懂"的证据链: landscape 让你看 JD 的眼光跟别人不一样, gap 分析让你知道自己差在哪, 拔高 case 描述你这段经历真正长什么样, POC 让你掏得出代码 demo, coach notes 让你能在白板前讲清每个技术选型, mock 让你提前在压测里暴露弱点. 9 份摞起来, 等于一个能坐进面试间, 被任何角度追问都接得住的求职者. **信息密度的累积是非线性的**, 这就是这套工作流的真正杠杆.
+**为什么这堆产物加在一起能撑起"面试就绪"?** 这 9 类产物一层一层堆出了"这个项目我真懂"的证据链: landscape 让你看 JD 的眼光跟别人不一样, gap 分析让你知道自己差在哪, 拔高 case 描述你这段经历真正长什么样, POC 让你掏得出代码 demo, coach notes 让你能在白板前讲清每个技术选型, mock 让你提前在压测里暴露弱点. 9 份摞起来, 等于一个能坐进面试间, 被任何角度追问都接得住的求职者. **信息密度的累积是非线性的**, 这就是这套工作流的真正杠杆.
 
 下面这张图把这种累积过程画出来. 整张图分成两列:
 
