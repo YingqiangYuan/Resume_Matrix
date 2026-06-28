@@ -104,7 +104,7 @@ flowchart TD
 | ⑧ 投递 PDF | (无 skill, 操作动作) | 11 |
 | ⑨ 收反馈 | (无 skill, 信息收集) | 13 (本节) |
 
-13 节课, 5 个本仓库的 skill + 2 个前置课程 skill (`understand-landscape` + `understand-yourself`), 拼出 9 节点闭环。
+跟改简历有关的 skill 全套一共 9 个, 全在本仓库的 `.claude/skills/` 下: `mini-project-design`, `mini-project-review`, `qualify-gap-plan`, `qualify-coach`, `qualify-mock-interview`, `bullet-writer`, `bullet-reviewer`, `summary-writer`, `summary-reviewer`。前 5 个是 06 / 07 / 08 教的「准备项目素材」工作流主干, 后 4 个是 09 / 10 教的「写 bullet 加 Summary」工具。另外还引用了 2 个前置课程 (career_planning) 的 skill: `understand-landscape` 和 `understand-yourself`, 这两个不在本仓库实现。9 + 2 = 11 个 skill 拼出上面这个 9 节点闭环。
 
 ---
 
@@ -176,20 +176,20 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    subgraph THEORY ["🎯 阶段 1: 看清游戏本质 (01-04)"]
+    subgraph THEORY ["阶段 1: 看清游戏本质 (01-04)"]
         T1["01 招聘"] --> T2["02 ATS"] --> T3["03 应届"] --> T4["04 有经验"]
     end
 
-    subgraph BUILD ["🛠️ 阶段 2: 从素材到投递的工程姿势 (05-11)"]
+    subgraph BUILD ["阶段 2: 从素材到投递的工程姿势 (05-11)"]
         B1["05 矩阵法"] --> B2["06 素材三路"] --> B3["07/08 6 阶段链路"]
         B3 --> B4["09 写 bullet"] --> B5["10 写 Summary"] --> B6["11 双轨协作 + PDF"]
     end
 
-    subgraph ASSET ["📦 阶段 3: 资产化 (12)"]
+    subgraph ASSET ["阶段 3: 资产化 (12)"]
         A1["12 持续维护 + Summary 演化"]
     end
 
-    subgraph LOOP ["🔄 阶段 4: 闭环 (13, 本节)"]
+    subgraph LOOP ["阶段 4: 闭环 (13, 本节)"]
         L1["13 终极闭环 + 终身职业管理"]
     end
 

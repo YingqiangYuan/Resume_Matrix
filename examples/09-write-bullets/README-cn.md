@@ -45,7 +45,7 @@ Hiring manager 看 bullet 的时候, 他脑子里其实在找 4 个问题的答�
 
 很多人写一段经历的 bullet, 写完是这样的:
 
-> ❌ 错误写法 (平行清单, 这里举 4 条但 3 条 / 5 条问题一样):
+> 不推荐写法 (平行清单, 这里举 4 条但 3 条 / 5 条问题一样):
 >
 > - Built LLM-powered BI agent on AWS Bedrock and Strand Agents framework, achieving 93% accuracy on a 50-question medical reporting eval set.
 > - Implemented retry-with-feedback loop integrating Snowflake error messages back into the agent prompt, improving zero-shot SQL generation accuracy from 78% to 93%.
@@ -70,7 +70,7 @@ Hiring manager 看 bullet 的时候, 他脑子里其实在找 4 个问题的答�
 
 注意 4 个要素都要有, 但都要短。
 
-> ✅ B1 范例 (同一个 MaternaPulse BI agent 项目):
+> 推荐写法, B1 范例 (同一个 MaternaPulse BI agent 项目):
 >
 > Built MaternaPulse, an LLM-powered natural-language BI agent for Cedar Ridge's 12-unit maternity hospital network on AWS Bedrock + Snowflake, letting nurse managers query daily census, staffing, and supply data in plain English instead of waiting on custom SQL reports, cutting analyst report turnaround from 2 days to under 5 minutes on routine questions.
 
@@ -80,7 +80,7 @@ Hiring manager 看 bullet 的时候, 他脑子里其实在找 4 个问题的答�
 
 这一条专门展示**一个非平凡的设计选型**。不是「我用了 X」, 是「在 X 和 Y 之间, 我选了 X, 因为...」的简短版本。
 
-> ✅ B2 范例:
+> 推荐写法, B2 范例:
 >
 > Designed a YAML-based semantic layer decoupling 40+ clinical metric definitions from the underlying Snowflake schema, letting analysts onboard new metric questions by editing 30-line YAML files instead of touching agent code, and grounding the LLM's generated SQL in business-approved metric definitions rather than raw column names.
 
@@ -90,7 +90,7 @@ Hiring manager 看 bullet 的时候, 他脑子里其实在找 4 个问题的答�
 
 这一条专门展示**项目里最非平凡的一个子问题**和你怎么解决的。
 
-> ✅ B3 范例:
+> 推荐写法, B3 范例:
 >
 > Implemented a retry-with-feedback loop using Strand Agents' tool-calling framework: when generated SQL hit runtime errors or returned obviously wrong row counts, the agent re-prompted itself with the database error message, raising end-to-end answering accuracy on the 50-question eval set from 78% (zero-shot) to 93%.
 
@@ -100,7 +100,7 @@ Hiring manager 看 bullet 的时候, 他脑子里其实在找 4 个问题的答�
 
 最后一条收尾, 展示**你在项目里的真实角色 + 项目跨出代码的真实影响**。
 
-> ✅ B4 范例:
+> 推荐写法, B4 范例:
 >
 > Partnered with 3 nurse managers, 2 analysts, and the data engineering team across 4 sprints to define the eval set, ground-truth answer keys, and rollout criteria; presented monthly demos to clinical operations leadership and shipped to production for 12 maternity units serving roughly 4,000 monthly inpatient cases.
 

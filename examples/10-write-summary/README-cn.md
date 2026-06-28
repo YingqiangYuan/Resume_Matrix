@@ -30,13 +30,13 @@ Hiring manager 拿到一份简历, 第一眼扫 Summary。他在找一个问题�
 
 3 件事压在 2 行 200 到 300 个字符内, 这就是好 Summary。
 
-❌ 错误写法 (空泛的「关于我」型 Summary):
+不推荐写法 (空泛的「关于我」型 Summary):
 
 > "Passionate and results-driven M.S. Computer Science student with a strong background in software engineering and a love for solving complex problems. Excited to apply my skills to make impact at innovative companies."
 
 读者扫完: 我不知道你做什么的, 不知道你强在哪, 不知道你能解决什么问题。形容词全是空话, 没有任何辨识度。
 
-✅ 正确写法 (定位 + 能力 + 证据型 Summary, 例如 John 的 AI Engineer variant):
+推荐写法 (定位 + 能力 + 证据型 Summary, 例如 John 的 AI Engineer variant):
 
 > "M.S. Computer Science student building production AI systems. Hands-on experience designing two natural-language BI Agents on AWS Bedrock AgentCore, covering maternity-ward operations at a 6-hospital healthcare network and fraud-ops self-serve analytics at a B2B fraud-detection SaaS. Comfortable with Strand Agents, Bedrock Knowledge Base, semantic layers over Snowflake, multi-provider LLM abstraction, prompt evaluation harnesses, and end-to-end AWS CDK deployment."
 
