@@ -113,41 +113,41 @@ Hiring Manager 有具体的招人需求 (缺某个技能, 补某个位置, 解�
 
 ### 不同岗位的 Summary 示例
 
-**Senior Software Engineer (后端方向): **
+**Senior Software Engineer (后端方向):**
 
 > *Backend Engineer with 4 years of experience building scalable distributed systems. Proficient in Java, Go, and AWS. Led the migration of a monolithic application to microservices, reducing deployment time by 60% and improving system reliability to 99.9% uptime.*
 
 这个 Summary 传递的信息: 4 年经验, 后端方向, 分布式系统, 有具体的成就数字.
 
-**Senior Software Engineer (全栈方向): **
+**Senior Software Engineer (全栈方向):**
 
 > *Full-Stack Engineer with 3 years of experience shipping user-facing products. Proficient in React, Node.js, and PostgreSQL. Built and launched 5 features that collectively serve 500K+ monthly active users.*
 
-**Data Engineer: **
+**Data Engineer:**
 
 > *Data Engineer with 4 years of experience building and optimizing data pipelines at scale. Expert in Python, Spark, and Airflow. Architected a real-time data pipeline processing 10M+ events daily with 99.9% reliability.*
 
-**Machine Learning Engineer: **
+**Machine Learning Engineer:**
 
 > *Machine Learning Engineer with 3 years of experience deploying ML models in production. Proficient in Python, PyTorch, and MLOps tools. Built recommendation systems serving 1M+ daily predictions with <100ms latency.*
 
-**Data Scientist: **
+**Data Scientist:**
 
 > *Data Scientist with 4 years of experience in predictive modeling and experimentation. Expert in Python, SQL, and statistical analysis. Led A/B testing initiatives that drove $2M+ in incremental annual revenue.*
 
-**Cloud Engineer / DevOps Engineer: **
+**Cloud Engineer / DevOps Engineer:**
 
 > *Cloud Engineer with 3 years of experience managing production infrastructure on AWS. Expert in Terraform, Kubernetes, and CI/CD pipelines. Reduced infrastructure costs by 30% while improving deployment frequency by 5x.*
 
-**AI Engineer: **
+**AI Engineer:**
 
 > *AI Engineer with 3 years of experience building LLM-powered applications. Proficient in Python, LangChain, and vector databases. Developed a RAG system that reduced customer support ticket volume by 35%.*
 
-**Solutions Architect: **
+**Solutions Architect:**
 
 > *Solutions Architect with 5 years of experience designing enterprise cloud architectures. AWS Certified Solutions Architect Professional. Led cloud migration projects totaling $10M+ in infrastructure, achieving 40% cost reduction.*
 
-**Financial Engineer / Quant Developer: **
+**Financial Engineer / Quant Developer:**
 
 > *Quantitative Developer with 4 years of experience in trading systems and risk analytics. Proficient in Python, C++, and SQL. Built low-latency trading infrastructure processing 50K+ orders per second.*
 
@@ -171,35 +171,35 @@ Skills 部分的原则和应届生一样: **精准, 有针对性, 只列你能�
 
 ### 针对不同方向的 Skills 示例
 
-**Backend Engineer: **
+**Backend Engineer:**
 
 > *Languages: Java, Go, Python*
 > *Frameworks: Spring Boot, gRPC, GraphQL*
 > *Infrastructure: AWS (EC2, RDS, SQS), Docker, Kubernetes*
 > *Databases: PostgreSQL, Redis, DynamoDB*
 
-**Full-Stack Engineer: **
+**Full-Stack Engineer:**
 
 > *Frontend: React, TypeScript, Next.js*
 > *Backend: Node.js, Python, Django*
 > *Databases: PostgreSQL, MongoDB, Redis*
 > *Cloud: AWS, Vercel, Docker*
 
-**Data Engineer: **
+**Data Engineer:**
 
 > *Languages: Python, SQL, Scala*
 > *Data Tools: Spark, Airflow, dbt, Kafka*
 > *Cloud: AWS (S3, Redshift, Glue, EMR), Snowflake*
 > *Databases: PostgreSQL, BigQuery, Delta Lake*
 
-**Machine Learning Engineer: **
+**Machine Learning Engineer:**
 
 > *Languages: Python, C++*
 > *ML Frameworks: PyTorch, TensorFlow, scikit-learn*
 > *MLOps: MLflow, Kubeflow, Weights & Biases*
 > *Infrastructure: Docker, Kubernetes, AWS SageMaker*
 
-**Cloud Engineer / DevOps: **
+**Cloud Engineer / DevOps:**
 
 > *Cloud Platforms: AWS (certified), GCP*
 > *Infrastructure as Code: Terraform, CloudFormation, Pulumi*
@@ -220,7 +220,7 @@ Skills 部分应该放在 Summary 之后, Work Experience 之前. 它的作用�
 
 和应届生项目描述一样, 工作经历的 Bullet Points 也应该遵循这个公式:
 
-**Action (做了什么) + Technical Detail (技术细节) + Measurable Impact (可量化的影响) **
+**Action (做了什么) + Technical Detail (技术细节) + Measurable Impact (可量化的影响)**
 
 但有经验者可以做得更深入.
 
@@ -274,11 +274,11 @@ Skills 部分应该放在 Summary 之后, Work Experience 之前. 它的作用�
 
 这里有一些找 Impact 数字的方法.
 
-**内部来源: **
+**内部来源:**
 
 你的日常工作中其实有很多数据来源. 和你的 Manager 聊聊, 问问你负责的项目对业务有什么影响. 和 Product Manager 聊聊, 他们通常有功能上线后的数据. 看看团队的 Analytics Dashboard (DAU, 转化率, 错误率这些指标). 回顾 All-Hands Meeting 或 Quarterly Review 的内容, 经常会提到各个项目的 Impact. 查看你参与的 A/B 测试结果.
 
-**外部来源: **
+**外部来源:**
 
 有些数据可以从公开渠道获取. 公司的 Press Release 或 Blog 文章. 面向公众的产品数据 (App Store 下载量, 用户评价等). 上市公司的 Quarterly Earnings Call 和 10-K Filing. 同事的 LinkedIn Profile, 看看他们怎么描述类似项目的 Impact.
 
@@ -444,7 +444,7 @@ Skills 部分应该放在 Summary 之后, Work Experience 之前. 它的作用�
 
 假设你在一家公司同时做过后端开发, 数据处理, 和一些 ML 相关的工作. 针对不同岗位, 你可以强调不同的 Bullet Points.
 
-**申请 Backend Engineer 岗位时强调: **
+**申请 Backend Engineer 岗位时强调:**
 
 > *Led the migration of a monolithic application to microservices, reducing deployment time by 60%.*
 >
@@ -452,7 +452,7 @@ Skills 部分应该放在 Summary 之后, Work Experience 之前. 它的作用�
 >
 > *Optimized database queries, reducing average response time by 70%.*
 
-**申请 Data Engineer 岗位时强调: **
+**申请 Data Engineer 岗位时强调:**
 
 > *Built real-time data pipelines using Kafka and Spark, processing 5M+ events daily.*
 >
@@ -460,7 +460,7 @@ Skills 部分应该放在 Summary 之后, Work Experience 之前. 它的作用�
 >
 > *Implemented data quality monitoring, reducing data incidents by 60%.*
 
-**申请 ML Engineer 岗位时强调: **
+**申请 ML Engineer 岗位时强调:**
 
 > *Built and deployed ML models for user behavior prediction, serving 1M+ daily inferences.*
 >

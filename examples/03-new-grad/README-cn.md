@@ -107,19 +107,19 @@
 
 让我用几个例子来说明. 假设你是一个 CS 应届生, 做过一些 Web 开发, 一些数据分析, 一些机器学习项目. 你想申请 SDE, Data Engineer, Machine Learning Engineer 三个方向.
 
-**针对 Software Engineer (SDE) 岗位的 Summary: **
+**针对 Software Engineer (SDE) 岗位的 Summary:**
 
 > *Computer Science new grad with hands-on experience building full-stack web applications. Proficient in Python, JavaScript, React, and Node.js. Developed and deployed 3 production-ready projects with 500+ users.*
 
 这个 Summary 强调的是: Full-Stack 开发能力, Web 技术栈, 有 Production 经验.
 
-**针对 Data Engineer 岗位的 Summary: **
+**针对 Data Engineer 岗位的 Summary:**
 
 > *Computer Science new grad with strong foundation in data systems and ETL pipelines. Experienced with Python, SQL, Spark, and AWS. Built automated data pipelines processing 100K+ records daily in academic projects.*
 
 这个 Summary 强调的是: 数据系统, Pipeline 构建, 大数据处理能力.
 
-**针对 Machine Learning Engineer 岗位的 Summary: **
+**针对 Machine Learning Engineer 岗位的 Summary:**
 
 > *Computer Science new grad specializing in machine learning and deep learning. Proficient in Python, PyTorch, and TensorFlow. Implemented and trained CNN models achieving 94% accuracy on image classification tasks.*
 
@@ -131,31 +131,31 @@
 
 让我再给你一些不同岗位方向的 Summary 示例, 帮你理解怎么针对不同方向做定位.
 
-**AI Developer (偏应用开发): **
+**AI Developer (偏应用开发):**
 
 > *Computer Science new grad focused on building AI-powered applications. Experienced with Python, LangChain, and OpenAI APIs. Developed a RAG-based chatbot handling 1000+ queries in production environment.*
 
-**AI Engineer (偏模型和系统): **
+**AI Engineer (偏模型和系统):**
 
 > *Computer Science new grad with expertise in deploying ML models at scale. Proficient in Python, PyTorch, Docker, and Kubernetes. Built end-to-end ML pipelines from training to inference serving.*
 
-**Data Analyst: **
+**Data Analyst:**
 
 > *Statistics and Computer Science new grad with strong analytical skills. Proficient in Python, SQL, Tableau, and Excel. Conducted data analysis projects uncovering insights that informed business decisions.*
 
-**Data Scientist: **
+**Data Scientist:**
 
 > *Computer Science new grad with a focus on statistical modeling and machine learning. Experienced with Python, R, scikit-learn, and Pandas. Built predictive models with 85%+ accuracy on real-world datasets.*
 
-**Cloud Engineer: **
+**Cloud Engineer:**
 
 > *Computer Science new grad with hands-on experience in cloud infrastructure. Proficient in AWS (EC2, S3, Lambda), Terraform, and Docker. Deployed and managed cloud-based applications with 99.9% uptime.*
 
-**Solution Architect (应届生较少见, 但有些公司招): **
+**Solution Architect (应届生较少见, 但有些公司招):**
 
 > *Computer Science new grad with broad technical foundation across cloud, data, and application development. AWS Certified. Designed system architectures for 3 academic capstone projects involving microservices and distributed systems.*
 
-**Financial Engineer / Quantitative Developer (金融科技方向): **
+**Financial Engineer / Quantitative Developer (金融科技方向):**
 
 > *Mathematics and Computer Science new grad with strong foundation in quantitative analysis. Proficient in Python, C++, and statistical modeling. Developed trading strategy backtesting framework processing 1M+ historical data points.*
 
@@ -205,25 +205,25 @@ Hiring Manager 要的是 Specialist, 不是 Generalist.
 
 Skills 部分也需要根据你申请的方向来调整. 同一个人, 针对不同岗位, Skills 部分可以完全不同.
 
-**SDE 岗位的 Skills: **
+**SDE 岗位的 Skills:**
 
 > *Languages: Python, JavaScript, TypeScript, Java*
 > *Frameworks: React, Node.js, Express, Django*
 > *Tools: Git, Docker, PostgreSQL, Redis*
 
-**Data Engineer 岗位的 Skills: **
+**Data Engineer 岗位的 Skills:**
 
 > *Languages: Python, SQL, Scala*
 > *Data Tools: Spark, Airflow, dbt, Kafka*
 > *Cloud: AWS (S3, Redshift, Glue), Snowflake*
 
-**Machine Learning Engineer 岗位的 Skills: **
+**Machine Learning Engineer 岗位的 Skills:**
 
 > *Languages: Python, C++*
 > *ML Frameworks: PyTorch, TensorFlow, scikit-learn*
 > *Tools: Docker, MLflow, Weights & Biases, Jupyter*
 
-**Cloud Engineer 岗位的 Skills: **
+**Cloud Engineer 岗位的 Skills:**
 
 > *Cloud Platforms: AWS (EC2, S3, Lambda, RDS), GCP*
 > *Infrastructure: Terraform, Docker, Kubernetes*
@@ -261,7 +261,7 @@ Skills 部分也需要根据你申请的方向来调整. 同一个人, 针对不
 
 一个好的项目描述应该遵循这个公式: **Action + Technical Detail + Impact**.
 
-**Action (做了什么) **
+**Action (做了什么)**
 
 用具体的动词开头, 描述你做了什么.
 
@@ -282,7 +282,7 @@ Skills 部分也需要根据你申请的方向来调整. 同一个人, 针对不
 
 这些词足够有力, 又不会让人觉得你在夸大.
 
-**Technical Detail (技术细节) **
+**Technical Detail (技术细节)**
 
 说明你用了什么技术, 怎么实现的. 但不要只是堆砌技术名词, 要让人看出你真正用这些技术做了什么.
 
@@ -296,7 +296,7 @@ Skills 部分也需要根据你申请的方向来调整. 同一个人, 针对不
 
 第二种写法让人看出你理解每个技术在系统中的角色.
 
-**Impact (影响/结果) **
+**Impact (影响/结果)**
 
 这是最容易被忽略的部分, 也是需要最谨慎的部分.
 
@@ -333,7 +333,7 @@ Skills 部分也需要根据你申请的方向来调整. 同一个人, 针对不
 
 让我给你一些不同岗位方向的项目描述示例, 帮你理解怎么针对不同方向写 Bullet Points.
 
-**SDE / Full-Stack 方向: **
+**SDE / Full-Stack 方向:**
 
 项目: 一个 Task Management Web App
 
@@ -343,7 +343,7 @@ Skills 部分也需要根据你申请的方向来调整. 同一个人, 针对不
 >
 > *Deployed on AWS EC2 with Docker, set up CI/CD pipeline using GitHub Actions. Currently serves 200+ registered users.*
 
-**Data Engineer 方向: **
+**Data Engineer 方向:**
 
 项目: 一个数据 Pipeline 项目
 
@@ -353,7 +353,7 @@ Skills 部分也需要根据你申请的方向来调整. 同一个人, 针对不
 >
 > *Reduced manual data collection time from 4 hours to 15 minutes through automation.*
 
-**Machine Learning Engineer 方向: **
+**Machine Learning Engineer 方向:**
 
 项目: 一个图像分类模型
 
@@ -363,7 +363,7 @@ Skills 部分也需要根据你申请的方向来调整. 同一个人, 针对不
 >
 > *Deployed model as a REST API using FastAPI and Docker, enabling real-time inference.*
 
-**Data Scientist 方向: **
+**Data Scientist 方向:**
 
 项目: 一个预测模型
 
@@ -373,7 +373,7 @@ Skills 部分也需要根据你申请的方向来调整. 同一个人, 针对不
 >
 > *Final model achieved 87% AUC-ROC, identified top 5 features driving customer churn.*
 
-**AI Developer 方向: **
+**AI Developer 方向:**
 
 项目: 一个 RAG Chatbot
 
@@ -383,7 +383,7 @@ Skills 部分也需要根据你申请的方向来调整. 同一个人, 针对不
 >
 > *Handles 100+ queries daily with 85% user satisfaction rate based on feedback collection.*
 
-**Cloud Engineer 方向: **
+**Cloud Engineer 方向:**
 
 项目: 一个云部署项目
 
@@ -393,7 +393,7 @@ Skills 部分也需要根据你申请的方向来调整. 同一个人, 针对不
 >
 > *Achieved 99.5% uptime over 3-month monitoring period with automated scaling and health checks.*
 
-**Financial Engineering / Quant 方向: **
+**Financial Engineering / Quant 方向:**
 
 项目: 一个量化策略回测项目
 
