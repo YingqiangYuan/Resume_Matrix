@@ -4,7 +4,7 @@
 
 ## 1. 课程导读: 13 不是新内容, 是把前面 12 节扣成一个环
 
-前 12 节像是一堆零件: 招聘理论, ATS, 6 阶段链路, 5 个 skill, 写 bullet, 写 Summary, Google Doc 协作, PDF 导出, 弹药库维护, Summary 演化. 每个零件单独看都有用, 但**真正让它们威力 1 + 1 > 2 的是把它们扣成一个能自循环的环**.
+前 12 节像是一堆零件: 招聘理论, ATS, 6 阶段链路, 10 个 skill, 写 bullet, 写 Summary, Google Doc 协作, PDF 导出, 弹药库维护, Summary 演化. 每个零件单独看都有用, 但**真正让它们威力 1 + 1 > 2 的是把它们扣成一个能自循环的环**.
 
 13 就讲这个环长什么样, 怎么转, 转一圈你身上发生了什么变化.
 
@@ -39,7 +39,7 @@
 | [10-write-summary](../10-write-summary/) | 从 bullet 反推 Summary |
 | [11-submit-and-collaborate](../11-submit-and-collaborate/) | 双轨协作 + 排版微调 + PDF 投递 |
 
-这一阶段的本质: **从一个目标 JD 出发, 用 AI + 5 个 skill, 4 到 8 周, 把一段经历变成扎实的 case, 然后 case 变成 bullet, bullet 反推 Summary, 派生针对性 PDF 投出去**. 这是从 0 到 1 的"重投入", 是矩阵法的奠基性动作.
+这一阶段的本质: **从一个目标 JD 出发, 用 AI + 10 个 skill, 4 到 8 周, 把一段经历变成扎实的 case, 然后 case 变成 bullet, bullet 反推 Summary, 派生针对性 PDF 投出去**. 这是从 0 到 1 的"重投入", 是矩阵法的奠基性动作.
 
 ### 阶段 3: 让简历变成长期资产 (12)
 
@@ -62,7 +62,7 @@
 ```mermaid
 flowchart TD
     DESIGN["① 设计 mini 项目<br/>(mini-project-design / -review)"]
-    SKILL["② 补技能<br/>(qualify-gap-plan + qualify-coach)"]
+    SKILL["② 诊断 + 补技能<br/>(qualify-gap-analyze + qualify-execution-plan + qualify-coach)"]
     DO["③ 把项目做出来<br/>(执行 + qualify-mock-interview 验收)"]
     CASE["④ 整理成 case 文档<br/>(understand-yourself, 前置课程)"]
     BULLET["⑤ 写成 bullet 加进 master<br/>(bullet-writer / -reviewer)"]
@@ -95,7 +95,7 @@ flowchart TD
 | 节点 | 对应 skill | 在哪节学 |
 |---|---|---|
 | ① 设计 mini 项目 | `mini-project-design` + `mini-project-review` | 06 / 07 / 08 |
-| ② 补技能 | `qualify-gap-plan` + `qualify-coach` | 07 / 08 |
+| ② 诊断 + 补技能 | `qualify-gap-analyze` + `qualify-execution-plan` + `qualify-coach` | 07 / 08 |
 | ③ 项目做出来 (执行 + 验收) | (执行靠自己) + `qualify-mock-interview` | 07 / 08 |
 | ④ 整理成 case 文档 | `understand-yourself` (来自前置课程 career_planning, 跟 `understand-landscape` 是姊妹篇) | 12 引用 |
 | ⑤ 写成 bullet | `bullet-writer` + `bullet-reviewer` | 09 |
@@ -104,7 +104,7 @@ flowchart TD
 | ⑧ 投递 PDF | (无 skill, 操作动作) | 11 |
 | ⑨ 收反馈 | (无 skill, 信息收集) | 13 (本节) |
 
-跟改简历有关的 skill 全套一共 9 个, 全在本仓库的 `.claude/skills/` 下: `mini-project-design`, `mini-project-review`, `qualify-gap-plan`, `qualify-coach`, `qualify-mock-interview`, `bullet-writer`, `bullet-reviewer`, `summary-writer`, `summary-reviewer`. 前 5 个是 06 / 07 / 08 教的"准备项目素材"工作流主干, 后 4 个是 09 / 10 教的"写 bullet 加 Summary"工具. 另外还引用了 2 个前置课程 (career_planning) 的 skill: `understand-landscape` 和 `understand-yourself`, 这两个不在本仓库实现. 9 + 2 = 11 个 skill 拼出上面这个 9 节点闭环.
+跟改简历有关的 skill 全套一共 10 个, 全在本仓库的 `.claude/skills/` 下: `qualify-gap-analyze`, `mini-project-design`, `mini-project-review`, `qualify-execution-plan`, `qualify-coach`, `qualify-mock-interview`, `bullet-writer`, `bullet-reviewer`, `summary-writer`, `summary-reviewer`. 前 6 个是 06 / 07 / 08 教的"准备项目素材"工作流主干, 后 4 个是 09 / 10 教的"写 bullet 加 Summary"工具. 另外还引用了 2 个前置课程 (career_planning) 的 skill: `understand-landscape` 和 `understand-yourself`, 这两个不在本仓库实现. 10 + 2 = 12 个 skill 拼出上面这个 9 节点闭环.
 
 ---
 

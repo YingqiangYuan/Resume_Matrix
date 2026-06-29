@@ -26,9 +26,9 @@
 
 ```mermaid
 flowchart TD
-    S1["阶段 1<br/>understand-landscape"] --> S2["阶段 2<br/>qualify-gap-plan 诊断版"]
+    S1["阶段 1<br/>understand-landscape"] --> S2["阶段 2<br/>qualify-gap-analyze"]
     S2 --> S3["阶段 3<br/>mini-project-design 加 review"]
-    S3 --> S4["阶段 4<br/>qualify-gap-plan 对齐 case 版"]
+    S3 --> S4["阶段 4<br/>qualify-execution-plan"]
     S4 --> S5["阶段 5<br/>qualify-coach"]
     S5 --> S6["阶段 6<br/>qualify-mock-interview"]
 
@@ -74,9 +74,9 @@ John 摸一下自己的家底: Go 没写过, 分布式系统只上过课没碰�
 | 阶段 | 解释 | 输入文档 | 输出文档 |
 |---|---|---|---|
 | 阶段 1 `understand-landscape` | 把目标 JD 当尽调对象, 调研行业加公司加角色加市场 | [`job-description.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/job-description.md) | [`landscape/`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/landscape/) 5 篇 (本仓库示例只展开了 `00-title-cn.md`) |
-| 阶段 2 `qualify-gap-plan` 诊断版 | 对照 JD 和 landscape 诚实诊断当前简历的差距 | 上面所有加 [`resume-old.md`](../../students/john-doe/resume-old.md) | [`01-gap-analysis-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/01-gap-analysis-cn.md) (stub) |
-| 阶段 3 `mini-project-design` 加 `mini-project-review` (**from-scratch 模式**) | 在无现有经历约束下前瞻性地设计 case, 3 轮迭代 | 上面所有加 capacity profile (**不带现有经历**) | [`case-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/case-cn.md) 前瞻版 |
-| 阶段 4 `qualify-gap-plan` 对齐 case 版 | 对照前瞻 case 重新算差距, POC 颗粒度更细 | 上面所有加 [`case-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/case-cn.md) | [`02-gap-fill-plan-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/02-gap-fill-plan-cn.md) 加 [`pocs/`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/pocs/) 加 [`tutorials/`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/tutorials/) |
+| 阶段 2 `qualify-gap-analyze` | 对照 JD 和 landscape 诚实诊断当前简历的差距 | 上面所有加 [`resume-old.md`](../../students/john-doe/resume-old.md) | [`gap-analysis-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/gap-analysis-cn.md) (stub) |
+| 阶段 3 `mini-project-design` 加 `mini-project-review` (**from-scratch 模式**) | 拿 gap analysis 当指南, 在无现有经历约束下前瞻性地设计 case, 3 轮迭代 | 上面所有加 gap analysis 加 capacity profile (**不带现有经历**) | [`case-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/case-cn.md) 前瞻版 |
+| 阶段 4 `qualify-execution-plan` | 拿 gap analysis 加前瞻 case 当输入, 推出周计划 + POC + 教程 | 上面所有加 [`case-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/case-cn.md) | [`execution-plan-cn.md`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/execution-plan-cn.md) 加 [`pocs/`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/pocs/) 加 [`tutorials/`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/tutorials/) |
 | 阶段 5 `qualify-coach` | 一个 gap 一个 gap 地学概念加写 POC, 顺便感受 case 难度 | 上面所有 | `coach-notes/` 动态生成于 [qualify-for 目录](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/) |
 | 阶段 6 `qualify-mock-interview` | 用 AI 扮演陌生面试官真刀真枪压测 | 上面所有 | `mock-interview-{n}-cn.md` 动态生成于 [qualify-for 目录](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/) |
 
@@ -133,7 +133,7 @@ John 摸一下自己的家底: Go 没写过, 分布式系统只上过课没碰�
 - **方法二 (elevate, 07)**: 你已经有一段薄经历, 你的工作是**把它重新理解深**. Cedar Ridge → Cascadia 那条线就是这条.
 - **方法三 (from-scratch, 08)**: 你什么都没有, 只有一个想去的 JD, 你的工作是**从 JD 反推一个值得做的设计**, 然后真的去做. Pulse 这条线就是这条.
 
-三条路最后都汇到同一个下游: 用同一套 6 阶段工作流, 跑同样的 `qualify-gap-plan`, `qualify-coach`, `qualify-mock-interview`, 最后走进同样的面试间. `mini-project-design` 这一个 skill 就是 elevate 和 from-scratch 两种模式的合体, 它把这三条路在工程上统一了.
+三条路最后都汇到同一个下游: 用同一套 6 阶段工作流, 跑同样的 `qualify-gap-analyze`, `qualify-execution-plan`, `qualify-coach`, `qualify-mock-interview`, 最后走进同样的面试间. `mini-project-design` 这一个 skill 就是 elevate 和 from-scratch 两种模式的合体, 它把这三条路在工程上统一了.
 
 我常碰到学生问"我没有实习也没有项目, 怎么办". 半数人的反应是"那我就再去刷一遍 LeetCode 吧", 这是错答案. 正确答案是: 选一个具体的 JD, 跑一遍 08 的链路, 把设计跑通, 然后想办法找到执行 venue. 即便你最后没拿到那个 JD 对应的实习, 你跑出来的 landscape, gap 分析, case 设计, POC 实操, 都是真东西, 都能搬到下一个目标 JD 上再跑一次.
 
@@ -153,9 +153,9 @@ John 摸一下自己的家底: Go 没写过, 分布式系统只上过课没碰�
 
 1. 起点对齐. 手里只有一份还不够看的简历, 加一个已经定位好的目标岗位. 这是"职业定位"环节做的事, 本课程的前置课程 career_planning 教的.
 2. 深度调研. 把目标岗位背后的"行业 + 公司 + 角色族 + 市场"全部摸透. 这一步用前置课程的 `understand-landscape` skill.
-3. 诊断差距. 根据调研结果分析"我现在跟这个岗位差在哪". 这一步用 `qualify-gap-plan` (诊断版).
-4. 设计项目. 根据差距, 设计一个不太难也不太简单的项目, 正好把这些差距补上. 这一步用 `mini-project-design` 加 `mini-project-review` 配套迭代.
-5. 细化执行. 把项目拆成"具体怎么干 + 要补哪些学习材料 + 哪些 mini-POC 练手". 这一步再跑一次 `qualify-gap-plan` (对齐 case 版).
+3. 诊断差距. 根据调研结果分析"我现在跟这个岗位差在哪". 这一步用 `qualify-gap-analyze`, 只产一份诚实的诊断文档, 不产 POC 也不产周计划.
+4. 设计项目. 拿上一步的 gap 分析当指南, 设计一个不太难也不太简单的项目, 正好把这些差距补上. 这一步用 `mini-project-design` 加 `mini-project-review` 配套迭代.
+5. 细化执行. 把项目拆成"具体怎么干 + 要补哪些学习材料 + 哪些 mini-POC 练手". 这一步用 `qualify-execution-plan`, 输入是上面的 gap 分析 + case, 输出周计划 + POC + 教程占位.
 6. 试一下能不能搞定. 拿学习材料和 POC 真上手做几下, 感受 3 到 6 个月内能不能 hold 住. hold 不住就回阶段 4 把 case 设计降难度重来; hold 得住就把 case 文档 finalize 下来.
 7. 写简历投递. 到这一步你手上的信息已经够你写一份过关的简历了. 按后面 [09-write-bullets](../09-write-bullets/README-cn.md) 教的方法把 bullet 写好, 按 [10-write-summary](../10-write-summary/README-cn.md) 写 summary, 按 [11-submit-and-collaborate](../11-submit-and-collaborate/README-cn.md) 教的方法投递出去就行.
 
@@ -163,15 +163,15 @@ John 摸一下自己的家底: Go 没写过, 分布式系统只上过课没碰�
 
 ### 9.1 这些 skill 在整件事里到底是什么角色
 
-可能你已经注意到了, 上面 7 步用到的 skill 加起来一共是 5 个: `mini-project-design`, `mini-project-review`, `qualify-gap-plan`, `qualify-coach`, `qualify-mock-interview`. 这是 06 加 07 加 08 三章工作流的"主干 5 个 skill".
+可能你已经注意到了, 上面 7 步用到的 skill 加起来一共是 6 个: `qualify-gap-analyze`, `mini-project-design`, `mini-project-review`, `qualify-execution-plan`, `qualify-coach`, `qualify-mock-interview`. 这是 06 加 07 加 08 三章工作流的"主干 6 个 skill".
 
-跟改简历有关的 skill 全套其实有 9 个. 剩下的 4 个 (`bullet-writer`, `bullet-reviewer`, `summary-writer`, `summary-reviewer`) 是 09 和 10 才教的, 专门负责"从 case 压成 bullet"和"从 bullet 反推 Summary"这两件事. 所以 06 加 07 加 08 看到的"5 个 skill"是"主干 5 个"的意思, 不是"全部就这 5 个".
+跟改简历有关的 skill 全套其实有 10 个. 剩下的 4 个 (`bullet-writer`, `bullet-reviewer`, `summary-writer`, `summary-reviewer`) 是 09 和 10 才教的, 专门负责"从 case 压成 bullet"和"从 bullet 反推 Summary"这两件事. 所以 06 加 07 加 08 看到的"6 个 skill"是"主干 6 个"的意思, 不是"全部就这 6 个".
 
 更重要的, 这些 skill 不是这件事的"主角". 它们只是"这件事每个阶段的输入和输出加几条质量下限"的工程化封装.
 
 不要拘泥于这些 skill 当前的具体写法. 每个 skill 本质上只是把"这个阶段的输入是什么, 产出是什么, 容易踩什么坑"用 prompt 工程的方式定义好, 然后保证它面对不同学生的需求时表现一致地够用而已. 如果你已经吃透了上面那 7 步每一步的逻辑, 你完全可以:
 
-- 单独拿某个 skill 出来用 (例如只跑 `qualify-gap-plan` 给自己做一次 gap 诊断, 不跑全套).
+- 单独拿某个 skill 出来用 (例如只跑 `qualify-gap-analyze` 给自己做一次 gap 诊断, 不跑全套).
 - 给 skill 加额外的需求, 背景信息, 特殊约束 (例如"我只剩 4 周不是 12 周, 请压缩学习计划""我是 PM 不是 SWE, POC 形态换成产品 case 拆解").
 - 跳过某个 skill 自己手写它的输入产出 (例如 landscape 你想用读书会的方式做, case 你想直接拿导师手稿).
 - 反过来用 (例如先有项目 case 再倒推 gap 分析).

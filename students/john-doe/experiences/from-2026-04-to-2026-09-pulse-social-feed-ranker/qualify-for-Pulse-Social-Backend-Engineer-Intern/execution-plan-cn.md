@@ -1,6 +1,6 @@
 # Pulse Backend Engineer Intern 的 Gap Fill Plan
 
-> 这是 08 教学示例的 abbreviated 版本。真实 workflow 里 `qualify-gap-plan` 第二部分会产出 ~350 行的完整版含 POC 优先级矩阵 + 教程目录索引 + 12 周时间线。这里只保留 POC 主干和时间线骨架。完整版可参考 CedarRidge 那份 [02-gap-fill-plan-cn.md](../../../from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/02-gap-fill-plan-cn.md)。
+> 这是 08 教学示例的 abbreviated 版本。真实 workflow 里 `qualify-execution-plan` 第二部分会产出 ~350 行的完整版含 POC 优先级矩阵 + 教程目录索引 + 12 周时间线。这里只保留 POC 主干和时间线骨架。完整版可参考 CedarRidge 那份 [execution-plan-cn.md](../../../from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/execution-plan-cn.md)。
 
 ## 1. 执行原则与时间线
 

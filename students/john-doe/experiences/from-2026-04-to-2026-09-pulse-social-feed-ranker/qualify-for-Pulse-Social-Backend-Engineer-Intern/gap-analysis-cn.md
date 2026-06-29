@@ -1,6 +1,6 @@
 # Pulse Backend Engineer Intern 的 Gap 分析
 
-> 这是 08 教学示例的 abbreviated 版本。真实 workflow 里 `qualify-gap-plan` 会产出 ~200 行的完整版含每个 gap 的"为什么这个对岗位重要"和"closing 之后能讲什么"。这里保留主干, 让学生看到 08 阶段 2 的产出形态。CedarRidge 文件夹有 200 行完整版示例 ([01-gap-analysis-cn.md](../../../from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/01-gap-analysis-cn.md))。
+> 这是 08 教学示例的 abbreviated 版本。真实 workflow 里 `qualify-execution-plan` 会产出 ~200 行的完整版含每个 gap 的"为什么这个对岗位重要"和"closing 之后能讲什么"。这里保留主干, 让学生看到 08 阶段 2 的产出形态。CedarRidge 文件夹有 200 行完整版示例 ([gap-analysis-cn.md](../../../from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/gap-analysis-cn.md))。
 
 ## 1. 相关性诊断
 

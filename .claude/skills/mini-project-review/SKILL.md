@@ -214,7 +214,7 @@ For from-scratch, run two distinct audits.
 
 Most designs land in `approve-with-revisions` on the first pass. That is the healthy default.
 
-`approve` means the case can move forward to `qualify-gap-plan` as-is. Reserve this for designs that survive all three axes cleanly. The interview-survivability bar is "every technical claim could be defended under a 10-minute follow-up by a competent interviewer".
+`approve` means the case can move forward to `qualify-execution-plan` as-is. Reserve this for designs that survive all three axes cleanly. The interview-survivability bar is "every technical claim could be defended under a 10-minute follow-up by a competent interviewer".
 
 `approve-with-revisions` means the case has 1 to 4 specific fixable gaps but the spine is sound. The student should patch the gaps and proceed.
 
@@ -307,7 +307,7 @@ This skill does not produce or rewrite the case. That is `mini-project-design`. 
 
 This skill does not edit `fix-*.md`. That file is the design terminal's output.
 
-This skill does not diagnose skill gaps or build the learning plan. That is `qualify-gap-plan`.
+This skill does not diagnose skill gaps or build the learning plan. That is `qualify-execution-plan`.
 
 This skill does not teach concepts or run mock interviews. Those are `qualify-coach` and `qualify-mock-interview`.
 

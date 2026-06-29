@@ -15,9 +15,9 @@ from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/
       02-company-cn.md
       03-role-cn.md
       04-market-cn.md
-    01-gap-analysis-cn.md                                 ← 阶段 2 产出：gap 诊断
+    gap-analysis-cn.md                                 ← 阶段 2 产出：gap 诊断
     case-cn.md                                            ← 阶段 3 产出：拔高项目设计（bullet 写作的源头）
-    02-gap-fill-plan-cn.md                                ← 阶段 4 产出：gap 填充计划
+    execution-plan-cn.md                                ← 阶段 4 产出：gap 填充计划
     pocs/                                                 ← 阶段 4-5 产出：mini-POC 实操
       poc-01-strand-agents/README-cn.md
       poc-05-semantic-yaml/README-cn.md

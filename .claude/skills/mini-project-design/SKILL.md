@@ -47,9 +47,10 @@ There is one mandatory input.
 
 - Target Job Description (JD). Without this, you cannot align anything. Refuse to proceed.
 
-There are three strongly recommended optional inputs. Ask for each, and if the user says they do not have it, soft-nudge with "are you sure you want to proceed without it? more context produces substantially better output." Do not block. Proceed with what is available and document the gaps inside the case file.
+There are four strongly recommended optional inputs. Ask for each, and if the user says they do not have it, soft-nudge with "are you sure you want to proceed without it? more context produces substantially better output." Do not block. Proceed with what is available and document the gaps inside the case file.
 
 - Existing case study or thin case write-up. This is functionally mandatory in `elevate` mode. Refuse to run `elevate` without it.
+- Gap analysis file (typically `gap-analysis-cn.md`, produced by `qualify-gap-analyze`). This is the single highest-leverage optional input. Without it you design a case that aims at the JD in the abstract; with it you design a case that specifically gives THIS student a chance to learn the technologies and skills they are missing. Two students with the same JD but different backgrounds need different cases, and only the gap analysis reveals that difference.
 - Landscape research output, specifically the 5 docs produced by `understand-landscape`. The `01-industry`, `02-company`, and `03-role` docs are the most load-bearing for project framing.
 - Student capacity and access constraints. Hours per week, total months available, dataset access, AWS account access, language preferences, on-campus versus remote, anything that bounds what is realistic.
 
@@ -206,7 +207,7 @@ Crucial procedural rules.
 - **This must run in a fresh terminal session, not in the prior design conversation that produced the original case**. The prior design conversation is polluted by 3 rounds of decisions you already defended; if you continue in that session you will instinctively defend the existing case rather than accept the rollback signal. A clean session has no such bias.
 - This is a fresh `initial` execution mode run, structural mode same as before (typically elevate or from-scratch matching the original case). The coach feedback document is an additional required input, on top of the usual initial-mode inputs.
 - Output is a new `case-cn.md` that overwrites the old one. The old version is preserved in git history; do not keep a parallel "v1" file in the qualify-for folder, that clutters the handshake protocol with `mini-project-review`.
-- After writing the new case, instruct the user to re-run `qualify-gap-plan` in stage 4 mode (against the new case) so the fill plan and POCs align, and then resume `qualify-coach` on the rebuilt plan. The prior `qualify-coach` session should be paused with its open concept marked `⏭️` ("blocked by case redesign") rather than declared complete.
+- After writing the new case, instruct the user to re-run `qualify-execution-plan` in stage 4 mode (against the new case) so the fill plan and POCs align, and then resume `qualify-coach` on the rebuilt plan. The prior `qualify-coach` session should be paused with its open concept marked `⏭️` ("blocked by case redesign") rather than declared complete.
 - The next round of `mini-project-review` after this rollback restarts the review counter; rename or archive existing `review-NN.md` and `fix-NN.md` files in the folder (a `_archive-pre-rollback/` subfolder is the recommended convention) so the fresh case starts at `review-01.md` again.
 
 This rollback path is the third leg of the "iterate fast, revise the case early" philosophy that runs throughout the workflow. It is cheaper to redesign the case in week 3 than to discover the case is unbuildable in week 12 during mock-interview prep.
@@ -267,7 +268,7 @@ For loop mode.
 
 This skill does not run the review. That is `mini-project-review`, which runs in a separate terminal for independent perspective.
 
-This skill does not diagnose gaps or build the fill plan. That is `qualify-gap-plan`.
+This skill does not diagnose gaps or build the fill plan. That is `qualify-execution-plan`.
 
 This skill does not produce landscape research. That is `understand-landscape`.
 

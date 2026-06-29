@@ -49,7 +49,7 @@ There is one mandatory input class.
 
 There is one strongly recommended input that you should ask for and soft-nudge if missing.
 
-- The gap-fill plan (`02-gap-fill-plan-cn.md`) plus the coach-notes folder. This is what tells you which concepts the student was supposed to have learned. Without it, you cannot produce a per-concept verdict in the debrief. You can still run an interview without it, but the debrief will be much weaker. Say so when nudging.
+- The gap-fill plan (`execution-plan-cn.md`) plus the coach-notes folder. This is what tells you which concepts the student was supposed to have learned. Without it, you cannot produce a per-concept verdict in the debrief. You can still run an interview without it, but the debrief will be much weaker. Say so when nudging.
 
 There are three weakly recommended inputs. Ask for each one, accept "no" without pushback.
 
@@ -67,7 +67,7 @@ You produce ONE file per round, with two sections inside it. Optionally you can 
 
 The default filename is `mock-interview-{round}.md` (English) or `mock-interview-{round}-cn.md` if the student requested Chinese. The round number is sequential. Before starting, list the existing files in the `qualify-for-<JD-slug>/` folder, find the highest existing `mock-interview-N` number, and use `N+1`. If no prior rounds exist, start at 1. Do not skip numbers. Do not overwrite.
 
-The file location is inside `qualify-for-<JD-slug>/`, same folder as `case.md` and `01-gap-analysis-cn.md`.
+The file location is inside `qualify-for-<JD-slug>/`, same folder as `case.md` and `gap-analysis-cn.md`.
 
 The file has two sections.
 
@@ -197,6 +197,6 @@ This skill does not teach. That is `qualify-coach`. If during the debrief the st
 
 This skill does not redesign the project. That is `mini-project-design`. If the case file itself looks structurally weak (not just the student's grasp of it), note it in the debrief but do not rewrite the case here.
 
-This skill does not produce the gap-fill plan or reorganize learning priorities at a strategic level. That is `qualify-gap-plan`. If the debrief reveals that the gap-fill plan itself missed a concept the JD clearly cares about, flag it for the student to take back to `qualify-gap-plan` in a separate session.
+This skill does not produce the gap-fill plan or reorganize learning priorities at a strategic level. That is `qualify-execution-plan`. If the debrief reveals that the gap-fill plan itself missed a concept the JD clearly cares about, flag it for the student to take back to `qualify-execution-plan` in a separate session.
 
 This skill does not pretend to be the real interview. It is practice. The student should leave knowing what to fix next, not knowing whether they would get the offer.

@@ -13,10 +13,10 @@ from-2026-04-to-2026-09-pulse-social-feed-ranker/
     job-description.md                                      ← 输入: 目标 JD (英文)
     landscape/
       00-title-cn.md                                        ← 阶段 1 (abbreviated, 教学示例)
-    01-gap-analysis-cn.md                                   ← 阶段 2 (stub)
+    gap-analysis-cn.md                                   ← 阶段 2 (stub)
     case-cn.md                                              ← 阶段 3 产出: forward-looking 设计
-    02-gap-fill-plan-cn.md                                  ← 阶段 4 (stub)
-    pocs/                                                   ← 阶段 4-5 (留给 qualify-gap-plan 实际生成)
+    execution-plan-cn.md                                  ← 阶段 4 (stub)
+    pocs/                                                   ← 阶段 4-5 (留给 qualify-execution-plan 实际生成)
     tutorials/                                              ← 阶段 4 (同上)
 ```
 

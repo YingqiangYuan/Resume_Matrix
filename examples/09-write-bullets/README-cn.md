@@ -279,7 +279,7 @@ skill 内部用 30% 的 diff 阈值做 Mode 推荐: 改动小于 30% 默认 Mode
 - 每投一家都跑一遍 reviewer. 没必要. 同一个 Job Family 里, 大多数 JD 互相只差几个关键词, master 版本就够用了. 只对你**真心想要的 3 到 5 家**跑 reviewer.
 - 反复 reviewer 同一个 Bullet Set 改了又改, master 越改越乱. 建议: 一旦针对某个 JD 微调出新版本, 如果改动比较大, 在 master 里**保留原版同时新增一个针对那家公司的 Bullet Set 变体**, 不要原地覆盖.
 
-> 注: `bullet-writer` 和 `bullet-reviewer` 跟 07/08 用的那 5 个 skill 之间是**弱耦合**关系. 输入是磁盘上的文件 (你的 master `resume.md` + `case-cn.md` + 可选 `job-description.md`), 不依赖前面 skill 的运行时状态. 你完全可以**不跑 07 和 08**, 自己手写一份 case 加贴一份 JD, 直接调 `bullet-writer`. 反过来, 跑完 07 或 08 拿到 case 之后, 你也可以**不用 bullet-writer**, 照着 §3 那套 4-bullet 内部结构手写直接编辑 `resume.md`. skill 只是把流程工业化加上质量底线托底, 不是必经之路. 这套课的真正资产是 §3 那套**"先 HR 画面再技术递进"的内部结构思维**, skill 只是工程化容器.
+> 注: `bullet-writer` 和 `bullet-reviewer` 跟 07/08 用的那 6 个 skill 之间是**弱耦合**关系. 输入是磁盘上的文件 (你的 master `resume.md` + `case-cn.md` + 可选 `job-description.md`), 不依赖前面 skill 的运行时状态. 你完全可以**不跑 07 和 08**, 自己手写一份 case 加贴一份 JD, 直接调 `bullet-writer`. 反过来, 跑完 07 或 08 拿到 case 之后, 你也可以**不用 bullet-writer**, 照着 §3 那套 4-bullet 内部结构手写直接编辑 `resume.md`. skill 只是把流程工业化加上质量底线托底, 不是必经之路. 这套课的真正资产是 §3 那套**"先 HR 画面再技术递进"的内部结构思维**, skill 只是工程化容器.
 
 ---
 

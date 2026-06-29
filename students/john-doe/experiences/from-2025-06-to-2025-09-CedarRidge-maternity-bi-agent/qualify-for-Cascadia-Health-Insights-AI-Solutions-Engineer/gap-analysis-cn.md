@@ -183,7 +183,7 @@ John 当前 Cedar Ridge 这段经历对 Cascadia AI Solutions Engineer 岗位是
 
 ## 8. 写给 fill plan 的 handoff 笔记
 
-下面几条是 02-gap-fill-plan-cn.md 的作者应该带着的约束和优先级。
+下面几条是 execution-plan-cn.md 的作者应该带着的约束和优先级。
 
 优先级排序：先做 Gap 1 + 3 + 6 + 9（合并成一个 RAG over FHIR agent 项目），因为这是 Cascadia phone screen 80% 概率会问的话题，缺这个直接挂。其次做 Gap 5 + 7 + 8（合并成一个 Cedar Ridge 拔高项目），因为这是 on-site case study 环节会展示的 portfolio。最后做 Gap 2 + 4（合并成一个 CDK 部署项目），优先级最低但闭合成本也最低，1-2 周可以做出 demo 级别。
 
