@@ -1,38 +1,38 @@
 # Maternity SQL Reporting
 
-> Period: 2025-06 to 2025-09. Company: Cedar Ridge Women's Health. Role: Analytics Intern. Industry: Healthcare.
+> Dates: 2025-06 to 2025-09. Company: Cedar Ridge Women's Health. Role: Analytics Intern. Industry: Healthcare.
 
-> Note: This is how John Doe originally described this internship before he learned to elevate it. The same internship, reframed and elevated through "Method 2: elevating an existing project," became the [CedarRidge-maternity-bi-agent](./from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/) project design package. Reading the two side by side shows what "elevation" actually means in practice.
+> Note: this is how John Doe described the experience before any elevation. After running the same internship through "Method 2: elevate and polish an existing project," it was reframed as the full project design document in [CedarRidge-maternity-bi-agent](./from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/). Reading the two side by side makes it very concrete what "elevation" actually means.
 
-## 1. Context
+## 1. Background
 
-Cedar Ridge Women's Health is a US chain of maternity and OB/GYN hospitals. I did a three-month summer internship on their analytics team.
+Cedar Ridge Women's Health is a US chain of hospitals focused on obstetrics and gynecology. I spent three months of my summer interning on their analytics team.
 
-My main contact was a senior analyst named Hannah. She handled the OB ward's reporting requests by writing SQL queries against the data warehouse and emailing results back. After I joined I mostly assisted her.
+My main point of contact was a senior analyst named Hannah. Day to day she handled reporting requests coming out of the OB ward (the maternity ward), writing SQL queries and emailing the results back. After I joined I mostly assisted her.
 
 ---
 
 ## 2. What I Did
 
-I mostly wrote SQL.
+I mainly wrote SQL.
 
-Hannah gave me a list of the recurring reporting requests she received and had me work through them. Cedar Ridge's data lived in Snowflake, so I spent the first couple of weeks learning the table layout, then started writing.
+Hannah handed me a list of the reporting requests she normally received and asked me to write SQL queries to pull the data. Cedar Ridge's data sits in Snowflake, so I spent a couple of weeks getting familiar with the schema before I started writing anything.
 
-I ended up writing about 15 SQL queries on a few common topics: bed availability, staff scheduling, postpartum length of stay, recently flagged high-risk patients, and so on. Each query corresponded to a specific reporting request.
+In total I wrote about 15 SQL queries spread across a handful of recurring topics: bed availability, clinician scheduling, postpartum length of stay, the most recently flagged high-risk expectant mothers, and so on. Each query mapped to one specific reporting request.
 
-Each week Hannah would walk through my queries with me, point out where I had the wrong metric definition or where the query was inefficient, and have me revise. Once it ran cleanly that was the deliverable.
+Every week I walked Hannah through the SQL I had written. She would point out where my definitions were off, or where a query could be written more efficiently, and I would revise. Once a revision ran clean it counted as delivered.
 
-Later in the internship the team asked me to look at whether the queries could be templated, but I didn't go very deep on that. I mostly followed the definitions Hannah gave me. I also helped put together some Excel summaries that rolled up the weekly operational numbers and sent them to the OB ward manager.
+In the second half of the internship the team asked me to look into making these queries more reusable, but I never went deep on that. I mostly stayed with the definitions Hannah gave me. Along the way I also helped put together some Excel reports, rolling weekly operational data into spreadsheets that went to the OB ward manager.
 
 ---
 
-## 3. Outcomes
+## 3. Deliverables
 
-15 SQL queries all ran.
+All 15 SQL queries ran cleanly.
 
-Weekly Excel reports went out on schedule.
+The weekly Excel reports went out on schedule.
 
-When I left, Hannah said I "asked good questions."
+At the end of the internship Hannah said I "was willing to ask questions."
 
 ---
 

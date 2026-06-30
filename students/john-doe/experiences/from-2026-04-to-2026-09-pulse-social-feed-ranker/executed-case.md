@@ -1,91 +1,91 @@
 # Feed Ranking Microservice
 
-> Period: 2026-06 to 2026-09. Company: Pulse Social. Role: Software Engineer Intern, Backend Team. Industry: Consumer Social.
+> Timeline: June 2026 to September 2026. Company: Pulse Social. Role: Software Engineering Intern, Backend team. Industry: consumer social.
 
-## 1. Context
+## 1. Background
 
-Pulse Social is a 200-person consumer social product with about 8 million monthly active users. The flagship surface is the home feed, the scrolling list of posts you see the moment you open the app.
+Pulse Social is a 200-person consumer social product with roughly 8 million monthly active users. Its main battleground is the Home Feed, the stream of posts you see scrolling the moment you open the app.
 
-The order of those posts is not random. A piece of software scores every post that could possibly be shown to you, sorts them, and hands the top results back to the mobile app. That piece of software is called the feed ranker. The quality of its decisions is roughly what people mean when they say a social app "feels good" or "feels stale".
+The order of those posts is not random. A program scores and ranks every post that could be shown to you and hands the top results back to the phone. That program is the Feed Ranker. The quality of its decisions is basically the source of either "this app feels great" or "this app keeps getting worse" in user reviews.
 
-At Pulse, the feed ranker had grown organically inside a Python monolith. A monolith is a single large application where every feature lives in the same codebase and ships together as one unit. Over the years, the ranking logic at Pulse had tangled itself together with the code that fetched posts from the database, the code that did content moderation, and a few half-dead experiments that nobody wanted to delete because nobody remembered who owned them.
+At Pulse, this Feed Ranker had grown organically inside a Python monolith. A monolith is a large application where all features live in one codebase and have to ship together as a single unit. After several years, Pulse's ranking logic, its post-fetching logic, and its content moderation logic were all tangled together. Buried in there were also a few half-dead experiments that nobody wanted to delete because nobody remembered who owned them.
 
-The symptoms were predictable. Latency spikes were common at peak hours. p99 latency sat around 220ms. p99 latency means the response time experienced by the slowest 1% of requests, which is the number engineers watch most closely because those slow requests are the ones users actually notice and complain about.
+The symptoms were predictable. Latency spikes at peak hours were common, with p99 hovering around 220ms. The p99 latency number describes the response time of the slowest 1 percent of requests. Engineers care about it the most because those slow requests are exactly the ones users feel and then complain about.
 
-The deploy story was just as bad. Shipping a new ranking model usually meant a multi-day release because the team had to redeploy the entire monolith, run a long test suite that included a hundred things unrelated to ranking, and then babysit the rollout. The data-science team had a backlog of model ideas that they could not afford to ship because the deploy tax was too high.
+The release process was just as bad. Shipping a new ranking model often took several days. The whole monolith had to be redeployed, a test suite of hundreds of checks unrelated to ranking had to run, and someone had to babysit the rollout. The data science team had a backlog of model ideas they could not ship because this release tax was too high.
 
-The Backend Tech Lead wanted a clean ranking microservice extracted from the monolith. A microservice is a small, independently deployable service that does one job well. It is the modern alternative to the giant single-application style.
+The backend Tech Lead wanted to pull the ranking piece out of the monolith and turn it into a clean microservice. A microservice is a small independently deployed service that does one thing. It is the modern alternative to the older "one big app does everything" style.
 
-The pitch was straightforward. Write it in Go for predictable performance and a small memory footprint. Split the work into composable stages (candidate generation, ranking, post-processing) so each stage could be reasoned about and tested independently. Expose a gRPC API. Ship it behind a percentage rollout so the team could compare it against the old monolith path on live traffic, and dial it back instantly if anything looked wrong.
+The plan itself was straightforward. Write it in Go for predictable performance and a small memory footprint. Split the work into composable stages (candidate generation, ranking, post-processing) so each stage could be reasoned about and tested in isolation. Expose a gRPC API. Roll it out by percentage gradually, compare with the monolith path in production, and keep the option to roll back instantly.
 
-I joined as an intern on the Backend Team and was given the rewrite as my primary project. I reported to the Tech Lead and pair-worked with two senior backend engineers on architecture decisions.
+I joined the backend team as an intern and this rewrite became my main project. I reported to the Tech Lead and paired with two senior backend engineers on architecture decisions.
 
-That framing matters. The rewrite was not a side experiment. It was the team's main bet for the quarter, with leadership visibility and a real deprecation deadline on the old monolith path. The trade-off as the intern owning it was that I got unusually high trust and unusually high accountability for someone in that role.
+That positioning matters. This rewrite was not a side experiment. It was the team's main bet for the quarter, watched by leadership, with a real shutdown deadline already set for the old monolith path. The cost of having an intern own this is that I got trust well beyond what is normal for the level, and I also carried responsibility well beyond what is normal for the level.
 
 ---
 
-## 2. What I Did
+## 2. What I Built
 
-I built the service in Go, structured into three composable stages that ran in sequence for every feed request.
+The service is written in Go and split into three composable stages. Every Feed request walks through them in order.
 
-The first stage was the Candidate Generator. Before you can rank posts, you have to pick which pool of posts is even eligible to be shown to a given user. That step is called candidate generation, and it is where most of the "what could I possibly show this person?" logic lives.
+The first stage is the Candidate Generator. Before you can score and rank posts, you need to decide which posts are eligible to be shown to a given user. That is candidate generation. Most of the "what do I even have to show this person" logic lives here.
 
-My implementation pulled candidates from three sources: the user's follow graph (everyone they follow), a topic-affinity index (topics the user has engaged with in the past), and a small set of editorially curated items the content team wanted boosted. Each source ran in parallel and returned at most a few hundred candidates, which were then merged and de-duplicated before being handed to the ranker.
+My implementation pulls candidates from three sources: the user's follow graph (who this person follows), a topic affinity index (topics this person has interacted with frequently), and a small set of operations-curated picks (items the content team wants to amplify). Each source runs in parallel and returns up to a few hundred candidates, which are then merged, deduplicated, and handed to the ranker.
 
-Each source was its own implementation of a common Go interface. That sounds like a small detail, but the practical effect was big. Adding a new candidate source became a one-file change rather than a code review across the whole team, and the content team eventually shipped a "trending in your city" source on their own with one engineer reviewing it.
+Each source is an implementation of the same Go interface. This sounds like a small detail, but the effect is large. Adding a new source becomes a "change one file and you are done" task, no full team Code Review needed. Later, the content team shipped a "trending in your city" source on their own with only one engineer needed for Review.
 
-The second stage was the Ranker. It loaded a model from an internal model registry and used that model to give every candidate a score. I deliberately kept the model interface as minimal as possible: a vector of items in, a vector of scored items out. The reason was political as much as technical. I did not want the data-science team to have to coordinate a backend release every time they wanted to try a new model.
+The second stage is the Ranker. It loads a model from an internal Model Registry and uses that model to score each candidate. I deliberately kept the model interface very small: take a list of candidates, return a list of scored candidates. The reasoning behind this is both technical and organizational. I did not want the data science team to have to coordinate a backend release every time they swapped a model.
 
-During my 12 weeks they shipped two new models through this path with zero backend involvement, which was the single biggest workflow win of the project. The bullet on my resume is "rebuilt the model-deploy path so a model swap stopped touching backend at all", and it sounds smaller than the rewrite itself, but it is the change my mentors pointed at when they said the team felt unblocked.
+During my 12 weeks they shipped two new models through this path with zero backend involvement. That is the biggest workflow win of the project. The corresponding bullet on my resume reads "refactored the model release path so swapping models no longer touches the backend." It sounds lighter than the rewrite itself, but my mentors said the team felt "unshackled." That is what they were referring to.
 
-The third stage was the Post-Processor. It handled deduplication, blocklist filtering, diversity policies (preventing five posts about the same topic from showing up in a row), and a "recently seen" filter that suppressed posts the user had already scrolled past in the last few hours. The recently-seen filter was backed by Redis sorted sets, which let me check and update per-user history in roughly a millisecond. We had measured a real user complaint pattern around "I just saw this post" and the diversity plus recently-seen pair was aimed directly at it.
+The third stage is the Post-Processor. It handles deduplication, blocklist filtering, diversity (avoiding five posts on the same topic in a row), and a "recently seen" filter (pushing down posts the user already scrolled past in the last few hours). The "recently seen" filter is implemented with a Redis Sorted Set so I can do a "read and update one user's history" operation in about 1 millisecond. We had actually collected a category of user complaint shaped like "didn't I just see this one?" The diversity logic and the "recently seen" filter were aimed exactly at that.
 
-For the API, I designed a gRPC contract. gRPC is a way for two services on different machines to call each other's functions over the network. It is faster and more strictly typed than the older REST/JSON style most websites use, which matters when you are inside a backend that has to serve thousands of requests per second.
+For the API I designed a gRPC contract. gRPC is a way for two services running on different machines to call each other's functions over the network. It is faster and more strictly typed than the older REST and JSON style most websites use, which matters when an internal backend has to serve several thousand requests per second.
 
-The contract had three RPCs: GetFeed (called every time a user opens or refreshes the feed), RecordImpression (called as the user scrolls past each post, so the system learns what they actually saw), and HealthCheck (called by the load balancer to know whether a given instance of the service is still alive). Three internal client services integrated against it: the mobile API gateway (the service the phone app talks to), a recommendation-test harness used by data science, and an internal admin tool used by content ops to debug "why am I seeing this post" reports from users.
+The contract defines three RPCs: GetFeed (called every time a user opens or refreshes the Feed), RecordImpression (called as the user scrolls past each post, so the system knows what was actually seen), and HealthCheck (called by the Load Balancer to decide whether a given service instance is still alive). Three internal client services hooked into this interface: the Mobile API Gateway (the service the phone app talks to directly), a recommendation testing Harness for data science, and an internal Admin tool (used by content operations to investigate user reports of "why am I seeing this post").
 
-For deployment I built a Kubernetes Helm chart. Kubernetes is the industry-standard system for running many copies of a service across many machines automatically. If one machine dies, Kubernetes spins up a replacement somewhere else without a human in the loop. A Helm chart is a packaged recipe that tells Kubernetes exactly how to run a given service.
+For deployment I wrote a Kubernetes Helm Chart. Kubernetes is the industry-standard system for "automatically run many copies of many services across many machines." If a machine dies, Kubernetes will start a replacement somewhere else with no human in the loop. A Helm Chart is a packaged "recipe" that tells Kubernetes exactly how to run the service.
 
-I wired up horizontal pod autoscaling on both CPU and requests-per-second so the cluster would grow and shrink with real traffic, added structured JSON logging via zap, and exported Prometheus metrics for the standard golden signals (request rate, error rate, latency distribution, saturation).
+I attached the HPA (horizontal pod autoscaler) to both CPU and QPS so the cluster could scale with real traffic. I used zap for structured JSON logging and exported Prometheus metrics following the industry-standard Golden Signals (request rate, error rate, latency distribution, saturation).
 
-The piece I cared about most was OpenTelemetry tracing running through every stage. When latency went up, we could open one dashboard and see immediately whether candidate generation, the model call, or post-processing was responsible. In the monolith, an incident usually started with "the feed is slow" and ended hours later with someone grep-ing through a million log lines. With per-stage traces, the same diagnosis took minutes. The service ran in two AWS regions behind a regional load balancer.
+The piece I cared about the most was OpenTelemetry tracing wired through every stage. The moment latency went up, we could open one Dashboard and see immediately whether candidate generation, the model call, or post-processing was the culprit. In the monolith, an incident usually started with "Feed got slow," and someone would spend hours grepping through millions of log lines to find the cause. With per-stage traces, the same diagnosis took minutes. The service runs in two AWS regions behind a regional Load Balancer.
 
-For correctness and load characteristics I wrote unit and integration tests reaching 84% line coverage, and a k6 load-test suite that replayed two weeks of recorded production traffic at 1.5x peak volume. k6 is a load-testing tool that lets you describe traffic in code and ramp it up to whatever volume you want. The 1.5x number was not a guess. We picked it so that if the new service held up under load tests, we had headroom for a year of organic growth.
+For correctness and load, I wrote unit and integration tests up to 84 percent line coverage, plus a k6 load test suite that replays two weeks of recorded production traffic amplified to 1.5x peak. k6 is a load testing tool where you describe traffic in code and dial up the intensity. We did not pick 1.5x at random. The thinking was that if the new service can handle that, we have built in headroom for the next year of organic growth.
 
-Before any real user traffic hit the new service, I ran it in shadow deployment for two weeks. Shadow deployment means running the new service in parallel with the old one, sending it real production traffic, but throwing its responses away and using the old service's response for the actual user. That lets you measure the new service against reality (latency, error rate, output diff) without putting users at risk. An offline diff job compared the feeds the two paths would have returned and flagged the cases where they disagreed badly enough to investigate.
+Before any real user traffic touched the new service, I ran a two-week Shadow deployment. A Shadow deployment means the new service and the old service run in parallel. Real production traffic is sent to the new service too, but the new service's response is thrown away. Users still get the old service's response. That lets you test latency, error rate, and output differences against real traffic without affecting any user. An offline Diff job compared the Feeds returned by both sides and flagged cases where the difference was big enough to be worth human review.
 
-Shadow week one caught a real bug. The new ranker was returning empty feeds for roughly 0.2% of users, all of whom turned out to be brand new accounts with no follows and no topic history. Candidate generation produced zero items, the ranker had nothing to score, and we returned an empty list. I added an "editorial cold start" fallback to the Candidate Generator. If the other two sources returned fewer than a threshold number of items, we filled the rest from the editorial pool. The bug never reached a real user.
+Week one of Shadow caught a real bug. The new ranker returned an empty Feed for roughly 0.2 percent of users. Those turned out to be brand-new accounts with no follows and no topic history. The candidate generator had nothing to pull, the ranker had nothing to score, and the result was an empty list. I added an "operations cold-start" fallback to the Candidate Generator: if the other two sources return fewer items than a threshold, top up from the operations pool. The bug never reached a real user.
 
-Shadow week two surfaced a quieter problem. The model call was occasionally taking longer than 200ms because of a slow path in how features were being fetched for the candidate set. I added a per-request budget and a parallel feature-fetch step, which brought the tail back under control. Neither of these issues would have been catchable in a staging environment with synthetic data. Both came out of shadow because shadow uses real production traffic shapes.
+Week two of Shadow surfaced something more subtle. The model call occasionally exceeded 200ms because the feature fetch for some candidate sets hit a slow path. I added a per-request budget cap plus a parallelized feature fetch step, and the long tail came back into the normal range. Neither problem was reproducible in Staging with synthetic data. They only surfaced with the shape of real production traffic, which is exactly what Shadow deployment is for.
 
-After shadow, we ran a careful percentage rollout: 1%, then 5%, then 25%. At each step we held the rollout flat for a few days, watched the dashboards, and only moved forward when latency, error rate, and the business metrics all looked clean. The Tech Lead and I agreed up front that we would never advance two stages in one day, no matter how good things looked, because the worst incidents tend to surface a day or two after a change as the traffic mix shifts.
+After Shadow came a careful percentage rollout: 1 percent, 5 percent, 25 percent. At each step we let things sit, watched dashboards for several days, and confirmed latency, error rate, and business metrics were clean before pushing to the next step. The Tech Lead and I agreed up front: no matter how good the numbers look, we never push two steps in a single day. The worst incidents usually surface a day or two after a change, once traffic shape shifts.
 
 ---
 
 ## 3. Outcomes
 
-The service shipped behind a 25% rollout in 8 weeks. Outcomes measured during the rollout window:
+The service reached 25 percent rollout in 8 weeks. Numbers measured during rollout:
 
-The service served 4,500 requests per second at peak across the two regions. In plain terms, that is roughly 4,500 user feed-load requests every second at the busiest hour of the day, sustained without the autoscaler running out of headroom.
+The service peaked at 4,500 QPS (queries per second) across both regions combined. In plain terms: at the busiest hour of the day, about 4,500 users per second were loading the Feed, and the autoscaler held up.
 
-For comparison, the monolith path it replaced was already running close to its scale ceiling at the same traffic level. The new service had room to absorb roughly another 50% before HPA would need to be retuned.
+For comparison, the monolith path it replaced was already near its scaling ceiling at the same traffic. The new service still had about 50 percent headroom before HPA would need another tune.
 
-End-to-end p99 latency stayed under 60ms, down from 220ms on the monolith path it replaced. So for the slowest 1% of feed requests (the ones users actually feel as a stutter), the new path was almost four times faster.
+End-to-end p99 latency held under 60ms. The monolith path it replaced sat at 220ms. So for the slowest 1 percent of requests (the ones users actually feel as lag), the new path was nearly four times faster.
 
-The A/B test showed a +6% session length lift, statistically significant at p<0.01. An A/B test on a feed works like this: half the users get the new ranker, half stay on the old one, and you measure whether the new-ranker group spends more time in the app on average.
+Session length in A/B testing improved by 6 percent, significant at p<0.01. The A/B test on Feed works like this: half the users get the new ranker, half stay on the old one. Then we look at whether the new-ranker group on average spends more time in the app.
 
-A +6% lift means new-ranker users averaged 6% more time per session, and p<0.01 means that result is very unlikely to be a coincidence (less than a 1% chance of seeing a gap this large by random luck). The diversity post-processor catching repeated topics that the monolith missed was the main driver. Internally, +6% session length on the home feed was a number nobody had moved in over a year, and it became the headline metric from the project.
+The +6 percent means the new-ranker group stayed about 6 percent longer per session on average. The p<0.01 means the chance this result is pure coincidence is very low (less than 1 percent chance of being a false positive from random sampling). The main driver was the diversity post-processing catching repeat-topic issues the monolith missed. Internally at Pulse, +6 percent session length on Home Feed is a number nobody had moved in over a year. It ended up being the headline metric in every external-facing readout of the project.
 
-Two new ranking models shipped by the data-science team through the model interface without backend involvement, which validated the original "minimal model interface" design call.
+The data science team shipped two new ranking models through the model interface without backend involvement, validating the original "keep the model interface as thin as possible" design decision.
 
-Before the rewrite, a model swap took a backend engineer roughly a week of integration work. After, it took the data-science team a few hours. That alone changed the rhythm of how the company experimented with feed quality.
+Before the rewrite, swapping a model required about a week of backend engineering work for the integration. After the rewrite, the data science team can do it themselves in a few hours. That single change rewrote the cadence at which the entire company can experiment on Feed quality.
 
-Mean time to recovery on incidents involving the feed dropped by roughly 40%, which the team attributed to the per-stage tracing surfacing the root cause faster than the monolith ever could. The shorter that recovery window is, the fewer users see a degraded feed during an incident, so this number translates directly into fewer complaints to support.
+MTTR (mean time to recovery) on Feed incidents dropped by about 40 percent. The team attributed this to per-stage tracing making root cause identification much faster than digging through the monolith. The shorter recovery time means fewer users see a degraded Feed during incidents, which translates directly into fewer support tickets.
 
-The Tech Lead asked me to return next summer to lead the rollout from 25% to 100%. Beyond the rollout itself, the plan for next summer is to migrate two more pieces out of the monolith using the same staged-pipeline template, so the rewrite ends up being a pattern other engineers can copy rather than a one-off effort.
+The Tech Lead invited me back next summer to push the rollout from 25 percent to 100 percent. Beyond rollout itself, next summer's plan is to apply the same "staged pipeline" template to pull two more pieces out of the monolith, so this rewrite ends up as a pattern other engineers can copy rather than a one-off effort.
 
 ---
 
 ## 4. Tech Stack
 
-Go, gRPC, Protocol Buffers, Redis, Apache Kafka, PostgreSQL, Kubernetes (with Helm), Docker, AWS (EKS, ElastiCache, RDS, ALB), Prometheus, Grafana, OpenTelemetry, zap (logging), k6 (load testing), GitHub Actions.
+Go, gRPC, Protocol Buffers, Redis, Apache Kafka, PostgreSQL, Kubernetes (via Helm), Docker, AWS (EKS, ElastiCache, RDS, ALB), Prometheus, Grafana, OpenTelemetry, zap (logging), k6 (load testing), GitHub Actions.
