@@ -8,7 +8,6 @@
 from-2026-04-to-2026-09-pulse-social-feed-ranker/
   README.md                                                 ← this file, layout notes
   executed-case.md                                          ← mature case after execution (post-internship)
-  executed-case-cn.md                                       ← Chinese version
   qualify-for-Pulse-Social-Backend-Engineer-Intern/
     job-description.md                                      ← input: target JD (English)
     landscape/

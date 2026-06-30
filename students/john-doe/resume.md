@@ -178,7 +178,7 @@ Full-stack AI/Data Intern. 2025-06 to 2025-09.
 > - B3 "self-serve query rate climbed from 0 to 41% in 8 weeks" comes from the CloudWatch query log + Snowflake audit table comparison. 0 to 41% is high for 8 weeks but defensible because the alternative (analyst ticket queue) was painful enough that adoption was sticky.
 > - B4 "Q3 internal compliance dry-run on the first pass" is binary (pass / fail) so does not need a baseline. The detail that matters is "first pass", signaling you got the spec right initially rather than after multiple revisions.
 >
-> **Notes**: if you derive a Data Analyst resume from this master, keep this Set, pair with Variant B. Same internship as Set 2 but a completely different framing; the case file (`case-cn.md` in qualify-for-Cascadia-...) supports both.
+> **Notes**: if you derive a Data Analyst resume from this master, keep this Set, pair with Variant B. Same internship as Set 2 but a completely different framing; the case file (`case.md` in qualify-for-Cascadia-...) supports both.
 
 ### Bullet Set 4, NovaRisk AI, Fraud and AML BI Agent (AI emphasis)
 

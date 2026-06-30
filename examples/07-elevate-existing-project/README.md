@@ -28,13 +28,13 @@ After all 6 stages, you accumulate 9 categories of artifact files. Before lookin
 
 - [`resume-old.md`](../../students/john-doe/resume-old.md): the "not great" thin resume the student starts with before entering the workflow.
 - [`job-description.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/job-description.md): the target job posting the student picked. Every later stage calibrates against it.
-- The raw thin experience [`...sql-reporting-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting-cn.md): the expanded write-up of that thin internship or project on the resume. This is the raw material the 07 workflow will elevate.
+- The raw thin experience [`...sql-reporting.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting.md): the expanded write-up of that thin internship or project on the resume. This is the raw material the 07 workflow will elevate.
 - [`landscape/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/) with 5 files: do VC due diligence on the role. Research industry, company, role, and market in 4 deep reports plus 1 index report, so that the AI actually "gets" the world behind the role. (This skill comes from the prerequisite course career_planning.)
-- [`gap-analysis-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/gap-analysis-cn.md): an honest gap diagnosis comparing the current resume against JD plus landscape. Each gap is sorted into 🔴 Core, 🟡 Important, or 🟠 Nice-to-have.
-- [`case-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case-cn.md) (elevated version): the raw thin experience redesigned into a project that reaches the JD. **This is the single most important artifact in the whole workflow.** It is the source material for elevated bullets later, and it is also the design blueprint for what you will actually build over the next 3 to 6 months.
-- [`execution-plan-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/execution-plan-cn.md) plus [`pocs/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/) plus [`tutorials/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/): the "fill the gap" trio that comes out of breaking down each gap. A learning plan, plus one mini-POC per gap, plus a matching tutorial.
+- [`gap-analysis.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/gap-analysis.md): an honest gap diagnosis comparing the current resume against JD plus landscape. Each gap is sorted into 🔴 Core, 🟡 Important, or 🟠 Nice-to-have.
+- [`case.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case.md) (elevated version): the raw thin experience redesigned into a project that reaches the JD. **This is the single most important artifact in the whole workflow.** It is the source material for elevated bullets later, and it is also the design blueprint for what you will actually build over the next 3 to 6 months.
+- [`execution-plan.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/execution-plan.md) plus [`pocs/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/) plus [`tutorials/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/): the "fill the gap" trio that comes out of breaking down each gap. A learning plan, plus one mini-POC per gap, plus a matching tutorial.
 - `coach-notes/`: notes and progress tracker produced while learning concepts with the AI coach. Generated dynamically under the [qualify-for folder](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/). Not shown in the repo example.
-- `mock-interview-{n}-cn.md`: transcripts and debriefs from mock interview sessions with the AI interviewer. Also generated dynamically under the same qualify-for folder.
+- `mock-interview-{n}.md`: transcripts and debriefs from mock interview sessions with the AI interviewer. Also generated dynamically under the same qualify-for folder.
 
 **Why does this stack add up to "interview ready"?** These 9 categories of artifacts build up a layered evidence chain that says "I really understand this project." Landscape gives you a sharper read on the JD than other candidates. Gap analysis tells you where you are short. The elevated case shows what this experience really looks like. The POCs let you actually pull up code demos. Coach notes let you explain every technical choice at the whiteboard. Mocks let you surface weaknesses under pressure ahead of time. Stack all 9, and you have a candidate who can sit in the interview room and field hard follow-ups from any angle. **The information density compounds non-linearly**, and that is the real leverage of this workflow.
 
@@ -52,15 +52,15 @@ columns 2
  space S1["Stage 1<br/>understand-landscape"]
  L1["🟢 + landscape/ (5 files)"] space
  space S2["Stage 2<br/>qualify-gap-analyze"]
- L2["🟢 + gap-analysis-cn.md"] space
+ L2["🟢 + gap-analysis.md"] space
  space S3["Stage 3<br/>mini-project-design + mini-project-review"]
- L3["🟢 + case-cn.md (elevated)"] space
+ L3["🟢 + case.md (elevated)"] space
  space S4["Stage 4<br/>qualify-execution-plan"]
- L4["🟢 + execution-plan-cn.md + pocs/ + tutorials/"] space
+ L4["🟢 + execution-plan.md + pocs/ + tutorials/"] space
  space S5["Stage 5<br/>qualify-coach"]
  L5["🟢 + coach-notes/"] space
  space S6["Stage 6<br/>qualify-mock-interview"]
- L6["🟢 + mock-interview-n-cn.md"] space
+ L6["🟢 + mock-interview-n.md"] space
 
  IN --> S1
  S1 --> L1
@@ -124,13 +124,13 @@ This section walks through the 6 stages, from "what each one does" all the way d
 | Stage | What it does | Input docs | Output docs |
 |---|---|---|---|
 | Stage 1 `understand-landscape` | Treat the target JD as a due-diligence subject. Research industry, company, role, and market | [`job-description.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/job-description.md) | [`landscape/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/) (5 files) |
-| Stage 2 `qualify-gap-analyze` | Honestly diagnose where the current resume falls short against JD + landscape | All of the above plus [`resume-old.md`](../../students/john-doe/resume-old.md) plus the [raw thin experience](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting-cn.md) | [`gap-analysis-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/gap-analysis-cn.md) |
-| Stage 3 `mini-project-design` + `mini-project-review` | Use the gap analysis as a guide. Redesign the raw thin experience into an elevated version that reaches the JD and closes the student's gaps. Iterate 3 rounds | All of the above plus gap analysis | [`case-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case-cn.md) (elevated version) |
-| Stage 4 `qualify-execution-plan` | Take gap analysis + case as input. Break each gap into a POC + tutorial + weekly schedule that maps 1:1 to the case's decisions | All of the above plus case | [`execution-plan-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/execution-plan-cn.md) plus [`pocs/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/) plus [`tutorials/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/) |
+| Stage 2 `qualify-gap-analyze` | Honestly diagnose where the current resume falls short against JD + landscape | All of the above plus [`resume-old.md`](../../students/john-doe/resume-old.md) plus the [raw thin experience](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting.md) | [`gap-analysis.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/gap-analysis.md) |
+| Stage 3 `mini-project-design` + `mini-project-review` | Use the gap analysis as a guide. Redesign the raw thin experience into an elevated version that reaches the JD and closes the student's gaps. Iterate 3 rounds | All of the above plus gap analysis | [`case.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case.md) (elevated version) |
+| Stage 4 `qualify-execution-plan` | Take gap analysis + case as input. Break each gap into a POC + tutorial + weekly schedule that maps 1:1 to the case's decisions | All of the above plus case | [`execution-plan.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/execution-plan.md) plus [`pocs/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/) plus [`tutorials/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/) |
 | Stage 5 `qualify-coach` | Learn each concept gap by gap, write POCs, get a feel for whether the case difficulty fits you | All of the above | `coach-notes/` generated dynamically under the [qualify-for folder](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/) |
-| Stage 6 `qualify-mock-interview` | AI plays a stranger interviewer. Real stress test | All of the above | `mock-interview-{n}-cn.md` generated dynamically under the [qualify-for folder](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/) |
+| Stage 6 `qualify-mock-interview` | AI plays a stranger interviewer. Real stress test | All of the above | `mock-interview-{n}.md` generated dynamically under the [qualify-for folder](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/) |
 
-Every artifact a stage produces lands directly under the same `qualify-for-<JD-slug>/` folder. That folder itself is the container for all the work to "qualify for this role." **Every output file has exactly one skill that produces it, and stages do not overwrite each other.** Stage 2 writes `gap-analysis-cn.md`, stage 3 writes `case-cn.md`, stage 4 writes `execution-plan-cn.md` + `pocs/` + `tutorials/`. The only exception is when stage 5 or 6 says the case difficulty is wrong and triggers `mini-project-design`'s case-difficulty-rollback. In that case the case gets rewritten, and stage 4 has to be rerun (because the POCs need to align with the new case decisions). Under the normal flow there is no overwriting.
+Every artifact a stage produces lands directly under the same `qualify-for-<JD-slug>/` folder. That folder itself is the container for all the work to "qualify for this role." **Every output file has exactly one skill that produces it, and stages do not overwrite each other.** Stage 2 writes `gap-analysis.md`, stage 3 writes `case.md`, stage 4 writes `execution-plan.md` + `pocs/` + `tutorials/`. The only exception is when stage 5 or 6 says the case difficulty is wrong and triggers `mini-project-design`'s case-difficulty-rollback. In that case the case gets rewritten, and stage 4 has to be rerun (because the POCs need to align with the new case decisions). Under the normal flow there is no overwriting.
 
 > Note: in the table, the `understand-landscape` skill comes from the prerequisite course **career_planning**, not from this repo. This section assumes you already know how to use it. The other 5 skills from this repo (`qualify-gap-analyze`, `mini-project-design`, `mini-project-review`, `qualify-execution-plan`, `qualify-coach`, `qualify-mock-interview` — counting review separately it is actually 6) all live under `.claude/skills/`. In the Claude Code terminal you just say "please invoke /<skill name>" and it kicks off. Each skill will proactively ask you for the inputs it needs, so you don't have to memorize command-line flags. The full set of resume-related skills is 10. The 6 above are the backbone of the "prepare project material" workflow taught in 06 / 07 / 08. The remaining 4 (`bullet-writer`, `bullet-reviewer`, `summary-writer`, `summary-reviewer`) are the "write bullets and Summary" tools taught in 09 and 10.
 
@@ -148,11 +148,11 @@ The 6 sections below cover each stage in order.
 
 **Outputs**:
 
-- [`landscape/00-title-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/00-title-cn.md): index plus a list of unverified items (questions to ask the Hiring Manager)
-- [`landscape/01-industry-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/01-industry-cn.md): industry research
-- [`landscape/02-company-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/02-company-cn.md): company research
-- [`landscape/03-role-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/03-role-cn.md): Job Family research
-- [`landscape/04-market-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/04-market-cn.md): market research
+- [`landscape/00-title.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/00-title.md): index plus a list of unverified items (questions to ask the Hiring Manager)
+- [`landscape/01-industry.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/01-industry.md): industry research
+- [`landscape/02-company.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/02-company.md): company research
+- [`landscape/03-role.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/03-role.md): Job Family research
+- [`landscape/04-market.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/04-market.md): market research
 
 **Why does this workflow insist on running landscape first**: later, when stage 2 computes gaps and stage 3 designs the elevated case, the quality of the AI output depends directly on "how deeply it understands this role." Without landscape as context, the AI is reduced to guessing from the literal text of the JD, and both the gap analysis and the case will be relatively shallow.
 
@@ -165,24 +165,24 @@ The 6 sections below cover each stage in order.
 - The file path to your current resume (e.g., `students/john-doe/resume-old.md`)
 - The file path to the target JD (e.g., `.../qualify-for-.../job-description.md`)
 - The folder path for the 5 landscape files (if you ran it; you can proceed without it, but the output will be a notch weaker)
-- (Optional) the expanded write-up of the thin experience on your resume (e.g., [`...sql-reporting-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting-cn.md)) so the skill can more precisely judge your "current state to JD" gap
+- (Optional) the expanded write-up of the thin experience on your resume (e.g., [`...sql-reporting.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting.md)) so the skill can more precisely judge your "current state to JD" gap
 
 **How to invoke**: just talk to it in plain language in the Claude Code terminal. For example:
 
 ```
 Please invoke the /qualify-gap-analyze skill.
 My resume is at students/john-doe/resume-old.md.
-The expanded write-up of my thin experience is at students/john-doe/experiences/.../sql-reporting-cn.md.
+The expanded write-up of my thin experience is at students/john-doe/experiences/.../sql-reporting.md.
 The target JD is at .../qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/job-description.md.
 landscape is in the landscape/ folder in the same directory.
-Please output in Chinese (-cn.md).
+Please output in English (.md).
 ```
 
 **What happens during**: the skill reads all the inputs, compares your current state to every must-have and nice-to-have line in the JD, and outputs an honest gap diagnosis. Each gap gets classified into 🔴 Core, 🟡 Important, or 🟠 Nice-to-have, with a JD quote attached as evidence. No softening, no sugarcoating.
 
 **Output**: 1 file:
 
-- [`gap-analysis-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/gap-analysis-cn.md): an honest gap diagnosis, sorted into 🔴 / 🟡 / 🟠. Each 🔴 Core gap also includes a concrete description of what "closed to interview-credible level" actually looks like.
+- [`gap-analysis.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/gap-analysis.md): an honest gap diagnosis, sorted into 🔴 / 🟡 / 🟠. Each 🔴 Core gap also includes a concrete description of what "closed to interview-credible level" actually looks like.
 
 **This step does NOT produce POCs, tutorials, or a weekly plan.** Those all come from stage 4 (`qualify-execution-plan`), after the case is designed, because POCs should correspond 1:1 to the specific technical decisions in the case rather than be abstracted directly from the JD. Stage 2 only "diagnoses." Stage 4 "prescribes."
 
@@ -198,7 +198,7 @@ After you finish writing something, if you go back and read it yourself, you alm
 
 The way out is to hand the artifact to a **totally unfamiliar second AI instance** in another session. Without the rationalizations in your head, that instance can only judge based on "does this piece stand on its own and does the design hold up under questioning." This is a very general AI collaboration pattern, not just useful for project design. When writing code you can have another AI instance act as code reviewer. When writing an essay, another instance can be the editor. When making a decision, another instance can play the opposition. This course productizes that pattern specifically as the `mini-project-design` plus `mini-project-review` pair.
 
-For the two AI instances to genuinely "not know about each other," they have to run in two separate Claude Code sessions, with all state living on disk. `case-cn.md` is the design side's output. `review-NN.md` is the review side's output. `fix-NN.md` is the design side's response (in Loop mode) to a review. Either terminal can be closed or restarted with a different model. The next launch just looks at the files on disk to figure out which round you are on, what the last review said, what the design side accepted, and what it rejected.
+For the two AI instances to genuinely "not know about each other," they have to run in two separate Claude Code sessions, with all state living on disk. `case.md` is the design side's output. `review-NN.md` is the review side's output. `fix-NN.md` is the design side's response (in Loop mode) to a review. Either terminal can be closed or restarted with a different model. The next launch just looks at the files on disk to figure out which round you are on, what the last review said, what the design side accepted, and what it rejected.
 
 The 3-round flow is a 7-step sequence. The diagram below uses the same two-column layout as section 2. **Left column shows files accumulating on disk** (yellow solid box is the initial input, green dashed boxes are artifacts added at each step). **Right column shows the 7 steps** (blue runs `mini-project-design` in terminal 1, pink runs `mini-project-review` in terminal 2). The arrows between them trace the input → step → produces zig-zag.
 
@@ -207,19 +207,19 @@ block-beta
 columns 2
  IN["🟡 Input<br/>JD + raw thin experience<br/>+ 5 landscape files + capacity"] space
  space S1["Step 1 Terminal 1<br/>mini-project-design initial draft"]
- L1["🟢 case-cn.md initial draft"] space
+ L1["🟢 case.md initial draft"] space
  space S2["Step 2 Terminal 2<br/>mini-project-review"]
  L2["🟢 review-01.md"] space
  space S3["Step 3 Terminal 1<br/>mini-project-design loop"]
- L3["🟢 fix-01.md + case-cn.md revised"] space
+ L3["🟢 fix-01.md + case.md revised"] space
  space S4["Step 4 Terminal 2<br/>mini-project-review"]
  L4["🟢 review-02.md"] space
  space S5["Step 5 Terminal 1<br/>mini-project-design loop"]
- L5["🟢 fix-02.md + case-cn.md revised again"] space
+ L5["🟢 fix-02.md + case.md revised again"] space
  space S6["Step 6 Terminal 2<br/>mini-project-review"]
  L6["🟢 review-03.md"] space
  space S7["Step 7 Terminal 1<br/>mini-project-design loop<br/>review-03 usually approves, converges"]
- L7["🟢 fix-03.md + final case-cn.md"] space
+ L7["🟢 fix-03.md + final case.md"] space
 
  IN --> S1
  S1 --> L1
@@ -258,8 +258,8 @@ Notice there is no "copy and paste the content" step anywhere. The only thing yo
 **Round 1 preparation** (terminal 1, design side):
 
 - Target JD path
-- Raw thin experience file (e.g., `experiences/.../sql-reporting-cn.md`)
-- **The `gap-analysis-cn.md` produced by stage 2** (optional but strongly recommended. This is the only way design knows what the student is missing. Without it, design can only abstract a design from the JD, and the resulting case may not match the student's actual gap.)
+- Raw thin experience file (e.g., `experiences/.../sql-reporting.md`)
+- **The `gap-analysis.md` produced by stage 2** (optional but strongly recommended. This is the only way design knows what the student is missing. Without it, design can only abstract a design from the JD, and the resulting case may not match the student's actual gap.)
 - 5 landscape files (optional but strongly recommended)
 - Your capacity information
 
@@ -270,13 +270,13 @@ Please invoke the /mini-project-design skill in elevate mode, initial submode.
 Project folder: students/john-doe/experiences/.../qualify-for-Cascadia-.../
 JD: <absolute path>
 Raw thin experience: <absolute path>
-gap analysis: <absolute path, the gap-analysis-cn.md produced by stage 2>
+gap analysis: <absolute path, the gap-analysis.md produced by stage 2>
 landscape: <absolute path>
 capacity: 12 weeks, 10 hours per week.
-Output case-cn.md.
+Output case.md.
 ```
 
-Once the skill confirms elevate + initial mode, it generates case-cn.md section by section. One-line summary, business context, trigger event, In/Out of Scope, team roles, what I did (with mermaid architecture diagram), key technical decision replay, output and metrics, tech stack, reflection, and open items. Along the way it may ask you about facts it isn't sure of (mentor name, reporting line). Answer honestly. When it's done it tells you, "Round 1 case is ready. Open another terminal and run mini-project-review to get review-01.md."
+Once the skill confirms elevate + initial mode, it generates case.md section by section. One-line summary, business context, trigger event, In/Out of Scope, team roles, what I did (with mermaid architecture diagram), key technical decision replay, output and metrics, tech stack, reflection, and open items. Along the way it may ask you about facts it isn't sure of (mentor name, reporting line). Answer honestly. When it's done it tells you, "Round 1 case is ready. Open another terminal and run mini-project-review to get review-01.md."
 
 **Round 1 invoke review (terminal 2, a brand new Claude Code session)**:
 
@@ -285,7 +285,7 @@ Please invoke the /mini-project-review skill.
 Project folder: students/john-doe/experiences/.../qualify-for-Cascadia-.../
 ```
 
-The review skill `ls`'s the folder itself, sees an existing `case-cn.md` and 0 review files, computes `NN = 01`, then **read-only** reads case-cn.md plus all context. It scores along three axes (feasibility, depth, JD alignment) plus a mode-specific check and writes out `review-01.md`. It does not touch a single character of case-cn.md.
+The review skill `ls`'s the folder itself, sees an existing `case.md` and 0 review files, computes `NN = 01`, then **read-only** reads case.md plus all context. It scores along three axes (feasibility, depth, JD alignment) plus a mode-specific check and writes out `review-01.md`. It does not touch a single character of case.md.
 
 After review finishes it tells you, "review-01.md is ready. Go back to terminal 1 and have mini-project-design process it to generate fix-01.md."
 
@@ -297,11 +297,11 @@ Project folder: students/john-doe/experiences/.../qualify-for-Cascadia-.../
 Process review-01.md.
 ```
 
-Design detects that the folder has `case-cn.md` and `review-01.md` but no `fix-01.md`, and automatically enters Loop mode. It **first** writes `fix-01.md` (with accept/reject lists and reasons for each), **then** makes precise Edit operations on case-cn.md (not a full rewrite). When done it tells you, "fix-01 done. Back to terminal 2 for review's next round."
+Design detects that the folder has `case.md` and `review-01.md` but no `fix-01.md`, and automatically enters Loop mode. It **first** writes `fix-01.md` (with accept/reject lists and reasons for each), **then** makes precise Edit operations on case.md (not a full rewrite). When done it tells you, "fix-01 done. Back to terminal 2 for review's next round."
 
 **Round 2** (run review again in terminal 2):
 
-Same invocation. This time review sees that the folder has `case-cn.md`, `review-01.md`, and `fix-01.md` all in place. It computes `NN = 02`, reads both case-cn.md and fix-01.md (to see what design accepted and what it rejected), and writes `review-02.md` picking only at issues that are still unresolved.
+Same invocation. This time review sees that the folder has `case.md`, `review-01.md`, and `fix-01.md` all in place. It computes `NN = 02`, reads both case.md and fix-01.md (to see what design accepted and what it rejected), and writes `review-02.md` picking only at issues that are still unresolved.
 
 **Round 3 + convergence**: same protocol. Generally after 3 rounds review issues an `approve` verdict and you can move on to stage 4.
 
@@ -318,8 +318,8 @@ Same invocation. This time review sees that the folder has `case-cn.md`, `review
 
 **What to prepare beforehand** (3 required + a few optional):
 
-- The [`gap-analysis-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/gap-analysis-cn.md) produced by stage 2 (required)
-- The [`case-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case-cn.md) produced by stage 3 (required)
+- The [`gap-analysis.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/gap-analysis.md) produced by stage 2 (required)
+- The [`case.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case.md) produced by stage 3 (required)
 - JD file (required, used to verify the case still serves the JD)
 - Current resume, landscape, capacity profile (optional but strongly recommended. Without these the weekly plan is guesswork)
 
@@ -328,22 +328,22 @@ Same invocation. This time review sees that the folder has `case-cn.md`, `review
 ```
 Please invoke the /qualify-execution-plan skill.
 Project folder: students/john-doe/experiences/.../qualify-for-Cascadia-.../
-gap analysis: gap-analysis-cn.md in the same folder
-case: case-cn.md in the same folder
+gap analysis: gap-analysis.md in the same folder
+case: case.md in the same folder
 JD: job-description.md in the same folder
 capacity: 12 weeks, 12 to 15 hours per week.
-Please output in Chinese (-cn.md).
+Please output in English (.md).
 ```
 
 **What happens during**: the skill reads gap analysis plus case, maps each gap from the gap analysis to a specific technical decision in the case (e.g., "the Strand Agents gap maps to the case's decision to use Strand Agents instead of LangGraph"), drafts a mini-POC for each gap, writes a tutorial stub, and lays out a weekly schedule.
 
 **Outputs**: 3 categories of files:
 
-- [`execution-plan-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/execution-plan-cn.md): main plan doc, including case-decision mapping, POC priority matrix, cross-POC reuse matrix, and a 12-week schedule
-- `pocs/poc-NN-<slug>/README-cn.md`: one POC scaffold per gap. The repo example expands [`poc-01-strand-agents/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/poc-01-strand-agents/README-cn.md) and [`poc-05-semantic-yaml/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/poc-05-semantic-yaml/README-cn.md)
-- `tutorials/NN-<slug>-cn.md`: one tutorial placeholder per gap. The repo example expands [`01-strand-agents-quickstart-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/01-strand-agents-quickstart-cn.md) and [`05-semantic-layer-yaml-design-cn.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/05-semantic-layer-yaml-design-cn.md)
+- [`execution-plan.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/execution-plan.md): main plan doc, including case-decision mapping, POC priority matrix, cross-POC reuse matrix, and a 12-week schedule
+- `pocs/poc-NN-<slug>/README.md`: one POC scaffold per gap. The repo example expands [`poc-01-strand-agents/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/poc-01-strand-agents/README.md) and [`poc-05-semantic-yaml/`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/poc-05-semantic-yaml/README.md)
+- `tutorials/NN-<slug>.md`: one tutorial placeholder per gap. The repo example expands [`01-strand-agents-quickstart.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/01-strand-agents-quickstart.md) and [`05-semantic-layer-yaml-design.md`](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/05-semantic-layer-yaml-design.md)
 
-**Does NOT overwrite stage 2's gap-analysis-cn.md.** execution-plan is its own file, downstream of gap analysis and case. It does not replace gap analysis. The stage 2 diagnosis is preserved forever, so you can later look back and see "where I was actually short at the time."
+**Does NOT overwrite stage 2's gap-analysis.md.** execution-plan is its own file, downstream of gap analysis and case. It does not replace gap analysis. The stage 2 diagnosis is preserved forever, so you can later look back and see "where I was actually short at the time."
 
 **Where people trip up**:
 
@@ -351,7 +351,7 @@ Please output in Chinese (-cn.md).
 - Not providing a capacity profile. The weekly schedule becomes the AI's guess at a "pretend weekly plan." Always tell it how many hours per week you have.
 - POCs are skill exercises, not resume-level projects. Don't misread this as "I have to ship 9 full business projects from scratch."
 
-> Note: there is a key point a lot of people miss here. **The mini-POCs and tutorials produced by `qualify-execution-plan` are not primarily so you can "finish learning everything before submitting your resume."** One of the main goals is to let you **try things out cheaply with the AI by your side** and feel out whether the project designed in the stage 3 case-cn.md is actually **buildable for you over 3 to 12 months**. If you start one POC and immediately realize "I have no idea where to even start," that means the project design is too hard for you. You should immediately go back to stage 3 and invoke `mini-project-design`'s case-difficulty-rollback mode to have the AI dial down the difficulty and redesign the case. After the case is rewritten, stage 4 has to be rerun (POCs no longer match the old case decisions). This is the "small steps, fast verification" work philosophy. Get hands-on, and if it isn't working, adjust right away. That is much cheaper than gritting it out to the mock interview only to discover the project design is unrealistic and having to redo everything. (This case-difficulty-rollback path is the one and only exception in the back-flow between stages 3 / 4 / 5. Under the normal flow, the three stages go strictly one-way and don't overwrite each other.)
+> Note: there is a key point a lot of people miss here. **The mini-POCs and tutorials produced by `qualify-execution-plan` are not primarily so you can "finish learning everything before submitting your resume."** One of the main goals is to let you **try things out cheaply with the AI by your side** and feel out whether the project designed in the stage 3 case.md is actually **buildable for you over 3 to 12 months**. If you start one POC and immediately realize "I have no idea where to even start," that means the project design is too hard for you. You should immediately go back to stage 3 and invoke `mini-project-design`'s case-difficulty-rollback mode to have the AI dial down the difficulty and redesign the case. After the case is rewritten, stage 4 has to be rerun (POCs no longer match the old case decisions). This is the "small steps, fast verification" work philosophy. Get hands-on, and if it isn't working, adjust right away. That is much cheaper than gritting it out to the mock interview only to discover the project design is unrealistic and having to redo everything. (This case-difficulty-rollback path is the one and only exception in the back-flow between stages 3 / 4 / 5. Under the normal flow, the three stages go strictly one-way and don't overwrite each other.)
 
 ### 4.5 Stage 5, qualify-coach (learn concepts and write POC code, and feel out the case difficulty along the way)
 
@@ -359,25 +359,25 @@ Please output in Chinese (-cn.md).
 
 **When to use**: fill plan in hand, POC scaffolds built, and you are starting to work through the gaps one at a time on plan.
 
-**What to prepare beforehand**: fill plan, POC scaffolds (`pocs/poc-NN-*/README-cn.md`), case file, (optional) gap analysis, landscape. All of these live in the same `qualify-for-<JD-slug>/` folder. When invoking, just hand the folder path to the skill.
+**What to prepare beforehand**: fill plan, POC scaffolds (`pocs/poc-NN-*/README.md`), case file, (optional) gap analysis, landscape. All of these live in the same `qualify-for-<JD-slug>/` folder. When invoking, just hand the folder path to the skill.
 
 **How to invoke**:
 
 ```
 Please invoke the qualify-coach skill.
-fill plan: .../qualify-for-.../execution-plan-cn.md
+fill plan: .../qualify-for-.../execution-plan.md
 POC scaffolds are under .../qualify-for-.../pocs/.
-case file: .../qualify-for-.../case-cn.md
+case file: .../qualify-for-.../case.md
 I want to learn through "code walk-through + analogy" style. Start with the highest-priority 🔴 Core gap.
 ```
 
-**What happens during**: this skill runs in **dialogue mode**, not lecture mode. It will explain a concept in 2 to 5 paragraphs (using a concrete scenario from your case as the example), then pause to ask you 2 to 3 verification questions. **It will not push forward on its own.** You have to answer, and it judges from your answer whether you really get it or are faking it before deciding what comes next. Answer well and it immediately writes a `coach-notes/concept-<slug>-cn.md` note and marks the progress tracker ✅. Answer weakly and it tries another angle (never repeats the same paragraph). Several weak answers in a row and it marks ❌ and skips, to come back to it later in the section or in the next session.
+**What happens during**: this skill runs in **dialogue mode**, not lecture mode. It will explain a concept in 2 to 5 paragraphs (using a concrete scenario from your case as the example), then pause to ask you 2 to 3 verification questions. **It will not push forward on its own.** You have to answer, and it judges from your answer whether you really get it or are faking it before deciding what comes next. Answer well and it immediately writes a `coach-notes/concept-<slug>.md` note and marks the progress tracker ✅. Answer weakly and it tries another angle (never repeats the same paragraph). Several weak answers in a row and it marks ❌ and skips, to come back to it later in the section or in the next session.
 
 The progress for each session is tracked in `coach-notes/_progress.md`. You can ask "where am I" at any time and it will show you the progress table.
 
 **Outputs**:
 
-- `coach-notes/concept-<slug>-cn.md`: one note per learned concept, covering "what this concept is, how it shows up in your case, why this choice over the alternatives, 3 to 5 interview questions that will probe deep with draft answers, and the key code snippets"
+- `coach-notes/concept-<slug>.md`: one note per learned concept, covering "what this concept is, how it shows up in your case, why this choice over the alternatives, 3 to 5 interview questions that will probe deep with draft answers, and the key code snippets"
 - `coach-notes/_progress.md`: real-time progress tracking table
 
 **Where people trip up**:
@@ -390,7 +390,7 @@ The progress for each session is tracked in `coach-notes/_progress.md`. You can 
 
 1. In the current coach session, say it directly: "I feel the case difficulty is too high for me. Please output a short structured feedback describing which specific skill I'm blocked on and why I can't reach it, so `mini-project-design` can redesign the case." Coach will write a structured feedback snippet.
 2. **Do not close the original design terminal 1.** The original case is still in that window so you can refer back to it. **Also do not continue in that old design session**, because that session has been polluted by your previous 3 rounds of iteration. **Open a brand new Claude Code terminal** and re-invoke `mini-project-design` the way Round 1 in 4.3 describes (elevate + initial mode). Feed in coach's feedback as a new constraint: "The student says they can't reach technology X in the original case. Please swap X for an alternative Y that they can reach, and keep everything else."
-3. The new design terminal runs 3 rounds of the review loop and produces a new `case-cn.md`. Then go back to 4.4 and run a fresh `qualify-execution-plan`. Then back to 4.5 to relearn the 🔴 Core gaps corresponding to the new case.
+3. The new design terminal runs 3 rounds of the review loop and produces a new `case.md`. Then go back to 4.4 and run a fresh `qualify-execution-plan`. Then back to 4.5 to relearn the 🔴 Core gaps corresponding to the new case.
 
 This is the operational landing of the "small steps, fast verification" philosophy. **Let the case bend to your absorption rate, don't force yourself to grind through the case.** The case is dead. Your absorption rate is alive. The sooner you feed this kind of feedback back to the design side, the less painful the downstream coach and mock stages will be.
 
@@ -410,13 +410,13 @@ In John's actual run, the loop of 4.5 and 4.6 ran 2 to 3 rounds (learn → test 
 
 Section 2 listed the artifacts with links. Section 4's table also gave links. But just looking at filenames doesn't convey the density of these outputs. This section walks you into a few key files so you can see for yourself: how heavy 5 landscape files actually are, how big the gap is between the elevated case and the raw thin experience, and how concrete the POCs and tutorials really get.
 
-**Stage 1 output**: open [00-title-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/00-title-cn.md). This is the title page of a "VC due-diligence rigor" report on the company, industry, Job Family, and market behind one role. It has the index for the other 4 deep reports and 6 unverified items (with how to ask the Hiring Manager next time). If you click into a deep report like [01-industry-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/01-industry-cn.md), you'll see 5000+ Chinese words, 20+ citations, mermaid diagrams, and an industry-life-cycle judgment. This is not the depth of "read a couple of blog posts and write two paragraphs." This is the depth of seeing through the world behind a role. **The JD is reverse-engineered by the landscape, not read in isolation.**
+**Stage 1 output**: open [00-title.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/00-title.md). This is the title page of a "VC due-diligence rigor" report on the company, industry, Job Family, and market behind one role. It has the index for the other 4 deep reports and 6 unverified items (with how to ask the Hiring Manager next time). If you click into a deep report like [01-industry.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/landscape/01-industry.md), you'll see 5000+ words, 20+ citations, mermaid diagrams, and an industry-life-cycle judgment. This is not the depth of "read a couple of blog posts and write two paragraphs." This is the depth of seeing through the world behind a role. **The JD is reverse-engineered by the landscape, not read in isolation.**
 
-**Stage 2 output**: open [gap-analysis-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/gap-analysis-cn.md) and see how 9 gaps get sorted into 🔴 / 🟡 / 🟠, each one followed by "why this gap matters for this role" and "what you can talk about once it's closed." No softening, no sugarcoating. It's an honest audit.
+**Stage 2 output**: open [gap-analysis.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/gap-analysis.md) and see how 9 gaps get sorted into 🔴 / 🟡 / 🟠, each one followed by "why this gap matters for this role" and "what you can talk about once it's closed." No softening, no sugarcoating. It's an honest audit.
 
-**Stage 3 output**: open the [elevated case-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case-cn.md) and the [raw thin experience sql-reporting-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting-cn.md) side by side. You will instantly feel what "elevated" actually means. Same time period, same company, same mentor, but the tech stack, output, and decision density are an order of magnitude higher. This is the source for the elevated bullets you write later.
+**Stage 3 output**: open the [elevated case.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/case.md) and the [raw thin experience sql-reporting.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-sql-reporting.md) side by side. You will instantly feel what "elevated" actually means. Same time period, same company, same mentor, but the tech stack, output, and decision density are an order of magnitude higher. This is the source for the elevated bullets you write later.
 
-**Stage 4 output**: open [execution-plan-cn.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/execution-plan-cn.md) and see how 9 gaps turn into 9 mini-POC design briefs. Each POC is a **small project for learning a skill**, not a pretend business project. Then flip through the example [POC-01](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/poc-01-strand-agents/README-cn.md) and matching [tutorial 01](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/01-strand-agents-quickstart-cn.md). Pretty concrete, right?
+**Stage 4 output**: open [execution-plan.md](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/execution-plan.md) and see how 9 gaps turn into 9 mini-POC design briefs. Each POC is a **small project for learning a skill**, not a pretend business project. Then flip through the example [POC-01](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/pocs/poc-01-strand-agents/README.md) and matching [tutorial 01](../../students/john-doe/experiences/from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/tutorials/01-strand-agents-quickstart.md). Pretty concrete, right?
 
 **Stage 5 and 6 outputs**: this section doesn't include examples for them. `qualify-coach` outputs learning notes organized by concept. `qualify-mock-interview` outputs an interview-weakness report. Together they form the "learn → test → learn → test" loop, until John can confidently tell the full story.
 

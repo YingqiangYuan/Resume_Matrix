@@ -50,10 +50,10 @@ students/john-doe/
   resume-role-1.md, resume-role-2.md, ...    # derived resumes for different roles, multiple files
   experiences/
     from-2025-06-to-2025-09-CedarRidge-maternity-bi-agent/
-      README-cn.md                           # overview of this experience
+      README.md                           # overview of this experience
       qualify-for-Cascadia-Health-Insights-AI-Solutions-Engineer/
         job-description.md                   # target JD
-        case-cn.md                           # elevated case document
+        case.md                           # elevated case document
         landscape/                           # landscape research
         ...
     from-2025-12-to-2026-01-NovaRisk-fraud-aml-bi-agent/
