@@ -156,6 +156,23 @@ The 6 sections below cover each stage in order.
 
 **Why does this workflow insist on running landscape first**: later, when stage 2 computes gaps and stage 3 designs the elevated case, the quality of the AI output depends directly on "how deeply it understands this role." Without landscape as context, the AI is reduced to guessing from the literal text of the JD, and both the gap analysis and the case will be relatively shallow.
 
+#### When the target is an entire Job Family, not one specific company
+
+The default scenario above is "John has locked onto this one JD at this one company, Cascadia." But often your situation is not that clean-cut: you are trying to land anywhere in an entire Job Family (say, AI/ML Engineer), and the one JD in hand is just a starting point, not the only company you plan to apply to in that direction.
+
+If you treat that single company's landscape as the anchor for stages 2 through 3, there is a risk: that JD carries its own preferences and phrasing (maybe it leans hard on one specific tool, or one particular evaluation style), and a gap diagnosis and case designed around it may only fit that one company. Apply the same case to another company in the same family and it will not line up cleanly. This is exactly the confusion a student raised at the top of this lesson: what a single JD elicits does not automatically generalize to the whole family.
+
+The fix is not "pick whichever JD looks more representative." It is one extra step before running stage 1:
+
+1. Within this Job Family, pick 3 to 5 more representative JDs (different companies, same direction).
+2. Run `understand-landscape` on each of them (or at least several). You now hold 3 to 5 landscapes instead of 1.
+3. **Make a deliberate trade-off decision by hand**: read through these landscapes and the raw JD text, and check whether these companies actually converge on the same emphasis within the family. If they diverge (say, some companies sell "backend + cloud," others sell "AI Agents shipped into business logic"), that is a strategic choice AI cannot make for you. You need to decide which card to play: lean into A, lean into B instead, or go for both (at the cost of doing more work to go deep on both fronts).
+4. Hand that decision to the AI and have it **synthesize** these 3 to 5 landscapes into one new landscape / JD profile, explicitly stating which strategy this synthesis represents and which branch requirements outside that strategy were dropped. This synthesized artifact replaces the single `job-description.md` from before, and feeds into stage 2 `qualify-gap-analyze` and stage 3 `mini-project-design` exactly as before — the chain itself does not change.
+
+> Note: if these JDs point in **genuinely unrelated directions** (say, one AI Engineer JD and one pure frontend JD), they are not in the same family to begin with. They cannot be merged. Pick one to be your main line and run the 6-stage chain separately for it.
+
+You do not need this step every time. If you are chasing one specific company this round (like John and Cascadia), the default single-JD flow in this lesson is enough. It only pays off when your actual goal is "I want to apply across this entire family." And doing it at stage 1 means everything downstream inherits it for free: stage 2's gap diagnosis, stage 3's case design, all the way through to the bullets [09-write-bullets](../09-write-bullets/README.md) compresses out — all of it is written against this family-level synthesized profile, instead of patching in generality after the fact at the bullet-writing stage.
+
 ### 4.2 Stage 2, qualify-gap-analyze (honest gap diagnosis)
 
 **When to use**: you have picked a target JD, finished the landscape research, and you hold your current thin resume. You have not started designing the project yet.

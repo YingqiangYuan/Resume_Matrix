@@ -133,7 +133,7 @@ Hiring manager 看 bullet 的时候, 他脑子里其实在找 4 个问题的答�
 
 **改简历 bullet 这件事的本质是: 你把信息给 AI, AI 给你写好的 bullet**. 具体是:
 
-- **输入** (信息): 你**现有的简历** (master `resume.md`, 里面已有的其他经历 bullet 是风格和密度参考) + **一段经历的 case 文档** + 项目的一切信息 + **可选**目标 JD (有 JD 时 bullet 会更针对那个岗位的关键词和强调点; 没有 JD 时 skill 写出的就是 Job Family 通用版)
+- **输入** (信息): 你**现有的简历** (master `resume.md`, 里面已有的其他经历 bullet 是风格和密度参考) + **一段经历的 case 文档** + 项目的一切信息 + **可选**目标 JD (有 JD 时 bullet 会更针对那个岗位的关键词和强调点; 没有 JD 时 skill 写出的就是 Job Family 通用版). 注意"Job Family 通用版"要有代表性, 靠的不是这里省略掉 JD, 而是你的 case 文档本身在 07/08 阶段 1 就已经是针对整个 family 综合出来的, 见 [07 §4.1 "当目标是一整个 Job Family, 而不是一家具体公司时"](../07-elevate-existing-project/README-cn.md#当目标是一整个-job-family-而不是一家具体公司时).
 - **输出** (3 到 4 条 bullet) 有 3 个落地位置可选:
   1. 直接吐到聊天框, 你手动复制
   2. 写到一份单独的文件 (例如 `qualify-for-.../bullets-cn.md`), 之后再合并到简历

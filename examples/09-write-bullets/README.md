@@ -133,7 +133,7 @@ Before diving into the skill mechanics, let's get the essence of what is happeni
 
 **Revising resume bullets is fundamentally this: you feed information to AI, and AI gives you back well-written bullets.** Concretely.
 
-- **Input** (information): your **existing resume** (the master `resume.md`, whose other experience bullets serve as a style and density reference) + the **case document for one experience** + everything else about the project + **optionally** the target JD (with a JD, bullets will lean toward that role's keywords and emphases; without a JD, the skill produces a Job Family generic version)
+- **Input** (information): your **existing resume** (the master `resume.md`, whose other experience bullets serve as a style and density reference) + the **case document for one experience** + everything else about the project + **optionally** the target JD (with a JD, bullets will lean toward that role's keywords and emphases; without a JD, the skill produces a Job Family generic version). Note that a "Job Family generic version" only stays representative because the case document itself was already synthesized across the whole family back in 07/08 stage 1, not merely because a JD was omitted here — see [07 §4.1, "When the target is an entire Job Family, not one specific company"](../07-elevate-existing-project/README.md#when-the-target-is-an-entire-job-family-not-one-specific-company).
 - **Output** (3 to 4 bullets) has 3 landing options:
   1. Print straight into the chat for you to copy by hand
   2. Write to a separate file (for example `qualify-for-.../bullets.md`) for later merging into the resume

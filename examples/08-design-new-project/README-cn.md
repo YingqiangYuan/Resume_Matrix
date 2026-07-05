@@ -82,7 +82,7 @@ John 摸一下自己的家底: Go 没写过, 分布式系统只上过课没碰�
 
 全部产出都进 [`from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/`](../../students/john-doe/experiences/from-2026-04-to-2026-09-pulse-social-feed-ranker/qualify-for-Pulse-Social-Backend-Engineer-Intern/) 这个文件夹. 文件夹名字编码了"这次 qualify 的是哪段经历, 对哪个岗位". 注意: 经历文件夹用的是项目执行的时段 (2026-04 到 2026-09), 即便 John 在 2 月就开始设计, 文件夹名字也已经为执行期预留好了位置.
 
-> 注: 表里第 1 阶段用的 `understand-landscape` skill 是**前置课程 career_planning 里教过的内容**, 不在本仓库教学里展开. 本课假设你已经会用它, 把一个 JD 反向解构成 4 篇 industry / company / role / market 调研报告加 1 篇 index. 如果还没学过, 回头补一下那门课再继续. 本课从第 2 阶段开始展开.
+> 注: 表里第 1 阶段用的 `understand-landscape` skill 是**前置课程 career_planning 里教过的内容**, 不在本仓库教学里展开. 本课假设你已经会用它, 把一个 JD 反向解构成 4 篇 industry / company / role / market 调研报告加 1 篇 index. 如果还没学过, 回头补一下那门课再继续. 本课从第 2 阶段开始展开. 如果你的目标是一整个 Job Family 而不是一家具体公司, 阶段 1 该怎么把多份 JD 综合成一份 landscape 再往下走, 见 [07 §4.1 "当目标是一整个 Job Family, 而不是一家具体公司时"](../07-elevate-existing-project/README-cn.md#当目标是一整个-job-family-而不是一家具体公司时), 08 沿用同一套做法.
 
 ---
 
