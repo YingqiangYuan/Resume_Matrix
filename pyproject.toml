@@ -1,5 +1,6 @@
 [project]
 name = "learn_build_resume_matrix"
+description = "Build a modular resume matrix for the US job market — a reusable pool of Summaries and bullet points you recombine and tailor per role, instead of rewriting one static resume every time."
 version = "0.1.1"
 requires-python = ">=3.12,<4.0"
 dependencies = [
