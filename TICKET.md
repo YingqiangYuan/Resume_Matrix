@@ -9,12 +9,12 @@ Absorb the 1+N resume matrix methodology end-to-end: the 13-lesson curriculum, t
 ## Checklist
 
 ### Setup
-- [ ] Clone the repo and switch to the `01-Learn-This-Project` branch
-- [ ] Install `mise` (`curl https://mise.run | sh`) and add it to your shell rc
-- [ ] Run `mise install` at the repo root to pick up Python 3.12 + uv
-- [ ] Run `mise run venv-create` to create `.venv/`
-- [ ] Run `mise run inst` to sync deps (no-op today, kept for forward compatibility)
-- [ ] Confirm Claude Code can see the skills: open the repo root in Claude Code and check that the 6 `/learn-this-project-*` skills and the 10 first-class workflow skills appear in the `/` menu
+- [X] Clone the repo and switch to the `01-Learn-This-Project` branch
+- [X] Install `mise` (`curl https://mise.run | sh`) and add it to your shell rc
+- [X] Run `mise install` at the repo root to pick up Python 3.12 + uv
+- [X] Run `mise run venv-create` to create `.venv/`
+- [X] Run `mise run inst` to sync deps (no-op today, kept for forward compatibility)
+- [X] Confirm Claude Code can see the skills: open the repo root in Claude Code and check that the 6 `/learn-this-project-*` skills and the 10 first-class workflow skills appear in the `/` menu
 
 ### Absorb (learn the content)
 - [ ] Run `/learn-this-project-absorb` in **Orient mode** for the high-level map and the `files to READ` vs `files to RUN/DO` lists
