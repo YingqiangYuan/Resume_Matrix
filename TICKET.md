@@ -23,7 +23,7 @@ Absorb the 1+N resume matrix methodology end-to-end: the 13-lesson curriculum, t
 - [X] Be able to explain **why the 1+N method derives targeted resumes by deletion only, never addition** — i.e., why subtraction scales and what internal-consistency property addition would break (lesson `examples/05-resume-matrix/`)
 - [X] Be able to explain **why Summary is reverse-engineered from existing Bullet Sets, not written first** — i.e., what aspirational-vague failure mode the reversed order prevents (lesson `examples/10-write-summary/`)
 - [X] Be able to explain **why `qualify-coach` and `qualify-mock-interview` must be invoked in separate Claude Code conversations** — i.e., what the coach's accumulated memory does to interview verdicts (`docs/learn-this-project/01-knowhow-inventory.md` § qualify-coach Gotchas)
-- [ ] Be able to explain **why the writer/reviewer pairing pattern exists** (bullet-writer ↔ bullet-reviewer, summary-writer ↔ summary-reviewer, mini-project-design ↔ mini-project-review) and what asymmetry the design ↔ review file-based loop enforces
+- [X] Be able to explain **why the writer/reviewer pairing pattern exists** (bullet-writer ↔ bullet-reviewer, summary-writer ↔ summary-reviewer, mini-project-design ↔ mini-project-review) and what asymmetry the design ↔ review file-based loop enforces
 
 ### Quiz (verify understanding)
 - [-] Run `/learn-this-project-quiz` in **Bank mode** and clear the floor — a 10-question round with no ⚠️ partial / ❌ wrong, where every answer hits the 3-part standard (**where to look + what + why**), not just a factually correct one-liner
