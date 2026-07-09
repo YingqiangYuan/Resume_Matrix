@@ -26,15 +26,15 @@ Absorb the 1+N resume matrix methodology end-to-end: the 13-lesson curriculum, t
 - [X] Be able to explain **why the writer/reviewer pairing pattern exists** (bullet-writer ↔ bullet-reviewer, summary-writer ↔ summary-reviewer, mini-project-design ↔ mini-project-review) and what asymmetry the design ↔ review file-based loop enforces
 
 ### Quiz (verify understanding)
-- [-] Run `/learn-this-project-quiz` in **Bank mode** and clear the floor — a 10-question round with no ⚠️ partial / ❌ wrong, where every answer hits the 3-part standard (**where to look + what + why**), not just a factually correct one-liner
-- [-] Use **Open-ended mode** to drill 2–3 topics where you came up shallow (likely candidates: the elevate vs from-scratch mode split, the gap severity 🔴/🟡/🟠 convention, the inline rationale blockquote convention)
-- [-] If anything keeps coming up partial, go back to the relevant `examples/` lesson or `docs/learn-this-project/01-knowhow-inventory.md`, then re-quiz
+- [X] Run `/learn-this-project-quiz` in **Bank mode** and clear the floor — a 10-question round with no ⚠️ partial / ❌ wrong, where every answer hits the 3-part standard (**where to look + what + why**), not just a factually correct one-liner
+- [X] Use **Open-ended mode** to drill 2–3 topics where you came up shallow (likely candidates: the elevate vs from-scratch mode split, the gap severity 🔴/🟡/🟠 convention, the inline rationale blockquote convention)
+- [X] If anything keeps coming up partial, go back to the relevant `examples/` lesson or `docs/learn-this-project/01-knowhow-inventory.md`, then re-quiz
 
 ### Elevate (see what's beyond)
-- [ ] Run `/learn-this-project-elevate` and explore 1–2 upgrade directions from `docs/learn-this-project/03-elevation-roadmap.md` (the highest-priority candidates: validation evidence beyond john-doe, schema and link-integrity tests for the curriculum, a Chinese↔English parity check)
-- [ ] **Converge each chosen direction into a concrete starter deliverable** — e.g. "a `tests/test_skill_frontmatter.py` that asserts every `SKILL.md` has `name`/`description`/`allowed-tools`/`argument-hint` and `name` matches the directory"
-- [ ] (Optional, high-value) Hand the deliverable to `/learn-this-project-absorb` in **Build mode** and actually build the first iteration
-- [ ] Note down "next small projects" that interest you (e.g., adding a second worked student covering a career-changer)
+- [-] Run `/learn-this-project-elevate` and explore 1–2 upgrade directions from `docs/learn-this-project/03-elevation-roadmap.md` (the highest-priority candidates: validation evidence beyond john-doe, schema and link-integrity tests for the curriculum, a Chinese↔English parity check)
+- [-] **Converge each chosen direction into a concrete starter deliverable** — e.g. "a `tests/test_skill_frontmatter.py` that asserts every `SKILL.md` has `name`/`description`/`allowed-tools`/`argument-hint` and `name` matches the directory"
+- [-] (Optional, high-value) Hand the deliverable to `/learn-this-project-absorb` in **Build mode** and actually build the first iteration
+- [-] Note down "next small projects" that interest you (e.g., adding a second worked student covering a career-changer)
 
 ### Interview (pressure-test yourself)
 - [ ] Run `/learn-this-project-interview` and complete a full mock session — calibrate it for the role/seniority you actually expect to interview for
