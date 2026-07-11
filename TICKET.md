@@ -31,14 +31,14 @@ Absorb the 1+N resume matrix methodology end-to-end: the 13-lesson curriculum, t
 - [X] If anything keeps coming up partial, go back to the relevant `examples/` lesson or `docs/learn-this-project/01-knowhow-inventory.md`, then re-quiz
 
 ### Elevate (see what's beyond)
-- [-] Run `/learn-this-project-elevate` and explore 1–2 upgrade directions from `docs/learn-this-project/03-elevation-roadmap.md` (the highest-priority candidates: validation evidence beyond john-doe, schema and link-integrity tests for the curriculum, a Chinese↔English parity check)
-- [-] **Converge each chosen direction into a concrete starter deliverable** — e.g. "a `tests/test_skill_frontmatter.py` that asserts every `SKILL.md` has `name`/`description`/`allowed-tools`/`argument-hint` and `name` matches the directory"
-- [-] (Optional, high-value) Hand the deliverable to `/learn-this-project-absorb` in **Build mode** and actually build the first iteration
-- [-] Note down "next small projects" that interest you (e.g., adding a second worked student covering a career-changer)
+- [X] Run `/learn-this-project-elevate` and explore 1–2 upgrade directions from `docs/learn-this-project/03-elevation-roadmap.md` (the highest-priority candidates: validation evidence beyond john-doe, schema and link-integrity tests for the curriculum, a Chinese↔English parity check)
+- [X] **Converge each chosen direction into a concrete starter deliverable** — e.g. "a `tests/test_skill_frontmatter.py` that asserts every `SKILL.md` has `name`/`description`/`allowed-tools`/`argument-hint` and `name` matches the directory"
+- [X] (Optional, high-value) Hand the deliverable to `/learn-this-project-absorb` in **Build mode** and actually build the first iteration
+- [X] Note down "next small projects" that interest you (e.g., adding a second worked student covering a career-changer)
 
 ### Interview (pressure-test yourself)
-- [ ] Run `/learn-this-project-interview` and complete a full mock session — calibrate it for the role/seniority you actually expect to interview for
-- [ ] Review the debrief; for the 3 weak-spot questions, return to quiz / absorb and re-cover the gap, then re-run the relevant round
+- [X] Run `/learn-this-project-interview` and complete a full mock session — calibrate it for the role/seniority you actually expect to interview for
+- [X] Review the debrief; for the 3 weak-spot questions, return to quiz / absorb and re-cover the gap, then re-run the relevant round
 
 ### Demo (learn to present)
 - [ ] Run `/learn-this-project-demo` and rehearse at least the 5-minute version against the audience type you're most likely to face (typically hiring manager — related-domain)
